@@ -3,5 +3,7 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "ayseboogie",
   },
-  plugins: ["gatsby-plugin-react-helmet", "gatsby-plugin-sitemap"],
+  plugins: ["gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-postcss"],
 };
