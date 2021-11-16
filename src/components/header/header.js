@@ -2,6 +2,7 @@ import { Link } from "gatsby";
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import cn from "classnames";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 import * as style from "./header.module.css";
 
 const Header = ({ pageTitle, children }) => {
@@ -42,10 +43,16 @@ const Header = ({ pageTitle, children }) => {
           <nav>
             <ul className="flex list-none justify-end tracking-widest text-black">
               <li className="pr-8">
-                <Link to="/">Home</Link>
+                {/*<Link to="/">Home</Link>*/}
+                <AnchorLink to="/" title="Home">
+                  <span>Home</span>
+                </AnchorLink>
               </li>
               <li className="pr-8">
-                <Link to="/about">About</Link>
+                {/*<Link to="/about">About</Link>*/}
+                <AnchorLink to="/#about" title="About">
+                  <span>About</span>
+                </AnchorLink>
               </li>
               <li className="pr-8">
                 <Link to="/portfolio">Portfolio</Link>

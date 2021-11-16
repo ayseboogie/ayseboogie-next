@@ -5,10 +5,11 @@ const Layout = ({ pageTitle, children }) => {
   return (
     <>
       <Header pageTitle={pageTitle} />
-      <div className="m-auto max-w-lg font-sans">
+      <div className="m-auto font-sans">
+        {/*<div className="m-auto max-w-lg font-sans">*/}
         <title>{pageTitle}</title>
         <main>
-          <h1 className="text-purple-400">{pageTitle}</h1>
+          {/*<h1 className="text-purple-400">{pageTitle}</h1>*/}
           {children}
         </main>
       </div>
