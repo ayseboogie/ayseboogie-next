@@ -22,9 +22,10 @@ const Header = ({ pageTitle, children }) => {
         // This is a presentational image, so the alt should be an empty string
         alt=""
         // Assisi, Perúgia, Itália by Bernardo Ferrari, via Unsplash
-        src={"../../images/sun.jpeg"}
+        src={"../../images/bermuda.jpeg"}
         formats={["auto", "webp", "avif"]}
       />
+
       <div
         style={{
           // By using the same grid area for both, they are stacked on top of each other
@@ -34,16 +35,33 @@ const Header = ({ pageTitle, children }) => {
           // placeItems: "center",
           placeItems: "start",
           display: "grid",
-          paddingTop: "32px",
+          paddingTop: "17px",
         }}
       >
-        {/* Any content here will be centered in the component */}
-        {/*<h1>Hero text</h1>*/}
-        {/*<div className="pb-32">*/}
-        <div className={cn("w-full text-center", style.textBanner)}>
-          <div>{pageTitle}</div>
+        <div className={cn("w-full text-center text-white", style.textBanner)}>
+          <nav>
+            <ul className="flex list-none justify-end tracking-widest text-black">
+              <li className="pr-8">
+                <Link to="/">Home</Link>
+              </li>
+              <li className="pr-8">
+                <Link to="/about">About</Link>
+              </li>
+              <li className="pr-8">
+                <Link to="/portfolio">Portfolio</Link>
+              </li>
+            </ul>
+          </nav>
         </div>
-        {/*</div>*/}
+
+        <div
+          className={cn(
+            "w-full text-center text-white text-3xl tracking-widest",
+            style.textBanner
+          )}
+        >
+          <h1>{pageTitle}</h1>
+        </div>
       </div>
     </div>
   );
