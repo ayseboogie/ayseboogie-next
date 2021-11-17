@@ -15,7 +15,7 @@ const Header = ({ pageTitle, children }) => {
         style={{
           gridArea: "1/1",
           // You can set a maximum height for the image, if you wish.
-          // maxHeight: 600,
+          maxHeight: "375px",
         }}
         layout="fullWidth"
         // You can optionally force an aspect ratio for the generated image
