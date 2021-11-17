@@ -12,7 +12,7 @@ const ChiFarms = () => {
             has been fun, and is continuously improving as I navigate the world of
             Wordpress."
         platform="Wordpress Woocommerce, hosted through GoDaddy"
-        checkIt="www.chifarms.org"
+        checkIt="https://chifarms.org/"
       />
     </Layout>
   );

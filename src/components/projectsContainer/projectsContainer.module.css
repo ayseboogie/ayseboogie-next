@@ -1,0 +1,8 @@
+.projectsContainer:hover .image {
+    opacity: 0.8;
+    filter: brightness(.5);
+}
+
+.projectsContainer:hover .projectsText {
+    opacity: 1;
+}
