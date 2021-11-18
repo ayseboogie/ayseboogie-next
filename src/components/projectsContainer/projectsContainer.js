@@ -10,7 +10,7 @@ const ProjectsContainer = () => {
       <div className="flex">
         <div className={cn("relative w-1/3 mx-3", style.projectsContainer)}>
           <StaticImage
-            src="../images/chiFarms.png"
+            src="../../images/chiFarms.png"
             alt="ecommerce site"
             className={cn("w-full opacity-100 block rounded-md", style.image)}
             style={{
@@ -35,7 +35,7 @@ const ProjectsContainer = () => {
 
         <div className={cn("relative w-1/3 mx-3", style.projectsContainer)}>
           <StaticImage
-            src="../images/lpExperiences.png"
+            src="../../images/lpExperiences.png"
             alt="ecommerce site"
             className={cn("w-full opacity-100 block rounded-md", style.image)}
             style={{

@@ -1,18 +1,16 @@
 import * as React from "react";
-import Header from "../header/header";
+import Header from "./header/header";
+import Footer from "./footer";
 
 const Layout = ({ pageTitle, children }) => {
   return (
     <>
       <Header pageTitle={pageTitle} />
       <div className="m-auto font-sans">
-        {/*<div className="m-auto max-w-lg font-sans">*/}
         <title>{pageTitle}</title>
-        <main>
-          {/*<h1 className="text-purple-400">{pageTitle}</h1>*/}
-          {children}
-        </main>
+        <main>{children}</main>
       </div>
+      <Footer />
     </>
   );
 };

@@ -8,7 +8,7 @@ const AboutPhotos = () => {
     <div className="flex mx-3 pb-10">
       <div className={cn("relative w-full mx-3", style.container)}>
         <StaticImage
-          src="../images/atPups.jpg"
+          src="../../images/atPups.jpg"
           alt="Appalachian Trail Puppies"
           className={cn("opacity-100 block w-full h-full", style.image)}
           style={{
@@ -32,7 +32,7 @@ const AboutPhotos = () => {
 
       <div className={cn("relative w-full mx-3", style.container)}>
         <StaticImage
-          src="../images/starMtn.jpg"
+          src="../../images/starMtn.jpg"
           alt="Star Mountain Hike"
           className={cn("opacity-100 block w-full h-full", style.image)}
           style={{
@@ -56,7 +56,7 @@ const AboutPhotos = () => {
 
       <div className={cn("relative w-full mx-3", style.container)}>
         <StaticImage
-          src="../images/weaversBend.jpg"
+          src="../../images/weaversBend.jpg"
           alt="Weavers Bend Horse Ride"
           className={cn("opacity-100 block w-full h-full", style.image)}
           style={{
