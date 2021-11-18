@@ -1,6 +1,6 @@
 import * as React from "react";
-import Layout from "../components/layout/layout";
-import ProjectsLayout from "../components/projectsLayout/projectsLayout";
+import Layout from "../components/layout";
+import ProjectsLayout from "../components/projectsLayout";
 
 const ChiFarms = () => {
   return (

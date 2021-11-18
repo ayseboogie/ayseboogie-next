@@ -1,5 +1,5 @@
 import * as React from "react";
-import ProjectsContainer from "../projectsContainer/projectsContainer";
+import ProjectsContainer from "./projectsContainer/projectsContainer";
 
 const ProjectsLayout = ({ about, platform, checkIt }) => {
   return (
@@ -27,6 +27,9 @@ const ProjectsLayout = ({ about, platform, checkIt }) => {
           </a>
         </main>
         <ProjectsContainer />
+        <div className="py-20 px-48">
+          <hr />
+        </div>
       </div>
     </>
   );
