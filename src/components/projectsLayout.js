@@ -6,16 +6,16 @@ const ProjectsLayout = ({ about, platform, checkIt }) => {
     <>
       <div className="m-auto font-sans text-lg">
         <main className="max-w-4xl m-auto">
-          <div className="text-center my-16">{about}</div>
+          <div className="text-center my-8 md:my-16">{about}</div>
           <hr />
-          <div className="flex my-16 w-full">
+          <div className="flex my-8 md:my-16 w-full px-4 md:px-0">
             <h2 className="flex-1 flex justify-start tracking-widest">
               Platform:
             </h2>
             <div className="flex-1 flex justify-end text-right">{platform}</div>
           </div>
           <a
-            className="flex my-16 w-full"
+            className="flex my-8 md:my-16 w-full px-4 md:px-0"
             href={checkIt}
             target="_blank"
             rel="noreferrer"
@@ -23,11 +23,13 @@ const ProjectsLayout = ({ about, platform, checkIt }) => {
             <h2 className="flex-1 flex justify-start tracking-widest">
               Check it Out:
             </h2>
-            <div className="flex-1 flex justify-end text-right">{checkIt}</div>
+            <div className="flex-1 flex flex-wrap justify-end text-right text-sm md:text-lg">
+              {checkIt}
+            </div>
           </a>
         </main>
         <ProjectsContainer />
-        <div className="py-20 px-48">
+        <div className="py-10 md:py-20 px-20 md:px-48">
           <hr />
         </div>
       </div>

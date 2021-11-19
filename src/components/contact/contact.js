@@ -2,12 +2,15 @@ import * as React from "react";
 
 const Contact = () => {
   return (
-    <section className="text-2xl px-48 py-16" id="contact">
+    <section
+      className="text-sm md:text-lg lg:text-2xl px-10 md:px-48 py-8 md:py-16"
+      id="contact"
+    >
       <main>
-        <h2 className="text-center tracking-widest">Contact</h2>
+        <h2 className="text-center tracking-widest pb-3 md:pb-0">Contact</h2>
 
         <form action="https://formspree.io/f/xpzkvoqb" method="POST">
-          <div className="my-6">
+          <div className="md:my-6">
             <input
               type="text"
               name="name"

@@ -8,9 +8,9 @@ const IndexPage = () => {
   return (
     <Layout pageTitle="Home">
       <div id="home" />
-      <div className="py-10">
+      <div className="py-6 md:py-10">
         <div
-          className="w-full text-center text-3xl tracking-widest px-32 py-16"
+          className="w-full text-center tracking-widest px-16 md:px-32 py-8 md:py-16 text-sm md:text-lg lg:text-2xl"
           style={{ backgroundColor: "#B76E79" }}
         >
           "It was a musical thing and you were supposed to sing or to dance
@@ -21,7 +21,7 @@ const IndexPage = () => {
 
       <AboutPhotos />
       <span id="about" />
-      <div className="w-full text-center text-2xl tracking-widest px-32 py-16">
+      <div className="w-full text-center text-sm md:text-lg lg:text-2xl tracking-widest px-16 md:px-32 py-6 md:py-16">
         I am a frontend engineer who enjoys taking on new challenges and
         continuously growing my skill set.
         <br />
@@ -36,9 +36,9 @@ const IndexPage = () => {
       <span id="contact" />
       <Contact />
 
-      <div className="py-10">
+      <div className="pb-10 md:py-10">
         <div
-          className="w-full text-center text-3xl tracking-widest px-32 py-16"
+          className="w-full text-center tracking-widest px-16 md:px-32 py-8 md:py-16 text-sm md:text-lg lg:text-2xl"
           style={{ backgroundColor: "#B76E79" }}
         >
           "We are the music makers, And we are the dreamers of dreams, Wandering
@@ -48,7 +48,7 @@ const IndexPage = () => {
           <br />- Arthur O'Shaugnessy
         </div>
       </div>
-      <hr className="pb-16 mx-48" />
+      <hr className="pb-8 md:pb-12 mx-20 md:mx-48" />
     </Layout>
   );
 };
