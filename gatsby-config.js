@@ -12,5 +12,6 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-anchor-links",
     "gatsby-plugin-fontawesome-css",
+    "gatsby-plugin-smoothscroll",
   ],
 };
