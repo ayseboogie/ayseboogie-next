@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import ProjectsContainer from "../components/projectsContainer/projectsContainer";
 import AboutPhotos from "../components/aboutPhotos/aboutPhotos";
 import Contact from "../components/contact/contact";
+import { StaticImage } from "gatsby-plugin-image";
 
 const IndexPage = () => {
   return (
@@ -21,6 +22,16 @@ const IndexPage = () => {
 
       <AboutPhotos />
       <span id="about" />
+      <div className="flex items-center justify-center mt-6">
+        <hr className="flex-1 flex-grow md:mx-16 lg:mx-24" />
+        <StaticImage
+          className="max-w-xs flex flex-1"
+          imgClassName="rounded-full"
+          src="../images/me.jpg"
+        />
+        <hr className="flex flex-grow md:mx-16 lg:mx-24" />
+      </div>
+
       <div className="w-full text-center text-sm md:text-lg lg:text-2xl tracking-widest px-16 md:px-32 py-6 md:py-16">
         I am a frontend engineer who enjoys taking on new challenges and
         continuously growing my skill set.
