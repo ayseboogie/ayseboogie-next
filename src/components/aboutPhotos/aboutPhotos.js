@@ -5,8 +5,8 @@ import cn from "classnames";
 
 const AboutPhotos = () => {
   return (
-    <div className="flex mx-3 pb-10">
-      <div className={cn("relative w-full mx-3", style.container)}>
+    <div className="flex mx-2 md:mx-3 md:pb-10">
+      <div className={cn("relative w-full mx-1 md:mx-3", style.container)}>
         <StaticImage
           src="../../images/atPups.jpg"
           alt="Appalachian Trail Puppies"
@@ -26,11 +26,11 @@ const AboutPhotos = () => {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <div className="text-white text-2xl">Motivated</div>
+          <div className="text-white md:text-2xl">Motivated</div>
         </div>
       </div>
 
-      <div className={cn("relative w-full mx-3", style.container)}>
+      <div className={cn("relative w-full mx-1 md:mx-3", style.container)}>
         <StaticImage
           src="../../images/starMtn.jpg"
           alt="Star Mountain Hike"
@@ -50,11 +50,11 @@ const AboutPhotos = () => {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <div className="text-white text-2xl">Passionate</div>
+          <div className="text-white md:text-2xl">Passionate</div>
         </div>
       </div>
 
-      <div className={cn("relative w-full mx-3", style.container)}>
+      <div className={cn("relative w-full mx-1 md:mx-3", style.container)}>
         <StaticImage
           src="../../images/weaversBend.jpg"
           alt="Weavers Bend Horse Ride"
@@ -74,7 +74,7 @@ const AboutPhotos = () => {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <div className="text-white text-2xl">Innovative</div>
+          <div className="text-white md:text-2xl">Innovative</div>
         </div>
       </div>
     </div>

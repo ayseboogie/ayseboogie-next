@@ -6,7 +6,7 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
-    <div className="w-full text-center text-3xl tracking-widest px-80 py-16 bg-gray-800">
+    <div className="w-full text-center text-3xl tracking-widest md:px-80 py-16 bg-gray-800">
       <a
         href="https://github.com/ayseboogie"
         target="_blank"
