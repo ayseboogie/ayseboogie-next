@@ -54,13 +54,17 @@ const Header = ({ pageTitle }) => {
           position: "relative",
           // This centers the other elements inside the hero component
           // placeItems: "center",
-          placeItems: "start",
+          // placeItems: "start",
+          justifyContent: "flex-end",
           display: "grid",
           paddingTop: "17px",
         }}
       >
-        <div className={cn("w-full text-center text-white", style.textBanner)}>
-          <nav>
+        <div
+          className=" text-center text-white"
+          // className={cn("w-full text-center text-white", style.textBanner)}
+        >
+          <nav className={style.textBanner}>
             <ul className="flex list-none justify-end tracking-widest text-white md:text-lg">
               <li className="pr-8">
                 <AnchorLink to="/" title="Home">
@@ -85,14 +89,24 @@ const Header = ({ pageTitle }) => {
             </ul>
           </nav>
         </div>
+      </div>
 
+      <div
+        className="opacity-100 absolute text-center"
+        style={{
+          transition: ".5 ease",
+          top: "13%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+      >
         <div
           className={cn(
-            "w-full text-center text-white text-3xl tracking-widest",
+            "text-white md:text-2xl px-2 md:px-4",
             style.textBanner
           )}
         >
-          <h1>{pageTitle}</h1>
+          {pageTitle}
         </div>
       </div>
     </div>
