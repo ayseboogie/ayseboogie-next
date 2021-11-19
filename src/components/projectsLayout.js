@@ -5,14 +5,18 @@ const ProjectsLayout = ({ about, platform, checkIt }) => {
   return (
     <>
       <div className="m-auto font-sans text-lg">
-        <main className="max-w-4xl m-auto">
-          <div className="text-center my-8 md:my-16">{about}</div>
+        <main className="max-w-2xl lg:max-w-4xl m-auto">
+          <div className="text-center my-8 md:my-16 text-base md:text-lg">
+            {about}
+          </div>
           <hr />
           <div className="flex my-8 md:my-16 w-full px-4 md:px-0">
-            <h2 className="flex-1 flex justify-start tracking-widest">
+            <h2 className="flex-1 flex justify-start tracking-widest text-base md:text-lg">
               Platform:
             </h2>
-            <div className="flex-1 flex justify-end text-right">{platform}</div>
+            <div className="flex-1 flex justify-end text-right text-sm md:text-lg">
+              {platform}
+            </div>
           </div>
           <a
             className="flex my-8 md:my-16 w-full px-4 md:px-0"
@@ -20,7 +24,7 @@ const ProjectsLayout = ({ about, platform, checkIt }) => {
             target="_blank"
             rel="noreferrer"
           >
-            <h2 className="flex-1 flex justify-start tracking-widest">
+            <h2 className="flex-1 flex justify-start tracking-widest text-base md:text-lg">
               Check it Out:
             </h2>
             <div className="flex-1 flex flex-wrap justify-end text-right text-sm md:text-lg">
