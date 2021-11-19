@@ -36,7 +36,7 @@ const ProjectsContainer = () => {
               transform: "translate(-50%, -50%)",
             }}
           >
-            <div className="text-white text-sm md:text-lg lg:text-2xl md:my-16">
+            <div className="text-white text-sm invisible md:visible md:text-lg lg:text-2xl md:my-16">
               Chi Farms
             </div>
             <div className="text-white text-sm md:text-base lg:text-xl underline">
@@ -73,7 +73,7 @@ const ProjectsContainer = () => {
               transform: "translate(-50%, -50%)",
             }}
           >
-            <div className="text-white text-sm md:text-lg lg:text-2xl md:my-16">
+            <div className="text-white text-sm invisible md:visible md:text-lg lg:text-2xl md:my-16">
               Lonely Planet Experiences
             </div>
             <div className="text-white text-sm md:text-base lg:text-xl underline">
