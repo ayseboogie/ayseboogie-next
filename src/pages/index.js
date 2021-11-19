@@ -4,14 +4,10 @@ import ProjectsContainer from "../components/projectsContainer/projectsContainer
 import AboutPhotos from "../components/aboutPhotos/aboutPhotos";
 import Contact from "../components/contact/contact";
 import { StaticImage } from "gatsby-plugin-image";
-import scrollTo from "gatsby-plugin-smoothscroll";
-import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const IndexPage = () => {
   return (
     <>
-      <div id="top" />
       <Layout pageTitle="Home">
         <div id="home" />
         <div className="py-6 md:py-10">
@@ -65,21 +61,6 @@ const IndexPage = () => {
           </div>
         </div>
         <hr className="pb-8 md:pb-12 mx-20 md:mx-48" />
-
-        <div className="flex w-full" id="scroll">
-          <button
-            className="flex-1 flex text-base text-white fixed right-0 bottom-0 w-12 h-12 mr-5 mb-5"
-            style={{
-              borderRadius: "50%",
-              backgroundColor: "#B76E79",
-              paddingLeft: "1.2rem",
-              paddingTop: "1rem",
-            }}
-            onClick={() => scrollTo("#top")}
-          >
-            <FontAwesomeIcon className="text-white" icon={faAngleUp} />
-          </button>
-        </div>
       </Layout>
     </>
   );
