@@ -3,7 +3,6 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import * as style from "./projectsContainer.module.css";
 import cn from "classnames";
-import resume from "../../static/resume.pdf";
 
 const ProjectsContainer = () => {
   return (

@@ -8,9 +8,8 @@ const Header = ({ pageTitle }) => {
   return (
     <div className="w-full" style={{ display: "grid" }}>
       {/* You can use a GatsbyImage component if the image is dynamic */}
-      {/* mobile header */}
+
       <StaticImage
-        className="md:invisible"
         loading="eager"
         objectFit="contain"
         style={{
@@ -24,26 +23,7 @@ const Header = ({ pageTitle }) => {
         // This is a presentational image, so the alt should be an empty string
         alt=""
         // Assisi, Perúgia, Itália by Bernardo Ferrari, via Unsplash
-        src={"../../images/bike.jpeg"}
-        formats={["auto", "webp", "avif"]}
-      />
-      {/*  desktp header */}
-      <StaticImage
-        className="invisible md:visible"
-        loading="eager"
-        // objectFit="contain"
-        style={{
-          gridArea: "1/1",
-          // You can set a maximum height for the image, if you wish.
-          maxHeight: "425px",
-        }}
-        layout="fullWidth"
-        // You can optionally force an aspect ratio for the generated image
-        aspectRatio={3 / 1}
-        // This is a presentational image, so the alt should be an empty string
-        alt=""
-        // Assisi, Perúgia, Itália by Bernardo Ferrari, via Unsplash
-        src={"../../images/bridge.jpeg"}
+        src={"../../images/rr.jpeg"}
         formats={["auto", "webp", "avif"]}
       />
 
