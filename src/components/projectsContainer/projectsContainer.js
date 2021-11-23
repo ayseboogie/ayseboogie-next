@@ -86,15 +86,6 @@ const ProjectsContainer = () => {
           </Link>
         </div>
       </div>
-      <a
-        className="mt-6 text-white tracking-widest text-sm md:text-lg lg:text-2xl pl-4"
-        href={resume}
-        target=" _blank"
-        rel=" noreferrer"
-        id=" email"
-      >
-        Resume
-      </a>
     </div>
   );
 };

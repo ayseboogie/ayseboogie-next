@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import Resume from "../static/resume.pdf";
 
 const Footer = () => {
   return (
@@ -30,6 +31,14 @@ const Footer = () => {
         className="px-6"
       >
         <FontAwesomeIcon className="text-white" icon={faTwitter} />
+      </a>
+      <a
+        href={Resume}
+        target="_blank"
+        rel="noreferrer"
+        className="px-6 mt-6 text-white tracking-widest text-sm md:text-lg lg:text-xl"
+      >
+        Resume
       </a>
       <br />
     </div>
