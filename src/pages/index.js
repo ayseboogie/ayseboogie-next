@@ -34,12 +34,14 @@ const IndexPage = () => {
         </div>
 
         <div className="w-full text-center text-sm md:text-lg lg:text-2xl tracking-widest px-16 md:px-32 py-6 md:py-16">
-          I am a frontend engineer who enjoys taking on new challenges and
-          continuously growing my skill set.
+          Hey, I'm Ayse.
+          <br /> I am a frontend engineer based out of Chattanooga, TN. I enjoy
+          taking on new challenges and continuously growing my skill set.
           <br />
           I am a React developer by day. I have built freelance sites with
           WordPress and Duda. I have upcoming projects in Wix and Shopify.
-          <br />I developed this website with Gatsby and Tailwind styling.{" "}
+          <br />I developed this website with React in a Gatsby framework and
+          Tailwind styling.
           <br />I received my computer science degree from UT Chattanooga.
         </div>
 
