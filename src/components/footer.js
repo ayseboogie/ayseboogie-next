@@ -7,7 +7,7 @@ import Resume from "../static/resume.pdf";
 
 const Footer = () => {
   return (
-    <div className="w-full text-center text-3xl tracking-widest lg:px-80 py-16 bg-gray-800">
+    <div className="w-full text-center text-3xl tracking-widest lg:px-80 py-16 bg-gray-800 flex items-center justify-center">
       <a
         href="https://github.com/ayseboogie"
         target="_blank"
@@ -36,7 +36,7 @@ const Footer = () => {
         href={Resume}
         target="_blank"
         rel="noreferrer"
-        className="px-6 mt-6 text-white tracking-widest text-sm md:text-lg lg:text-xl"
+        className="px-6 text-white tracking-widest text-sm md:text-lg lg:text-xl"
       >
         Resume
       </a>
