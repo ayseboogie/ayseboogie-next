@@ -11,7 +11,6 @@ const Header = ({ pageTitle }) => {
 
       <StaticImage
         loading="eager"
-        objectFit="contain"
         style={{
           gridArea: "1/1",
           // You can set a maximum height for the image, if you wish.
