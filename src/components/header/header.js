@@ -71,17 +71,16 @@ const Header = ({ pageTitle }) => {
       </div>
 
       <div
-        className="opacity-100 absolute text-center"
+        className={cn("opacity-100 absolute text-center", style.textTop)}
         style={{
           transition: ".5 ease",
-          top: "13%",
           left: "50%",
           transform: "translate(-50%, -50%)",
         }}
       >
         <div
           className={cn(
-            "text-white md:text-2xl px-2 md:px-4",
+            "text-white text-xl md:text-2xl lg:text-4xl px-2 md:px-4",
             style.textBanner
           )}
         >
