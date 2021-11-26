@@ -6,6 +6,7 @@ import Contact from "../components/contact/contact";
 import { StaticImage } from "gatsby-plugin-image";
 import { Helmet } from "react-helmet";
 import Seo from "../components/seo";
+import Triangle from "../images/triangle.png";
 
 const IndexPage = () => {
   return (
@@ -14,6 +15,7 @@ const IndexPage = () => {
         <meta charSet="utf-8" />
         <title>Ayse Site</title>
         <link rel="canonical" href="http://ayse.site" />
+        <link rel="icon" href={Triangle} />
       </Helmet>
       <Layout pageTitle="Home">
         <Seo
