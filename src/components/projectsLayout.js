@@ -6,7 +6,7 @@ const ProjectsLayout = ({ about, platform, checkIt }) => {
     <>
       <div className="m-auto font-sans text-lg">
         <main className="max-w-2xl lg:max-w-4xl m-auto">
-          <div className="text-center my-8 md:my-16 text-base md:text-lg">
+          <div className="text-center my-8 md:my-16 px-4 md:px-0 text-sm md:text-base lg:text-lg">
             {about}
           </div>
           <hr />
