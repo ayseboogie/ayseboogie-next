@@ -4,11 +4,22 @@ import ProjectsContainer from "../components/projectsContainer/projectsContainer
 import AboutPhotos from "../components/aboutPhotos/aboutPhotos";
 import Contact from "../components/contact/contact";
 import { StaticImage } from "gatsby-plugin-image";
+import { Helmet } from "react-helmet";
+import Seo from "../components/seo";
 
 const IndexPage = () => {
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Ayse Site</title>
+        <link rel="canonical" href="http://ayse.site" />
+      </Helmet>
       <Layout pageTitle="Home">
+        <Seo
+          title="Home"
+          description="Hey, I'm Ayse. I am a frontend engineer based out of Chattanooga, TN."
+        />
         <div id="home" />
         <div className="py-6 md:py-10">
           <div

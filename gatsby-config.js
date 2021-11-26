@@ -1,7 +1,10 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "ayseboogie",
+    siteUrl: "https://www.ayse.site",
+    url: "https://www.ayse.site",
+    title: "Ayse Site",
+    description:
+      "Hey, I'm Ayse. I am a frontend engineer based out of Chattanooga, TN.",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
