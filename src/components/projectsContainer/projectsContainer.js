@@ -8,9 +8,10 @@ const ProjectsContainer = () => {
   return (
     <div className="w-full bg-gray-800 text-2xl tracking-widest pb-10 py-8 md:py-16">
       <div className="flex flex-wrap justify-center text-center lg:px-32">
+        {/* 0 */}
         <div
           className={cn(
-            "relative w-3/4 md:w-1/3 mx-3",
+            "relative w-3/4 md:w-1/3 mx-3 lg:py-2",
             style.projectsContainer
           )}
         >
@@ -45,9 +46,10 @@ const ProjectsContainer = () => {
           </Link>
         </div>
 
+        {/* 1 */}
         <div
           className={cn(
-            "relative w-3/4 md:w-1/3 mx-3",
+            "relative w-3/4 md:w-1/3 mx-3 lg:py-2",
             style.projectsContainer
           )}
         >
@@ -78,6 +80,47 @@ const ProjectsContainer = () => {
           >
             <div className="text-white text-sm invisible lg:visible md:text-lg lg:text-2xl md:my-16">
               Lonely Planet Experiences
+            </div>
+            <div className="text-white text-sm md:text-base lg:text-xl underline">
+              details
+            </div>
+          </Link>
+        </div>
+
+        {/* 2 */}
+        <div
+          className={cn(
+            "relative w-3/4 md:w-1/3 mx-3 lg:py-2",
+            style.projectsContainer
+          )}
+        >
+          <Link
+            to="/experiences"
+            className="text-white whitespace-nowrap lg:hidden text-sm"
+          >
+            DOM Traversal
+          </Link>
+          <StaticImage
+            src="../../images/dom.png"
+            alt="DOM Traversal"
+            className={cn("w-full opacity-100 block rounded-md", style.image)}
+            style={{
+              transition: ".5s ease",
+              backfaceVisibility: "hidden",
+            }}
+          />
+          <Link
+            to="/dom"
+            className={cn("opacity-0 absolute text-center", style.projectsText)}
+            style={{
+              transition: ".5 ease",
+              top: "27%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+            }}
+          >
+            <div className="text-white text-sm invisible lg:visible md:text-lg lg:text-2xl md:my-16">
+              DOM Traversal
             </div>
             <div className="text-white text-sm md:text-base lg:text-xl underline">
               details

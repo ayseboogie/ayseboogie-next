@@ -23,6 +23,7 @@ const IndexPage = () => {
           description="Hey, I'm Ayse. I am a frontend engineer based out of Chattanooga, TN."
         />
         <div id="home" />
+
         <div className="py-6 md:py-10">
           <div
             className="w-full text-center tracking-widest px-16 md:px-32 py-8 md:py-16 text-sm md:text-lg lg:text-2xl"
@@ -42,6 +43,7 @@ const IndexPage = () => {
             className="max-w-xs flex flex-1"
             imgClassName="rounded-full"
             src="../images/me.jpg"
+            alt="Ayse"
           />
           <hr className="flex flex-grow md:mx-16 lg:mx-24" />
         </div>
@@ -56,6 +58,10 @@ const IndexPage = () => {
           <br />I developed this website with React in a Gatsby framework and
           Tailwind styling.
           <br />I received my computer science degree from UT Chattanooga.
+          <br />
+          <br />
+          Other than staring at a computer screen, some of the things I enjoy
+          include bicycling, paddleboarding, hiking, traveling, and scrabble.
         </div>
 
         <span id="portfolio" />

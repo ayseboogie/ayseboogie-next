@@ -12,17 +12,17 @@
     }
 }
 
-@media (min-width: 800px) {
-    .textTop {
-        top: 16%;
-    }
-}
+/*@media (min-width: 800px) {*/
+/*    .textTop {*/
+/*        top: 14%;*/
+/*    }*/
+/*}*/
 
-@media (min-width: 1024px) {
-    .textTop {
-        top: 14%;
-    }
-}
+/*@media (min-width: 1024px) {*/
+/*    .textTop {*/
+/*        top: 14%;*/
+/*    }*/
+/*}*/
 
 @media (min-width: 1100px) {
     .textTop {
