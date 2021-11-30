@@ -33,23 +33,77 @@ export class DomTraversal extends Component {
           id: 2,
           label: "B",
           child: [
-            { id: 5, label: "E", child: [] },
-            { id: 6, label: "F", child: [] },
+            { id: 5, label: "E", child: [{ id: 11, label: "K", child: [] }] },
             {
-              id: 7,
-              label: "G",
-              child: [],
+              id: 6,
+              label: "F",
+              child: [
+                { id: 12, label: "L", child: [] },
+                {
+                  id: 13,
+                  label: "M",
+                  child: [
+                    {
+                      id: 7,
+                      label: "T",
+                      child: [{ id: 12, label: "Y", child: [] }],
+                    },
+                  ],
+                },
+              ],
             },
           ],
         },
-        { id: 3, label: "C", child: [] },
+        {
+          id: 3,
+          label: "C",
+          child: [
+            { id: 7, label: "G", child: [] },
+            {
+              id: 8,
+              label: "H",
+              child: [
+                {
+                  id: 1,
+                  label: "N",
+                  child: [
+                    { id: 8, label: "U", child: [] },
+                    { id: 9, label: "V", child: [] },
+                  ],
+                },
+              ],
+            },
+            {
+              id: 9,
+              label: "I",
+              child: [
+                { id: 2, label: "O", child: [] },
+                { id: 3, label: "P", child: [] },
+              ],
+            },
+            { id: 11, label: "X", child: [] },
+          ],
+        },
         {
           id: 4,
           label: "D",
           child: [
-            { id: 8, label: "H", child: [] },
-            { id: 9, label: "I", child: [] },
+            {
+              id: 10,
+              label: "J",
+              child: [
+                { id: 4, label: "Q", child: [] },
+                { id: 5, label: "R", child: [] },
+                { id: 6, label: "S", child: [] },
+                { id: 10, label: "W", child: [] },
+              ],
+            },
           ],
+        },
+        {
+          id: 13,
+          label: "Z",
+          child: [],
         },
       ],
     };
