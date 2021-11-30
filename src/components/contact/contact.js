@@ -17,7 +17,7 @@ const Contact = () => {
               id="full-name"
               placeholder="First and Last"
               aria-label="Your name"
-              required="true"
+              required={true}
               style={{
                 appearance: "none",
                 border: "none",
@@ -35,7 +35,7 @@ const Contact = () => {
               name="_replyto"
               placeholder="Your email"
               aria-label="Your email"
-              required="true"
+              required={true}
               style={{
                 border: "1px solid var(--mid-gray-color)",
                 borderRadius: "5px",
@@ -52,7 +52,7 @@ const Contact = () => {
               placeholder="Your message"
               rows="4"
               aria-label="Your message"
-              required="true"
+              required={true}
               style={{
                 border: "1px solid var(--mid-gray-color)",
                 borderRadius: "5px",
