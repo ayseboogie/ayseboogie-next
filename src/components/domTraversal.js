@@ -5,7 +5,9 @@ export class DomTraversal extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      input: "",
+    };
   }
 
   buttClick() {
@@ -17,11 +19,16 @@ export class DomTraversal extends Component {
     console.log("2 ", h1);
     const p = document.getElementsByTagName("p")[0];
     console.log("3 ", p);
-    const ul = document.getElementsByTagName("ul")[0];
-    console.log("4 ", ul);
-    const ulKidz = ul.childNodes;
-    console.log("5 ", ulKidz);
-    ul.firstElementChild.style.background = "yellow";
+    // const ul = document.getElementsByTagName("ul")[0];
+    // console.log("4 ", ul);
+    // const ulKidz = ul.childNodes;
+    // console.log("5 ", ulKidz);
+    // ul.firstElementChild.style.background = "yellow";
+    const td = document.getElementsByTagName("td")[0];
+    console.log("4 ", td);
+    const tdKidz = td.childNodes;
+    console.log("5 ", tdKidz);
+    td.firstElementChild.style.background = "yellow";
   }
 
   render() {
@@ -108,20 +115,31 @@ export class DomTraversal extends Component {
       ],
     };
 
+    function handleClick() {
+      search(tree, textInput.current.value);
+    }
+
+    const matchList = [];
     const search = (tree, target) => {
-      if (tree.id === target) {
-        // return
-        console.log("tree label", tree.label);
+      if (tree.id == target) {
+        matchList.push(tree.label);
+        // console.log(matchList);
+        alert(matchList);
+        if (matchList.length === 2) {
+          // alert(matchList);
+        }
       }
       for (const child of tree.child) {
         const res = search(child, target);
-
-        if (res) {
-          // return res;
-          console.log("res", res);
-        }
+        // if (res) {
+        // return res;
+        // console.log("res", res);
+        // }
       }
+      return matchList;
     };
+
+    let textInput = React.createRef();
 
     return (
       <html lang="en">
@@ -130,22 +148,33 @@ export class DomTraversal extends Component {
         </head>
 
         <body style={{ textAlign: "center" }}>
+          <input
+            style={{ textAlign: "center" }}
+            ref={textInput}
+            type="text"
+            placeholder=" Type a number..."
+          />
           <button
-            type="button"
+            type=" button"
+            onClick={handleClick}
             style={{
-              overflow: "hidden",
+              overflow: " hidden",
               padding: 10,
-              cursor: "pointer",
+              cursor: " pointer",
               borderRadius: 25,
               backgroundColor: "#B76E79",
               letterSpacing: 0.1 + "em",
             }}
-            onClick={search(tree, 7)}
+            className=" icon"
           >
-            test
+            Submit
           </button>
 
           <br />
+          <div style={{ padding: 10 + "px" }}>
+            Enter a number between 1 and 13 to traverse the node tree and see
+            your letters
+          </div>
           <br />
           <button
             type="button"
@@ -169,6 +198,12 @@ export class DomTraversal extends Component {
             information.
           </p>
           <h2>Types of Sharks</h2>
+          <table>
+            <td>
+              <tr>Hammerhead</tr>
+              <tr>Tiger</tr>
+            </td>
+          </table>
           <ul>
             <li>Hammerhead</li>
             <li>Tiger</li>
