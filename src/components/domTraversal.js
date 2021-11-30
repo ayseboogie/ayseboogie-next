@@ -10,27 +10,6 @@ export class DomTraversal extends Component {
     };
   }
 
-  buttClick() {
-    const html = document.documentElement;
-
-    console.log("0 ", html);
-
-    const h1 = html.getElementsByTagName("h1")[0];
-    console.log("2 ", h1);
-    const p = document.getElementsByTagName("p")[0];
-    console.log("3 ", p);
-    // const ul = document.getElementsByTagName("ul")[0];
-    // console.log("4 ", ul);
-    // const ulKidz = ul.childNodes;
-    // console.log("5 ", ulKidz);
-    // ul.firstElementChild.style.background = "yellow";
-    const td = document.getElementsByTagName("td")[0];
-    console.log("4 ", td);
-    const tdKidz = td.childNodes;
-    console.log("5 ", tdKidz);
-    td.firstElementChild.style.background = "yellow";
-  }
-
   render() {
     const tree = {
       id: 1,
@@ -141,10 +120,28 @@ export class DomTraversal extends Component {
 
     let textInput = React.createRef();
 
+    let numb = -1;
+
+    function nextFact() {
+      const td = document.getElementsByTagName("td")[0];
+
+      const tdKidz = td.childNodes;
+      console.log("5 ", tdKidz.length);
+      numb += 1;
+      console.log("4 ", numb);
+      const nextFactButton = document.getElementsByTagName("button")[1];
+      if (numb < tdKidz.length) {
+        td.childNodes[numb].style.color = "black";
+      }
+      if (numb == tdKidz.length - 1) {
+        nextFactButton.style.backgroundColor = "grey";
+      }
+    }
+
     return (
       <html lang="en">
         <head>
-          <title>Learning About Nodes</title>
+          <title>DOM</title>
         </head>
 
         <body style={{ textAlign: "center" }}>
@@ -169,12 +166,67 @@ export class DomTraversal extends Component {
           >
             Submit
           </button>
-
           <br />
           <div style={{ padding: 10 + "px" }}>
             Enter a number between 1 and 13 to traverse the node tree and see
             your letters
           </div>
+          <br />
+          <br />
+
+          <hr />
+          <h1
+            style={{
+              color: "green",
+              paddingTop: 10 + "px",
+              fontSize: 24 + "px",
+            }}
+          >
+            Salvador Dalí is my favorite visual artist.
+          </h1>
+          <h2 style={{ paddingBottom: 1.75 + "em" }}>Fun Facts</h2>
+          <table
+            style={{
+              textAlign: "center",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          >
+            <td
+              style={{
+                color: "white",
+                paddingTop: 10 + "px",
+              }}
+            >
+              <tr>
+                <div style={{ paddingBottom: 1.25 + "em" }}>
+                  He was friends with one of my favorite musical artists, Alice
+                  Cooper
+                </div>
+              </tr>
+              <tr>
+                <div style={{ paddingBottom: 1.25 + "em" }}>
+                  We were both born on May 11th
+                </div>
+              </tr>
+              <tr>
+                <div style={{ paddingBottom: 1.25 + "em" }}>
+                  He had an ocelot named Babou
+                </div>
+              </tr>
+              <tr>
+                <div style={{ paddingBottom: 1.25 + "em" }}>
+                  Dalí and his wife lived in America for 8 years
+                </div>
+              </tr>
+              <tr>
+                <div style={{ paddingBottom: 1.25 + "em" }}>
+                  His trademark mustache was still intact, since his death in
+                  1989, when his body was exhumed in 2017
+                </div>
+              </tr>
+            </td>
+          </table>
           <br />
           <button
             type="button"
@@ -186,29 +238,11 @@ export class DomTraversal extends Component {
               backgroundColor: "#B76E79",
               letterSpacing: 0.1 + "em",
             }}
-            onClick={this.buttClick}
+            onClick={nextFact}
           >
-            Refresh Page
+            Next Fact
           </button>
           <br />
-          <h1 style={{ color: "red" }}>Shark World</h1>
-          <h2 id="app">app</h2>
-          <p>
-            The world's leading source on <strong>shark</strong> related
-            information.
-          </p>
-          <h2>Types of Sharks</h2>
-          <table>
-            <td>
-              <tr>Hammerhead</tr>
-              <tr>Tiger</tr>
-            </td>
-          </table>
-          <ul>
-            <li>Hammerhead</li>
-            <li>Tiger</li>
-            <li>Great White</li>
-          </ul>
         </body>
       </html>
     );

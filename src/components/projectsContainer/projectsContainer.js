@@ -11,7 +11,7 @@ const ProjectsContainer = () => {
         {/* 0 */}
         <div
           className={cn(
-            "relative w-3/4 md:w-1/3 mx-3",
+            "relative w-3/4 md:w-1/3 mx-3 lg:py-2",
             style.projectsContainer
           )}
         >
@@ -49,7 +49,7 @@ const ProjectsContainer = () => {
         {/* 1 */}
         <div
           className={cn(
-            "relative w-3/4 md:w-1/3 mx-3",
+            "relative w-3/4 md:w-1/3 mx-3 lg:py-2",
             style.projectsContainer
           )}
         >
@@ -90,7 +90,7 @@ const ProjectsContainer = () => {
         {/* 2 */}
         <div
           className={cn(
-            "relative w-3/4 md:w-1/3 mx-3",
+            "relative w-3/4 md:w-1/3 mx-3 lg:py-2",
             style.projectsContainer
           )}
         >
@@ -101,8 +101,8 @@ const ProjectsContainer = () => {
             DOM Traversal
           </Link>
           <StaticImage
-            src="../../images/lpExperiences.png"
-            alt="LP Experiences"
+            src="../../images/dom.png"
+            alt="DOM Traversal"
             className={cn("w-full opacity-100 block rounded-md", style.image)}
             style={{
               transition: ".5s ease",
@@ -120,7 +120,7 @@ const ProjectsContainer = () => {
             }}
           >
             <div className="text-white text-sm invisible lg:visible md:text-lg lg:text-2xl md:my-16">
-              Lonely Planet Experiences
+              DOM Traversal
             </div>
             <div className="text-white text-sm md:text-base lg:text-xl underline">
               details

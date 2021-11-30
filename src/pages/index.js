@@ -7,7 +7,6 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Helmet } from "react-helmet";
 import Seo from "../components/seo";
 import Triangle from "../images/triangle.png";
-import DomTraversal from "../components/domTraversal";
 
 const IndexPage = () => {
   return (
@@ -24,10 +23,6 @@ const IndexPage = () => {
           description="Hey, I'm Ayse. I am a frontend engineer based out of Chattanooga, TN."
         />
         <div id="home" />
-        <div className="py-6 md:py-10">
-          dom traversal
-          <DomTraversal />
-        </div>
 
         <div className="py-6 md:py-10">
           <div
