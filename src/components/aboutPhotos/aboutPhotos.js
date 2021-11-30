@@ -74,7 +74,7 @@ const AboutPhotos = () => {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <div className="text-white md:text-2xl">Innovative</div>
+          <div className="text-white md:text-2xl">Dedicated</div>
         </div>
       </div>
     </div>
