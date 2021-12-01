@@ -55,12 +55,12 @@ const IndexPage = () => {
           <br />
           I am a React developer by day. I have built freelance sites with
           WordPress and Duda. I have upcoming projects in Wix and Shopify.
-          <br />I developed this website with React in a Gatsby framework and
+          <br />I developed this website with React in a Gatsby framework using
           Tailwind styling.
           <br />I received my computer science degree from UT Chattanooga.
           <br />
           <br />
-          Other than staring at a computer screen, some of the things I enjoy
+          Other than staring at a computer screen, a few of the things I enjoy
           include bicycling, paddleboarding, hiking, traveling, and scrabble.
         </div>
 
