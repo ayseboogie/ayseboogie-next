@@ -126,9 +126,7 @@ export class DomTraversal extends Component {
       const td = document.getElementsByTagName("td")[0];
 
       const tdKidz = td.childNodes;
-      console.log("5 ", tdKidz.length);
       numb += 1;
-      console.log("4 ", numb);
       const nextFactButton = document.getElementsByTagName("button")[1];
       if (numb < tdKidz.length) {
         td.childNodes[numb].style.color = "black";
