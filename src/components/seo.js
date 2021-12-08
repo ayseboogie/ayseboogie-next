@@ -36,8 +36,7 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
-      title={defaultTitle}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      title={title}
       meta={[
         {
           name: `description`,
