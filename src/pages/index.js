@@ -16,11 +16,12 @@ const IndexPage = () => {
         <title>Ayse Site</title>
         <link rel="canonical" href="http://ayse.site" />
         <link rel="icon" href={Triangle} />
+        <meta name="Ayse Stinnett" content="Ayse Stinnett's personal website" />
       </Helmet>
       <Layout pageTitle="Home">
         <Seo
           title="Home"
-          description="Hey, I'm Ayse. I am a frontend engineer based out of Chattanooga, TN."
+          description="Hey, I'm Ayse Stinnett. I am a frontend focused engineer based out of Chattanooga, TN."
         />
         <div id="home" />
 
@@ -49,9 +50,10 @@ const IndexPage = () => {
         </div>
 
         <div className="w-full text-center text-sm md:text-lg lg:text-2xl tracking-widest px-16 md:px-32 py-6 md:py-16">
-          Hey, I'm Ayse.
-          <br /> I am a frontend engineer based out of Chattanooga, TN. I enjoy
-          taking on new challenges and continuously growing my skill set.
+          <h1>Hey, I'm Ayse.</h1>
+          <p>I am a frontend engineer based out of Chattanooga, TN.</p>
+          I enjoy taking on new challenges and continuously growing my skill
+          set.
           <br />
           I am a React developer by day. I have built freelance sites with
           WordPress and Duda. I have upcoming projects in Wix and Shopify.
