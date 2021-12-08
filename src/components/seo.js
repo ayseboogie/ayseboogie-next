@@ -21,6 +21,7 @@ function SEO({ description, lang, meta, title }) {
       }
     `
   );
+
   const image = site.siteMetadata?.image;
   const siteUrl = site.siteMetadata.siteUrl;
   const url = site.siteMetadata.url;
@@ -34,7 +35,7 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={defaultTitle}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
@@ -47,7 +48,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: defaultTitle,
         },
         {
           property: `og:description`,
@@ -75,7 +76,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: defaultTitle,
         },
         {
           name: `twitter:description`,
@@ -87,17 +88,19 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: "en",
   meta: [],
-  description: ``,
+  description: "",
+  title: "",
+  image: "",
 };
 
 SEO.propTypes = {
-  description: PropTypes.string,
-  image: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default SEO;
