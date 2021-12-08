@@ -13,7 +13,7 @@ const IndexPage = () => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Ayse Site</title>
+        <title>Home</title>
         <link rel="canonical" href="http://ayse.site" />
         <link rel="icon" href={Triangle} />
         <meta name="Ayse Stinnett" content="Ayse Stinnett's personal website" />
