@@ -1,81 +1,103 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
-import { useLocation } from "@reach/router";
 import { useStaticQuery, graphql } from "gatsby";
 
-const SEO = ({ title, description }) => {
-  const { pathname } = useLocation();
-  // const { site } = useStaticQuery(query);
-
-  const defaultTitle = "Ayse Site";
-  const defaultDescription =
-    "Hey, I'm Ayse. I am a frontend engineer based out of Chattanooga, TN.";
-  const siteUrl = "https://www.ayse.site";
-  const twitterUsername = "@AyseStinnett";
-
-  const seo = {
-    title: title || defaultTitle,
-    description: description || defaultDescription,
-    url: `${siteUrl}${pathname}`,
-  };
+function SEO({ description, lang, meta, title }) {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            siteUrl
+            url
+            title
+            description
+            author
+            keywords
+            image
+          }
+        }
+      }
+    `
+  );
+  const image = site.siteMetadata?.image;
+  const siteUrl = site.siteMetadata.siteUrl;
+  const url = site.siteMetadata.url;
+  const defaultTitle = site.siteMetadata?.title;
+  const metaDescription = description || site.siteMetadata.description;
+  const author = site.siteMetadata?.author;
+  const keywords = site.siteMetadata.keywords;
 
   return (
-    <Helmet title={seo.title}>
-      <meta name="description" content={seo.description} />
-      {/*<meta name="image" content={seo.image} />*/}
-
-      {seo.url && <meta property="og:url" content={seo.url} />}
-
-      {seo.title && <meta property="og:title" content={seo.title} />}
-
-      {seo.description && (
-        <meta property="og:description" content={seo.description} />
-      )}
-
-      {seo.image && <meta property="og:image" content={seo.image} />}
-
-      <meta name="twitter:card" content="summary_large_image" />
-
-      {twitterUsername && (
-        <meta name="twitter:creator" content={twitterUsername} />
-      )}
-
-      {seo.title && <meta name="twitter:title" content={seo.title} />}
-
-      {seo.description && (
-        <meta name="twitter:description" content={seo.description} />
-      )}
-
-      {seo.image && <meta name="twitter:image" content={seo.image} />}
-    </Helmet>
+    <Helmet
+      htmlAttributes={{
+        lang,
+      }}
+      title={title}
+      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      meta={[
+        {
+          name: `description`,
+          content: metaDescription,
+        },
+        {
+          name: `keywords`,
+          content: keywords,
+        },
+        {
+          property: `og:title`,
+          content: title,
+        },
+        {
+          property: `og:description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: image,
+        },
+        {
+          name: `twitter:card`,
+          content: `summary`,
+        },
+        {
+          name: `twitter:image`,
+          content: image,
+        },
+        {
+          name: `twitter:creator`,
+          content: `@AyseStinnett`,
+        },
+        {
+          name: `twitter:title`,
+          content: title,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
+        },
+      ].concat(meta)}
+    />
   );
+}
+
+SEO.defaultProps = {
+  lang: `en`,
+  meta: [],
+  description: ``,
+};
+
+SEO.propTypes = {
+  description: PropTypes.string,
+  image: PropTypes.string,
+  lang: PropTypes.string,
+  meta: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string.isRequired,
 };
 
 export default SEO;
-
-SEO.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.string,
-};
-
-SEO.defaultProps = {
-  title: null,
-  description: null,
-  image: null,
-};
-
-// const query = graphql`
-//   query SEO {
-//     site {
-//       siteMetadata {
-//         defaultTitle: title
-//         defaultDescription: description
-//         siteUrl: url
-//         defaultImage: image
-//         twitterUsername
-//       }
-//     }
-//   }
-// `;

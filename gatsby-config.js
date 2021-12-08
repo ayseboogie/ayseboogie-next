@@ -4,7 +4,10 @@ module.exports = {
     url: "https://www.ayse.site",
     title: "Ayse Site",
     description:
-      "Hey, I'm Ayse. I am a frontend engineer based out of Chattanooga, TN.",
+      "Hey, I'm Ayse Stinnett. I am a frontend engineer based out of Chattanooga, TN.",
+    author: `Ayse Stinnett`,
+    keywords: `Ayse Stinnett, Ayse Site, React, Engineer, Web Developer`,
+    image: `src/images/me.jpg`,
   },
   plugins: [
     "gatsby-plugin-react-helmet",
