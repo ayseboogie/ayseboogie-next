@@ -19,5 +19,14 @@ module.exports = {
     "gatsby-plugin-anchor-links",
     "gatsby-plugin-fontawesome-css",
     "gatsby-plugin-smoothscroll",
+    "gatsby-plugin-robots-txt",
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.ayse.site",
+        sitemap: "https://www.ayse.site/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
   ],
 };
