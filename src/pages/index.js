@@ -52,7 +52,7 @@ const IndexPage = () => {
 
         <div className="w-full text-center text-sm md:text-lg lg:text-2xl tracking-widest px-16 md:px-32 py-6 md:py-16">
           <h1>Hey, I'm Ayse.</h1>
-          <p>I am a frontend engineer based out of Chattanooga, TN.</p>
+          <p>I am a frontend engineer with a passion for web development.</p>
           I enjoy taking on new challenges and continuously growing my skill
           set.
           <br />
@@ -60,11 +60,13 @@ const IndexPage = () => {
           WordPress and Duda. I have upcoming projects in Wix and Shopify.
           <br />I developed this website with React in a Gatsby framework using
           Tailwind styling.
-          <br />I received my computer science degree from UT Chattanooga.
+          <br />I received my computer science degree, with a business
+          administration minor, from UT Chattanooga.
           <br />
           <br />
           Other than staring at a computer screen, a few of the things I enjoy
-          include bicycling, paddleboarding, hiking, traveling, and scrabble.
+          include bicycling, paddleboarding, hiking, snowboarding, traveling,
+          and scrabble.
         </div>
 
         <span id="portfolio" />
