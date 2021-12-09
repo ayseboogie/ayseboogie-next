@@ -20,6 +20,7 @@ const IndexPage = () => {
       </Helmet>
       <Layout pageTitle="Home">
         <Seo
+          lang="en"
           title="Home"
           description="Hey, I'm Ayse Stinnett. I am a frontend focused engineer based out of Chattanooga, TN."
         />
