@@ -1,7 +1,7 @@
 import * as React from "react";
+import { Helmet } from "react-helmet";
 import Layout from "../components/layout";
 import ProjectsLayout from "../components/projectsLayout";
-import { Helmet } from "react-helmet";
 
 const Experiences = () => {
   return (

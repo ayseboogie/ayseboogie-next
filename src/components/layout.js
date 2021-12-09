@@ -1,9 +1,9 @@
 import * as React from "react";
-import Header from "./header/header";
-import Footer from "./footer";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
+import Header from "./header/header";
+import Footer from "./footer";
 
 const Layout = ({ pageTitle, children }) => {
   return (

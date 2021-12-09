@@ -1,9 +1,9 @@
 import * as React from "react";
-import Layout from "../components/layout";
-import ProjectsLayout from "../components/projectsLayout";
 import { Helmet } from "react-helmet";
-import DomTraversal from "../components/domTraversal";
 import { StaticImage } from "gatsby-plugin-image";
+import Layout from "../components/layout";
+import DomTraversal from "../components/domTraversal";
+import ProjectsLayout from "../components/projectsLayout";
 
 const Experiences = () => {
   return (

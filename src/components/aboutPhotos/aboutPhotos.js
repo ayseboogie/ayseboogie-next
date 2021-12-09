@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import * as style from "./aboutPhotos.module.css";
 import cn from "classnames";
+import * as style from "./aboutPhotos.module.css";
 
 const AboutPhotos = () => {
   return (

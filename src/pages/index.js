@@ -1,12 +1,12 @@
 import * as React from "react";
-import Layout from "../components/layout";
-import ProjectsContainer from "../components/projectsContainer/projectsContainer";
-import AboutPhotos from "../components/aboutPhotos/aboutPhotos";
-import Contact from "../components/contact/contact";
-import { StaticImage } from "gatsby-plugin-image";
 import { Helmet } from "react-helmet";
+import { StaticImage } from "gatsby-plugin-image";
+import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Triangle from "../images/triangle.png";
+import AboutPhotos from "../components/aboutPhotos/aboutPhotos";
+import ProjectsContainer from "../components/projectsContainer/projectsContainer";
+import Contact from "../components/contact";
 
 const IndexPage = () => {
   return (

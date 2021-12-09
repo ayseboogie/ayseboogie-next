@@ -1,5 +1,5 @@
-import { Component } from "react";
 import * as React from "react";
+import { Component } from "react";
 
 export class DomTraversal extends Component {
   constructor(props) {
@@ -112,7 +112,6 @@ export class DomTraversal extends Component {
         const res = search(child, target);
         // if (res) {
         // return res;
-        // console.log("res", res);
         // }
       }
       return matchList;
