@@ -1,8 +1,8 @@
 import * as React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
-import * as style from "./projectsContainer.module.css";
+import { StaticImage } from "gatsby-plugin-image";
 import cn from "classnames";
+import * as style from "./projectsContainer.module.css";
 
 const ProjectsContainer = () => {
   return (
