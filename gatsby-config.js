@@ -3,11 +3,10 @@ module.exports = {
     siteUrl: "https://ayse.site",
     url: "https://ayse.site",
     title: "Ayse Site",
-    description:
-      "Hey, I'm Ayse Stinnett. I am a frontend engineer based out of Chattanooga, TN.",
+    description: "I am a frontend engineer with a passion for web development.",
     author: "Ayse Stinnett",
     keywords: "Ayse Stinnett, Ayse Site, React, Engineer, Web Developer",
-    image: ".src/images/me.jpg",
+    image: "./src/images/ayseSite.png",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
