@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
-import Image from "../images/ayseSite.png";
 
 //img isn't working
 const SEO = ({ description, lang, title }) => {
@@ -16,14 +15,13 @@ const SEO = ({ description, lang, title }) => {
             description
             author
             keywords
-            image
           }
         }
       }
     `
   );
 
-  const image = site.siteMetadata?.image;
+  const image = "https://www.dropbox.com/s/9yhu1avur3bs97v/ayseSite.png?dl=0";
   const url = site.siteMetadata.url;
   const defaultTitle = site.siteMetadata?.title;
   const metaDescription = description || site.siteMetadata.description;
