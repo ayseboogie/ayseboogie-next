@@ -18,6 +18,7 @@ const IndexPage = () => {
         <link rel="canonical" href="http://ayse.site" />
         <link rel="icon" href={Triangle} />
         <meta property="og:image" content={MI} />
+        <meta property="twitter:image" content={MI} />
       </Helmet>
       <Layout pageTitle="Home">
         <Seo lang="en" title="Home" />

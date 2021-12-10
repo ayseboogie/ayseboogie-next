@@ -2,7 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-//img isn't working
 const SEO = ({ lang, title }) => {
   const { site } = useStaticQuery(
     graphql`
@@ -25,8 +24,6 @@ const SEO = ({ lang, title }) => {
   const defaultTitle = site.siteMetadata?.title;
   const metaDescription = site.siteMetadata.description;
   const author = site.siteMetadata.author;
-  // const imageHC = "https://ayse.site/image";
-  // const image = site.siteMetadata.image;
   const keywords = site.siteMetadata.keywords;
   const meta = [];
 
@@ -69,21 +66,9 @@ const SEO = ({ lang, title }) => {
           property: `og:type`,
           content: `website`,
         },
-        // {
-        //   property: `og:image`,
-        //   content: image,
-        // },
-        // {
-        //   property: `og:image:secure_url`,
-        //   content: `https://ayse.site/image`,
-        // },
         {
           name: `twitter:card`,
           content: `summary_large_image`,
-        },
-        {
-          name: `twitter:image`,
-          content: `https://ayse.site/image`,
         },
         {
           name: `twitter:creator`,
