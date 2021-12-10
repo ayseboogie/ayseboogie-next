@@ -60,7 +60,7 @@ const SEO = ({ description, lang, title }) => {
           content: `website`,
         },
         {
-          property: `og:image:secure`,
+          property: `og:image:url`,
           content: image,
         },
         {
