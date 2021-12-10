@@ -80,7 +80,7 @@ const SEO = ({ lang, title }) => {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:image`,
@@ -88,6 +88,10 @@ const SEO = ({ lang, title }) => {
         },
         {
           name: `twitter:creator`,
+          content: `@AyseStinnett`,
+        },
+        {
+          name: `twitter:site`,
           content: `@AyseStinnett`,
         },
         {
