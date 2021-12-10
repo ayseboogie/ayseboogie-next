@@ -6,7 +6,6 @@ module.exports = {
     description: "I am a frontend engineer with a passion for web development.",
     author: "Ayse Stinnett",
     keywords: "Ayse Stinnett, Ayse Site, React, Engineer, Web Developer",
-    image: "https://ayse.site/image",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
