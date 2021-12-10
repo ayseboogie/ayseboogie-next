@@ -21,7 +21,7 @@ const SEO = ({ description, lang, title }) => {
     `
   );
 
-  const image = "https://ayse.site/image";
+  const image = "ayse.site/image";
   const url = site.siteMetadata.url;
   const defaultTitle = site.siteMetadata?.title;
   const metaDescription = description || site.siteMetadata.description;
