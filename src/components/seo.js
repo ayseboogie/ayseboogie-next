@@ -15,7 +15,7 @@ const SEO = ({ lang, title }) => {
             description
             author
             keywords
-            image
+            // image
           }
         }
       }
@@ -26,8 +26,8 @@ const SEO = ({ lang, title }) => {
   const defaultTitle = site.siteMetadata?.title;
   const metaDescription = site.siteMetadata.description;
   const author = site.siteMetadata.author;
-  const imageHC = "https://ayse.site/image";
-  const image = site.siteMetadata.image;
+  // const imageHC = "https://ayse.site/image";
+  // const image = site.siteMetadata.image;
   const keywords = site.siteMetadata.keywords;
   const meta = [];
 
@@ -70,14 +70,14 @@ const SEO = ({ lang, title }) => {
           property: `og:type`,
           content: `website`,
         },
-        {
-          property: `og:image`,
-          content: image,
-        },
-        {
-          property: `og:image:secure_url`,
-          content: `https://ayse.site/image`,
-        },
+        // {
+        //   property: `og:image`,
+        //   content: image,
+        // },
+        // {
+        //   property: `og:image:secure_url`,
+        //   content: `https://ayse.site/image`,
+        // },
         {
           name: `twitter:card`,
           content: `summary_large_image`,
