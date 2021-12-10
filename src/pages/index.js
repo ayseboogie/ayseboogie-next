@@ -16,7 +16,10 @@ const IndexPage = () => {
         <title>Home</title>
         <link rel="canonical" href="http://ayse.site" />
         <link rel="icon" href={Triangle} />
-        <meta name="Ayse Stinnett" content="Ayse Stinnett's personal website" />
+        <meta
+          property="og:image:secure_url"
+          content="https://ayse.site/image"
+        />
       </Helmet>
       <Layout pageTitle="Home">
         <Seo lang="en" title="Home" />
