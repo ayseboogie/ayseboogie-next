@@ -15,7 +15,6 @@ const SEO = ({ lang, title }) => {
             description
             author
             keywords
-            // image
           }
         }
       }
