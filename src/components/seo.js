@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
 //img isn't working
-const SEO = ({ description, lang, title }) => {
+const SEO = ({ lang, title }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -15,16 +15,19 @@ const SEO = ({ description, lang, title }) => {
             description
             author
             keywords
+            image
           }
         }
       }
     `
   );
 
-  const image = "https://ayse.site/image";
   const url = site.siteMetadata.url;
   const defaultTitle = site.siteMetadata?.title;
-  const metaDescription = description || site.siteMetadata.description;
+  const metaDescription = site.siteMetadata.description;
+  const author = site.siteMetadata.author;
+  const imageHC = "https://ayse.site/image";
+  const image = site.siteMetadata.image;
   const keywords = site.siteMetadata.keywords;
   const meta = [];
 
@@ -35,6 +38,14 @@ const SEO = ({ description, lang, title }) => {
       }}
       title={title}
       meta={[
+        {
+          name: `og:site_name`,
+          content: "Ayse Site",
+        },
+        {
+          name: `author`,
+          content: author,
+        },
         {
           name: `description`,
           content: metaDescription,
@@ -60,8 +71,12 @@ const SEO = ({ description, lang, title }) => {
           content: `website`,
         },
         {
-          property: `og:image:url`,
+          property: `og:image`,
           content: image,
+        },
+        {
+          property: `og:image:secure_url`,
+          content: `https://ayse.site/image`,
         },
         {
           name: `twitter:card`,
@@ -69,7 +84,7 @@ const SEO = ({ description, lang, title }) => {
         },
         {
           name: `twitter:image`,
-          content: image,
+          content: `https://ayse.site/image`,
         },
         {
           name: `twitter:creator`,

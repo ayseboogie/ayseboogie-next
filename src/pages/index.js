@@ -19,11 +19,7 @@ const IndexPage = () => {
         <meta name="Ayse Stinnett" content="Ayse Stinnett's personal website" />
       </Helmet>
       <Layout pageTitle="Home">
-        <Seo
-          lang="en"
-          title="Home"
-          description="Hey, I'm Ayse Stinnett. I am a frontend focused engineer based out of Chattanooga, TN."
-        />
+        <Seo lang="en" title="Home" />
         <div id="home" />
 
         <div className="py-6 md:py-10">
