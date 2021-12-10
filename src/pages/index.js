@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Triangle from "../images/triangle.png";
-import MI from "../images/ayseSite.png.png";
+import MI from "../images/ayseSite.png";
 import AboutPhotos from "../components/aboutPhotos/aboutPhotos";
 import ProjectsContainer from "../components/projectsContainer/projectsContainer";
 import Contact from "../components/contact";
