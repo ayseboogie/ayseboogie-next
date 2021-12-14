@@ -18,14 +18,6 @@ const IndexPage = () => {
         <link rel="canonical" href="http://ayse.site" />
         <link rel="icon" href={Triangle} />
         <meta property="og:image" content={MI} />
-        {/*<meta name="twitter:card" content="summary_large_image" />*/}
-        {/*<meta name="twitter:creator" content="@AyseStinnett" />*/}
-        {/*<meta name="twitter:title" content="Ayse Site" />*/}
-        {/*<meta*/}
-        {/*  name="twitter:description"*/}
-        {/*  content="I am a frontend engineer with a passion for web development."*/}
-        {/*/>*/}
-        {/*<meta name="twitter:image" content={MI} />*/}
       </Helmet>
       <Layout pageTitle="Home">
         <Seo lang="en" title="Home" />
