@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Triangle from "../images/triangle.png";
 import MI from "../images/ayseSite.png";
+import MIT from "../images/ayseSite1.png";
 import AboutPhotos from "../components/aboutPhotos/aboutPhotos";
 import ProjectsContainer from "../components/projectsContainer/projectsContainer";
 import Contact from "../components/contact";
@@ -18,6 +19,7 @@ const IndexPage = () => {
         <link rel="canonical" href="http://ayse.site" />
         <link rel="icon" href={Triangle} />
         <meta property="og:image" content={MI} />
+        <meta name="twitter:image" content={MIT} />
       </Helmet>
       <Layout pageTitle="Home">
         <Seo lang="en" title="Home" />
