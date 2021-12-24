@@ -98,11 +98,11 @@ const ProjectsContainer = () => {
             to="/experiences"
             className="text-white whitespace-nowrap lg:hidden text-sm"
           >
-            DOM Traversal
+            Nifty Code
           </Link>
           <StaticImage
             src="../../images/dom.png"
-            alt="DOM Traversal"
+            alt="Nifty Code"
             className={cn("w-full opacity-100 block rounded-md", style.image)}
             style={{
               transition: ".5s ease",
@@ -110,7 +110,7 @@ const ProjectsContainer = () => {
             }}
           />
           <Link
-            to="/dom"
+            to="/code"
             className={cn("opacity-0 absolute text-center", style.projectsText)}
             style={{
               transition: ".5 ease",
@@ -120,7 +120,7 @@ const ProjectsContainer = () => {
             }}
           >
             <div className="text-white text-sm invisible lg:visible md:text-lg lg:text-2xl md:my-16">
-              DOM Traversal
+              Nifty Code
             </div>
             <div className="text-white text-sm md:text-base lg:text-xl underline">
               details

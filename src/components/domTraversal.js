@@ -104,7 +104,6 @@ export class DomTraversal extends Component {
         matchList.push(tree.label);
         alert(matchList);
         if (matchList.length === 2) {
-          // alert(matchList);
         }
       }
       for (const child of tree.child) {
@@ -170,7 +169,10 @@ export class DomTraversal extends Component {
           <br />
           <br />
 
-          <hr />
+          <div className="max-w-2xl lg:max-w-4xl m-auto">
+            <hr />
+          </div>
+
           <h1
             style={{
               color: "green",
