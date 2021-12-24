@@ -110,7 +110,7 @@ const ProjectsContainer = () => {
             }}
           />
           <Link
-            to="/code"
+            to="/niftyCode"
             className={cn("opacity-0 absolute text-center", style.projectsText)}
             style={{
               transition: ".5 ease",
