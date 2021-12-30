@@ -1,0 +1,56 @@
+.projectsContainer:hover .image {
+    opacity: 0.8;
+    filter: brightness(.5);
+}
+
+.projectsContainer:hover .projectsText {
+    opacity: 1;
+}
+
+.bgWrap {
+    /*position: fixed;*/
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    /*z-index: -1;*/
+}
+
+.bgText {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    padding-top: 40vh;
+    text-shadow: 1px 1px 1px #3c5c5e;
+}
+
+.container {
+    /* first breakpoint*/
+    --w1:1200px;
+    --n:4;
+    /* second breakpoint*/
+    --w2:800px;
+    --m:3;
+    /* third breakpoint*/
+    --w3:500px;
+    --p:2;
+
+    justify-items: center;
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fill,
+    minmax(clamp(clamp(clamp(
+                    100%/(var(--n) + 1) + 0.1%,
+                    (var(--w1) - 100vw)*1000,
+                    100%/(var(--m) + 1) + 0.1%),
+            (var(--w2) - 100vw)*1000,
+            100%/(var(--p) + 1) + 0.1%),
+            (var(--w3) - 100vw)*1000,
+            100%), 1fr));
+    gap:10px;
+}
+
+.container > div {
+    height:200px;
+    /*background:red;*/
+}
