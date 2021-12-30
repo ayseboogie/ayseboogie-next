@@ -30,8 +30,8 @@ const IndexPage = () => {
           <hr className="flex-1 flex-grow md:mx-16 lg:mx-24" />
           <Image
             className="max-w-xs flex flex-1 rounded-full h-auto"
-            width="240vw"
-            height="280vh"
+            width="220vw"
+            height="260vh"
             src={Me}
             alt="Ayse"
           />

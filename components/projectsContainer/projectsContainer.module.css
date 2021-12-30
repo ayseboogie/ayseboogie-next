@@ -7,50 +7,71 @@
     opacity: 1;
 }
 
-.bgWrap {
-    /*position: fixed;*/
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    /*z-index: -1;*/
-}
-
-.bgText {
-    margin: 0;
-    font-size: 2rem;
-    line-height: 3rem;
-    text-align: center;
-    padding-top: 40vh;
-    text-shadow: 1px 1px 1px #3c5c5e;
-}
-
 .container {
     /* first breakpoint*/
-    --w1:1200px;
-    --n:4;
+    --w1: 12000px;
+    --n: 4;
     /* second breakpoint*/
-    --w2:800px;
-    --m:3;
+    --w2: 800px;
+    --m: 3;
     /* third breakpoint*/
-    --w3:500px;
-    --p:2;
+    --w3: 500px;
+    --p: 2;
 
-    justify-items: center;
-    display:grid;
+    display: grid;
     grid-template-columns:
     repeat(auto-fill,
     minmax(clamp(clamp(clamp(
-                    100%/(var(--n) + 1) + 0.1%,
-                    (var(--w1) - 100vw)*1000,
-                    100%/(var(--m) + 1) + 0.1%),
-            (var(--w2) - 100vw)*1000,
-            100%/(var(--p) + 1) + 0.1%),
-            (var(--w3) - 100vw)*1000,
+                    100% / (var(--n) + 1) + 0.1%,
+                    (var(--w1) - 100vw) * 1000,
+                    100% / (var(--m) + 1) + 0.1%),
+            (var(--w2) - 100vw) * 1000,
+            100% / (var(--p) + 1) + 0.1%),
+            (var(--w3) - 100vw) * 1000,
             100%), 1fr));
-    gap:10px;
+    gap: 2rem;
 }
 
 .container > div {
-    height:200px;
-    /*background:red;*/
+    height: 200px;
+}
+
+.translateDiv {
+    transform: translate(-50%, 210%);
+}
+
+@media (min-width: 170px) {
+    .translateDiv {
+        transform: translate(-50%, 50%);
+    }
+}
+
+@media (min-width: 270px) {
+    .translateDiv {
+        transform: translate(-50%, -20%);
+    }
+}
+
+@media (min-width: 320px) {
+    .translateDiv {
+        transform: translate(-50%, -80%);
+    }
+}
+
+@media (min-width: 365px) {
+    .translateDiv {
+        transform: translate(-50%, -100%);
+    }
+}
+
+@media (min-width: 500px) {
+    .translateDiv {
+        transform: translate(-50%, -40%);
+    }
+}
+
+@media (min-width: 685px) {
+    .translateDiv {
+        transform: translate(-50%, -100%);
+    }
 }
