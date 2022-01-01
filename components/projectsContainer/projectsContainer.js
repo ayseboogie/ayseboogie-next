@@ -13,7 +13,7 @@ const ProjectsContainer = () => {
       <div className={style.container}>
         {/* 0 */}
         <div className="relative w-full">
-          <a href="">
+          <a href="/chiFarms" className="cursor-pointer">
             <Image
               src={ChiFarms}
               alt="Chi Farms"
@@ -40,14 +40,14 @@ const ProjectsContainer = () => {
             }}
           >
             <div className="text-white text-center whitespace-nowrap text-sm">
-              <Link href="">Chi Farms</Link>
+              <Link href="/chiFarms">Chi Farms</Link>
             </div>
           </div>
         </div>
 
         {/* 1 */}
         <div className="relative w-full">
-          <a href="">
+          <a href="/experiences">
             <Image
               src={Experiences}
               alt="LP Experiences"
@@ -74,14 +74,14 @@ const ProjectsContainer = () => {
             }}
           >
             <div className="text-white text-center whitespace-nowrap text-sm">
-              <Link href="">Lonely Planet Experiences</Link>
+              <Link href="/experiences">Lonely Planet Experiences</Link>
             </div>
           </div>
         </div>
 
         {/* 2 */}
         <div className="relative w-full">
-          <a href="">
+          <a href="/funCode">
             <Image
               src={Dom}
               alt="Fun Code"
@@ -108,7 +108,7 @@ const ProjectsContainer = () => {
             }}
           >
             <div className="text-white text-center whitespace-nowrap text-sm">
-              <Link href="">Fun Code</Link>
+              <Link href="/funCode">Fun Code</Link>
             </div>
           </div>
         </div>
