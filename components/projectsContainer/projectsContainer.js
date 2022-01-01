@@ -13,7 +13,7 @@ const ProjectsContainer = () => {
       <div className={style.container}>
         {/* 0 */}
         <div className="relative w-full">
-          <a href="/chiFarms" className="cursor-pointer">
+          <Link href="/chiFarms" className="cursor-pointer">
             <Image
               src={ChiFarms}
               alt="Chi Farms"
@@ -28,7 +28,7 @@ const ProjectsContainer = () => {
                 backfaceVisibility: "hidden",
               }}
             />
-          </a>
+          </Link>
           <div
             className={cn(
               "opacity-100 absolute text-center",
@@ -47,7 +47,7 @@ const ProjectsContainer = () => {
 
         {/* 1 */}
         <div className="relative w-full">
-          <a href="/experiences">
+          <Link href="/experiences">
             <Image
               src={Experiences}
               alt="LP Experiences"
@@ -62,7 +62,7 @@ const ProjectsContainer = () => {
                 backfaceVisibility: "hidden",
               }}
             />
-          </a>
+          </Link>
           <div
             className={cn(
               "opacity-100 absolute text-center",
@@ -81,7 +81,7 @@ const ProjectsContainer = () => {
 
         {/* 2 */}
         <div className="relative w-full">
-          <a href="/funCode">
+          <Link href="/funCode">
             <Image
               src={Dom}
               alt="Fun Code"
@@ -96,7 +96,7 @@ const ProjectsContainer = () => {
                 backfaceVisibility: "hidden",
               }}
             />
-          </a>
+          </Link>
           <div
             className={cn(
               "opacity-100 absolute text-center",

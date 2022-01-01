@@ -33,7 +33,7 @@ const Code = () => {
           I created this page to familiarize myself with traversing the dom. All
           of the logic used in this page stems from the DOM. I used a for loop
           to traverse the node tree. For the fun facts, I used
-          getElementsByTagName to find the " &lt;td&gt; element and an if
+          getElementsByTagName to find the &lt;td&gt; element and an if
           statement to change the text color.
         </div>
         <hr />
