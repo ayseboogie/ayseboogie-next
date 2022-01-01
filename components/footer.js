@@ -1,11 +1,11 @@
 import * as React from "react";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-// import Resume from "../public/resume.pdf";
 
-const Footer = () => {
+function Footer() {
   return (
     <div className="w-full text-center text-3xl tracking-widest lg:px-80 py-16 bg-gray-800 flex items-center justify-center">
       <a
@@ -32,17 +32,16 @@ const Footer = () => {
       >
         <FontAwesomeIcon className="text-white" icon={faTwitter} />
       </a>
-      <a
-        // href={Resume}
+      <div
         target="_blank"
         rel="noreferrer"
         className="px-6 text-white tracking-widest text-sm md:text-lg lg:text-xl"
       >
-        Resume
-      </a>
+        <Link href="/resume">Resume</Link>
+      </div>
       <br />
     </div>
   );
-};
+}
 
 export default Footer;
