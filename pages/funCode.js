@@ -1,30 +1,31 @@
 import * as React from "react";
-// import { Helmet } from "react-helmet";
+import { NextSeo } from "next-seo";
 import Image from "next/image";
 import NodeTree from "../public/nodeTree.png";
 import Layout from "../components/layout";
-import DomTraversal from "../components/domTraversal";
 import ProjectsLayout from "../components/projectsLayout";
+import DomTraversal from "../components/domTraversal";
+
 // import CodeEditor from "../components/codeEditor/app";
 
 const Code = () => {
   return (
     <>
-      {/*<Helmet>*/}
-      {/*  <meta charSet="utf-8" />*/}
-      {/*  <title>Nifty Code</title>*/}
-      {/*  <link rel="canonical" href="http://ayse.site/code" />*/}
-      {/*</Helmet>*/}
+      <NextSeo title="Fun Code" description="Fun code exercises." />
       <Layout pageTitle="Nifty Code">
-        <div className="pb-6 md:py-6">
+        <div className="pb-4 md:py-6">
           {/*  DOM Traversal */}
-          <div className="text-center text-3xl pb-10">DOM Traversal</div>
-          <div className=" flex justify-center align-middle px-60">
+          <div className="text-center text-3xl pb-6">DOM Traversal</div>
+          <div className="flex justify-center align-middle px-56">
             <Image
-              className="max-w-sm md:max-w-xl"
+              // className="max-w-sm
+              // md:max-w-xl"
               src={NodeTree}
               alt="Node Tree"
-              objectPosition="center center"
+              // objectPosition="center
+              // center"
+              height="400%"
+              width="500%"
             />
           </div>
           <DomTraversal />

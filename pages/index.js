@@ -1,14 +1,49 @@
 import * as React from "react";
 import Image from "next/image";
 import Me from "../public/me.jpg";
+import Card from "../public/ayseSite.png";
+import Card2 from "../public/ayseSite1.png";
 import Layout from "../components/layout";
 import AboutPhotos from "../components/aboutPhotos/aboutPhotos";
 import ProjectsContainer from "../components/projectsContainer/projectsContainer";
 import Contact from "../components/contact";
+import { NextSeo } from "next-seo";
 
 const IndexPage = () => {
   return (
     <>
+      <NextSeo
+        title="Ayse Site"
+        description="I am a frontend engineer with a passion for web development."
+        canonical="https://www.ayse.site/"
+        openGraph={{
+          url: "https://www.ayse.site/",
+          title: "Ayse Site",
+          description:
+            "I am a frontend engineer with a passion for web development.",
+          images: [
+            {
+              url: { Card },
+              width: 2330,
+              height: 1374,
+              alt: "Ayse Site Card",
+              type: "image/png",
+            },
+            {
+              url: { Card2 },
+              width: 1200,
+              height: 630,
+              alt: "Ayse Site Card",
+              type: "image/png",
+            },
+          ],
+        }}
+        twitter={{
+          handle: "@AyseStinnett",
+          // site: "@site",
+          cardType: "summary_large_image",
+        }}
+      />
       <Layout pageTitle="Home">
         <div id="home" />
 
