@@ -21,7 +21,6 @@ function Resume() {
       <div className="w-full text-center text-3xl tracking-widest lg:px-80 py-16 bg-gray-800 flex items-center justify-center">
         <Document file="/resume.pdf" onLoadSuccess={onDocumentLoadSuccess}>
           <Page pageNumber={pageNumber} />
-          {/*<Page pageNumber={1}/>*/}
         </Document>
       </div>
     </>
