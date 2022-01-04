@@ -1,11 +1,7 @@
-.projectsContainer:hover .image {
-    opacity: 0.8;
-    filter: brightness(.5);
+.container:hover .image {
+    cursor: pointer;
 }
 
-.projectsContainer:hover .projectsText {
-    opacity: 1;
-}
 
 .container {
     /* first breakpoint*/

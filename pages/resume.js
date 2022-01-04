@@ -15,10 +15,12 @@ function Resume() {
 
   return (
     <>
-      <div className="w-full text-white tracking-widest pr-8 lg:px-80 pt-6 bg-gray-800 flex items-center justify-end">
-        <Link href="/">back home</Link>
+      <div className="w-full md:pr-8 pt-6 md:bg-gray-800">
+        <div className="md:text-white tracking-widest flex justify-end">
+          <Link href="/">back home</Link>
+        </div>
       </div>
-      <div className="w-full text-center text-3xl tracking-widest lg:px-80 py-16 bg-gray-800 flex items-center justify-center">
+      <div className="w-full md:flex items-center justify-center">
         <Document file="/resume.pdf" onLoadSuccess={onDocumentLoadSuccess}>
           <Page pageNumber={pageNumber} />
         </Document>
