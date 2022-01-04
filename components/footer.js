@@ -14,7 +14,7 @@ function Footer() {
         rel="noreferrer"
         className="px-6"
       >
-        <FontAwesomeIcon className="text-white" icon={faGithub} />
+        <FontAwesomeIcon className="text-white w-1/2" icon={faGithub} />
       </a>
       <a
         href="https://www.linkedin.com/in/ayse-stinnett-41a100140/"
@@ -22,7 +22,7 @@ function Footer() {
         rel="noreferrer"
         className="px-6"
       >
-        <FontAwesomeIcon className="text-white" icon={faLinkedin} />
+        <FontAwesomeIcon className="text-white w-1/2" icon={faLinkedin} />
       </a>
       <a
         href="https://twitter.com/aysestinnett"
@@ -30,7 +30,7 @@ function Footer() {
         rel="noreferrer"
         className="px-6"
       >
-        <FontAwesomeIcon className="text-white" icon={faTwitter} />
+        <FontAwesomeIcon className="text-white w-1/2" icon={faTwitter} />
       </a>
       <div
         target="_blank"
