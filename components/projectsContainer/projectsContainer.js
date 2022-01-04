@@ -1,9 +1,6 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import ChiFarms from "../../public/chiFarms.png";
-import Experiences from "../../public/lpExperiences.png";
-import Dom from "../../public/dom.png";
 import cn from "classnames";
 import * as style from "./projectsContainer.module.css";
 
@@ -23,10 +20,6 @@ const ProjectsContainer = () => {
                 "h-full w-auto opacity-100 block rounded-md",
                 style.image
               )}
-              style={{
-                transition: ".5s ease",
-                backfaceVisibility: "hidden",
-              }}
             />
           </Link>
           <div
@@ -57,10 +50,6 @@ const ProjectsContainer = () => {
                 "h-full w-auto opacity-100 block rounded-md",
                 style.image
               )}
-              style={{
-                transition: ".5s ease",
-                backfaceVisibility: "hidden",
-              }}
             />
           </Link>
           <div
@@ -91,10 +80,6 @@ const ProjectsContainer = () => {
                 "h-full w-auto opacity-100 block rounded-md",
                 style.image
               )}
-              style={{
-                transition: ".5s ease",
-                backfaceVisibility: "hidden",
-              }}
             />
           </Link>
           <div
