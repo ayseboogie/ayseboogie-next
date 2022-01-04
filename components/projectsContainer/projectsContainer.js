@@ -15,7 +15,7 @@ const ProjectsContainer = () => {
         <div className="relative w-full">
           <Link href="/chiFarms" className="cursor-pointer">
             <Image
-              src={ChiFarms}
+              src="/chiFarms.png"
               alt="Chi Farms"
               layout="fill"
               objectFit="contain"
@@ -49,7 +49,7 @@ const ProjectsContainer = () => {
         <div className="relative w-full">
           <Link href="/experiences">
             <Image
-              src={Experiences}
+              src="/lpExperiences.png"
               alt="LP Experiences"
               layout="fill"
               objectFit="contain"
@@ -83,7 +83,7 @@ const ProjectsContainer = () => {
         <div className="relative w-full">
           <Link href="/funCode">
             <Image
-              src={Dom}
+              src="/dom.png"
               alt="Fun Code"
               layout="fill"
               objectFit="contain"

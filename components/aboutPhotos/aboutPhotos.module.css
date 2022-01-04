@@ -1,3 +1,10 @@
+.container .image {
+    transition-duration: .5ms;
+    transition-timing-function: ease-in;
+    backface-visibility: hidden;
+    filter: brightness(.6);
+}
+
 .container:hover .image {
     opacity: 0.8;
 }
