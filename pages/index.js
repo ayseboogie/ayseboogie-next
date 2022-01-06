@@ -8,8 +8,11 @@ import AboutPhotos from "../components/aboutPhotos/aboutPhotos";
 import ProjectsContainer from "../components/projectsContainer/projectsContainer";
 import Contact from "../components/contact";
 import { NextSeo } from "next-seo";
+import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
 
 const IndexPage = () => {
+  const { windowWidth } = useWindowDimensions();
+
   return (
     <>
       <NextSeo
@@ -64,9 +67,9 @@ const IndexPage = () => {
         <div className="flex items-center justify-center mt-6">
           <hr className="flex-1 flex-grow md:mx-16 lg:mx-24" />
           <Image
-            className="max-w-xs flex flex-1 rounded-full h-auto"
-            width="220vw"
-            height="260vh"
+            className="max-w-full rounded-full"
+            width={windowWidth > 900 ? "240px" : "170px"}
+            height={windowWidth > 900 ? "288px" : "195px"}
             src={Me}
             alt="Ayse"
           />

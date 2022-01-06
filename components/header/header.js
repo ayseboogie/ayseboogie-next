@@ -10,10 +10,10 @@ const Header = ({ pageTitle }) => {
     <div className="w-full h-auto" style={{ display: "grid" }}>
       <Image
         loading="eager"
-        style={{
-          gridArea: "1/1",
-          maxHeight: "425px",
-        }}
+        // style={{
+        //   gridArea: "1/1",
+        //   maxHeight: "425px",
+        // }}
         alt="Weavers Bend"
         src={WeaversBend}
       />
