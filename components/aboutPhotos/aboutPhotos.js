@@ -9,13 +9,14 @@ import WeaversBend from "../../public/weaversBend.jpg";
 const AboutPhotos = () => {
   return (
     <div className="flex mx-2 md:mx-3 md:pb-10">
+      {/*0*/}
       <div className={cn("relative w-full mx-1 md:mx-3", style.container)}>
         <Image
           src={ATPups}
           alt="Appalachian Trail Puppies"
           layout="fill"
           objectFit="cover"
-          className={cn("block w-full h-full", style.image)}
+          className={style.image}
         />
         <div
           className="absolute text-center"
@@ -29,13 +30,14 @@ const AboutPhotos = () => {
         </div>
       </div>
 
+      {/*1*/}
       <div className={cn("relative w-full mx-1 md:mx-3", style.container)}>
         <Image
           src={StarMtn}
           alt="Star Mountain Hike"
           layout="fill"
           objectFit="cover"
-          className={cn("opacity-100 block w-full h-full", style.image)}
+          className={style.image}
         />
         <div
           className="opacity-100 absolute text-center"
@@ -50,11 +52,13 @@ const AboutPhotos = () => {
         </div>
       </div>
 
+      {/*2*/}
       <div className={cn("relative w-full mx-1 md:mx-3", style.container)}>
-        <Image
-          src={WeaversBend}
+        <img
+          src="WeaversBend.jpg"
           alt="Weavers Bend Horse Ride"
-          className={cn("opacity-100 block w-full h-full", style.image)}
+          // layout="fill"
+          className={style.image}
         />
         <div
           className="opacity-100 absolute text-center"
