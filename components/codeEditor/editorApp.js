@@ -109,20 +109,20 @@ const EditorApp = () => {
   }`
   );
   // const [js, setJs] = useLocalStorage("js", "");
-  const [srcDoc, setSrcDoc] = useState("");
+  // const [srcDoc, setSrcDoc] = useState("");
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setSrcDoc(`
-        <html>
-          <body>${html}</body>
-          <style>${css}</style>
-        </html>
-      `);
-    }, 250);
-
-    return () => clearTimeout(timeout);
-  }, [html, css]);
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setSrcDoc(`
+  //       <html>
+  //         <body>${html}</body>
+  //         <style>${css}</style>
+  //       </html>
+  //     `);
+  //   }, 250);
+  //
+  //   return () => clearTimeout(timeout);
+  // }, [html, css]);
 
   return (
     <>
