@@ -1,17 +1,26 @@
 import React from "react";
+import { useState } from "react";
 // import loadable from "@loadable/component";
 import dynamic from "next/dynamic";
 import "codemirror/lib/codemirror.css";
 import "codemirror/theme/material.css";
 import "codemirror/mode/xml/xml";
-import "codemirror/mode/javascript/javascript";
+// import "codemirror/mode/javascript/javascript";
 import "codemirror/mode/css/css";
 // import { Controlled as ControlledEditor } from "react-codemirror2-react-17";
 import * as style from "./editorApp.module.css";
 
-const CodeMirror = dynamic(() => import("react-codemirror2-react-17"), {
-  ssr: false,
-});
+// const CodeMirror = dynamic(() => import("react-codemirror2-react-17"), {
+//   ssr: false,
+// });
+
+const CodeMirror = dynamic(
+  () => {
+    import("codemirror/mode/javascript/javascript");
+    return import("react-codemirror2-react-17");
+  },
+  { ssr: false }
+);
 // const { ControlledEditor } = loadable(() =>
 //   import("react-codemirror2-react-17")
 // );
@@ -24,6 +33,7 @@ const CodeMirror = dynamic(() => import("react-codemirror2-react-17"), {
 // }
 
 export default function Editor(props) {
+  const [code, setCode] = useState(null);
   const { language, displayName, value, onChange } = props;
 
   function handleChange(editor, data, value) {
@@ -36,7 +46,7 @@ export default function Editor(props) {
       {/*<ControlledEditor*/}
       {CodeMirror && (
         <CodeMirror
-          onBeforeChange={handleChange}
+          onBeforeChange={(code) => setCode}
           value={value}
           className={style.codeMirrorWrapper}
           options={{
