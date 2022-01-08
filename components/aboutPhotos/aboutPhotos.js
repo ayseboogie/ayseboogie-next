@@ -54,8 +54,8 @@ const AboutPhotos = () => {
 
       {/*2*/}
       <div className={cn("relative w-full mx-1 md:mx-3", style.container)}>
-        <img
-          src="WeaversBend.jpg"
+        <Image
+          src={WeaversBend}
           alt="Weavers Bend Horse Ride"
           // layout="fill"
           className={cn("h-full", style.image)}
