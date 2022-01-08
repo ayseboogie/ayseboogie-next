@@ -5,8 +5,8 @@ import Editor from "./editor";
 import * as style from "./editorApp.module.css";
 
 const EditorApp = () => {
-  const [html, setHtml] = ("html", "");
-  const [css, setCss] = ("css", "");
+  const [html, setHtml] = useLocalStorage("html", "");
+  const [css, setCss] = useLocalStorage("css", "");
   // const [js, setJs] = useLocalStorage("js", "");
   const [srcDoc, setSrcDoc] = useState("");
 
