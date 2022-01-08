@@ -58,7 +58,7 @@ const AboutPhotos = () => {
           src="WeaversBend.jpg"
           alt="Weavers Bend Horse Ride"
           // layout="fill"
-          className={style.image}
+          className={cn("h-full", style.image)}
         />
         <div
           className="opacity-100 absolute text-center"
