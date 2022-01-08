@@ -8,22 +8,14 @@ import * as style from "./header.module.css";
 const Header = ({ pageTitle }) => {
   return (
     <div className="w-full h-auto" style={{ display: "grid" }}>
-      <Image
-        loading="eager"
-        // style={{
-        //   gridArea: "1/1",
-        //   maxHeight: "425px",
-        // }}
-        alt="Weavers Bend"
-        src={WeaversBend}
-      />
+      <Image loading="eager" alt="Weavers Bend" src={WeaversBend} />
       <div
-        className={cn("opacity-100 absolute w-full text-right top-3")}
+        className={cn("opacity-100 absolute top-3 w-full flex justify-end")}
         style={{
           transition: ".5 ease",
         }}
       >
-        <div className={cn("text-white", style.textBanner)}>
+        <div className={cn("text-white ", style.textBanner)}>
           <nav className={style.textBanner}>
             <ul className="flex list-none justify-end tracking-widest text-white md:text-lg">
               <li className="pr-8">
