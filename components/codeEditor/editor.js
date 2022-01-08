@@ -30,18 +30,20 @@ export default function Editor(props) {
     <div className={style.editorContainer}>
       <div className={style.editorTitle}>{displayName}</div>
       {/*<ControlledEditor*/}
-      <CodeMirror
-        onBeforeChange={handleChange}
-        value={value}
-        className={style.codeMirrorWrapper}
-        options={{
-          lineWrapping: true,
-          lint: true,
-          mode: language,
-          theme: "material",
-          lineNumbers: true,
-        }}
-      />
+      {CodeMirror && (
+        <CodeMirror
+          onBeforeChange={handleChange}
+          value={value}
+          className={style.codeMirrorWrapper}
+          options={{
+            lineWrapping: true,
+            lint: true,
+            mode: language,
+            theme: "material",
+            lineNumbers: true,
+          }}
+        />
+      )}
     </div>
   );
 }
