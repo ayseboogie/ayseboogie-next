@@ -6,12 +6,12 @@ const ProjectsLayout = ({ about, platform, checkIt }) => {
     <>
       <div className="m-auto font-sans text-lg">
         <main className="max-w-2xl lg:max-w-4xl m-auto">
-          <div className="text-center my-8 md:my-16 px-4 md:px-0 text-sm md:text-base lg:text-lg">
+          <div className="text-center my-8 md:my-16 px-6 md:px-0 text-sm md:text-base lg:text-lg">
             {about}
           </div>
           <hr />
           {platform && (
-            <div className="flex my-8 md:my-16 w-full px-4 md:px-0">
+            <div className="flex my-8 md:my-16 w-full px-6 md:px-0">
               <h2 className="flex-1 flex justify-start tracking-widest text-base md:text-lg">
                 Platform:
               </h2>
@@ -22,7 +22,7 @@ const ProjectsLayout = ({ about, platform, checkIt }) => {
           )}
           {checkIt && (
             <a
-              className="flex my-8 md:my-16 w-full px-4 md:px-0"
+              className="flex my-8 md:my-16 w-full px-6 md:px-0"
               href={checkIt}
               target="_blank"
               rel="noreferrer"
