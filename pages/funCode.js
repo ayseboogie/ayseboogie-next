@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 import ProjectsLayout from "../components/projectsLayout";
 import DomTraversal from "../components/domTraversal";
 
-// import CodeEditor from "../components/codeEditor/app";
+import CodeEditor from "../components/codeEditor/editorApp";
 
 const Code = () => {
   return (
@@ -43,7 +43,9 @@ const Code = () => {
         <div className="text-center text-3xl py-10">
           Responsive Layout Without Media Queries
         </div>
-        {/*<CodeEditor />*/}
+
+        <CodeEditor />
+
         <div className="pb-10 max-w-2xl lg:max-w-4xl m-auto text-center">
           I read an article from
           <a
