@@ -11,6 +11,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
+    "@loadable/component": "^5.15.2",
     "classnames": "^2.3.1",
     "codemirror": "^5.65.0",
     "next": "12.0.7",
