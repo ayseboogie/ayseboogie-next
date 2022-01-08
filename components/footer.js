@@ -7,14 +7,14 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
   return (
-    <div className="w-full text-center text-3xl tracking-widest lg:px-80 py-16 bg-gray-800 flex items-center justify-center">
+    <div className="w-full justify-center items-center text-3xl tracking-widest py-16 bg-gray-800 flex ">
       <a
         href="https://github.com/ayseboogie"
         target="_blank"
         rel="noreferrer"
         className="px-6"
       >
-        <FontAwesomeIcon className="text-white w-1/2" icon={faGithub} />
+        <FontAwesomeIcon className="text-white w-8" icon={faGithub} />
       </a>
       <a
         href="https://www.linkedin.com/in/ayse-stinnett-41a100140/"
@@ -22,7 +22,7 @@ function Footer() {
         rel="noreferrer"
         className="px-6"
       >
-        <FontAwesomeIcon className="text-white w-1/2" icon={faLinkedin} />
+        <FontAwesomeIcon className="text-white w-8" icon={faLinkedin} />
       </a>
       <a
         href="https://twitter.com/aysestinnett"
@@ -30,7 +30,7 @@ function Footer() {
         rel="noreferrer"
         className="px-6"
       >
-        <FontAwesomeIcon className="text-white w-1/2" icon={faTwitter} />
+        <FontAwesomeIcon className="text-white w-8" icon={faTwitter} />
       </a>
       <div
         target="_blank"
