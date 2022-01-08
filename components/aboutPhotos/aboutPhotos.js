@@ -14,7 +14,8 @@ const AboutPhotos = () => {
         <Image
           src={ATPups}
           alt="Appalachian Trail Puppies"
-          layout="fill"
+          width={1000}
+          height={1200}
           objectFit="cover"
           className={style.image}
         />
@@ -26,7 +27,7 @@ const AboutPhotos = () => {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <div className="text-white md:text-2xl">Motivated</div>
+          <div className="text-white md:text-2xl">Dedication</div>
         </div>
       </div>
 
@@ -35,7 +36,8 @@ const AboutPhotos = () => {
         <Image
           src={StarMtn}
           alt="Star Mountain Hike"
-          layout="fill"
+          width={1000}
+          height={1200}
           objectFit="cover"
           className={style.image}
         />
@@ -48,17 +50,19 @@ const AboutPhotos = () => {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <div className="text-white md:text-2xl">Passionate</div>
+          <div className="text-white md:text-2xl">Persistence</div>
         </div>
       </div>
 
       {/*2*/}
       <div className={cn("relative w-full mx-1 md:mx-3", style.container)}>
-        <img
-          src="WeaversBend.jpg"
+        <Image
+          src={WeaversBend}
           alt="Weavers Bend Horse Ride"
-          // layout="fill"
-          className={style.image}
+          objectFit="cover"
+          width={1000}
+          height={1200}
+          className={cn("pb-8", style.image)}
         />
         <div
           className="opacity-100 absolute text-center"
@@ -69,7 +73,7 @@ const AboutPhotos = () => {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <div className="text-white md:text-2xl">Dedicated</div>
+          <div className="text-white md:text-2xl">Determination</div>
         </div>
       </div>
     </div>
