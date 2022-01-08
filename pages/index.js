@@ -84,8 +84,8 @@ const IndexPage = () => {
           <br />
           I am a React developer by day. I have built freelance sites with
           WordPress and Duda. I have upcoming projects in Wix and Shopify.
-          <br />I developed this website with React in a Gatsby framework using
-          Tailwind styling.
+          <br />I developed this website with React in the NextJS framework
+          using Tailwind styling.
           <br />I received my computer science degree, with a business
           administration minor, from UT Chattanooga.
           <br />
