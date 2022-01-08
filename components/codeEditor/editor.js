@@ -1,5 +1,5 @@
 import React from "react";
-import loadable from "@loadable/component";
+// import loadable from "@loadable/component";
 import "codemirror/lib/codemirror.css";
 import "codemirror/theme/material.css";
 import "codemirror/mode/xml/xml";
@@ -8,9 +8,16 @@ import "codemirror/mode/css/css";
 // import { Controlled as ControlledEditor } from "react-codemirror2-react-17";
 import * as style from "./editorApp.module.css";
 
-const { ControlledEditor } = loadable(() =>
-  import("react-codemirror2-react-17")
-);
+// const { ControlledEditor } = loadable(() =>
+//   import("react-codemirror2-react-17")
+// );
+
+let CodeMirror = null;
+if (typeof window !== "undefined" && typeof window.navigator !== "undefined") {
+  CodeMirror = require("react-codemirror2-react-17");
+  require("codemirror/mode/yaml/yaml");
+  require("codemirror/mode/dockerfile/dockerfile");
+}
 
 export default function Editor(props) {
   const { language, displayName, value, onChange } = props;
@@ -22,7 +29,8 @@ export default function Editor(props) {
   return (
     <div className={style.editorContainer}>
       <div className={style.editorTitle}>{displayName}</div>
-      <ControlledEditor
+      {/*<ControlledEditor*/}
+      <CodeMirror
         onBeforeChange={handleChange}
         value={value}
         className={style.codeMirrorWrapper}
