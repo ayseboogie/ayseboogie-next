@@ -6,8 +6,7 @@ import Layout from "../components/layout";
 import ProjectsLayout from "../components/projectsLayout";
 import DomTraversal from "../components/domTraversal";
 
-// import CodeEditor from "../components/codeEditor/editorApp";
-import CodeEditor from "../components/code2/codeEditor";
+import CodeEditor from "../components/codeEditor/editorApp";
 
 const Code = () => {
   return (
