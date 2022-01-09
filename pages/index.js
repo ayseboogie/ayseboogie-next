@@ -9,7 +9,8 @@ import AboutPhotos from "../components/aboutPhotos/aboutPhotos";
 import ProjectsContainer from "../components/projectsContainer/projectsContainer";
 import Contact from "../components/contact";
 // import { NextSeo } from "next-seo";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
+import Head from "next/head";
 import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
 
 const IndexPage = () => {
@@ -17,25 +18,26 @@ const IndexPage = () => {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Ayse Site</title>
+        <link rel="canonical" href="https://ayse.site" key="canonical" />
         <meta name="author" content="Ayse Stinnett" />
-        <meta name="title" content="Ayse's Personal Webbie" />
         <meta
           name="description"
           content="I am a frontend engineer with a passion for web development."
+          key="desc"
         />
-        <meta property="og:title" content="Ayse Site" />
+        <meta property="og:title" content="Ayse's sweet webbie" />
         <meta property="og:url" content="https://www.ayse.site/" />
-        <meta property="og:image" content={Card} />
         <meta
           property="og:description"
-          content="I am a frontend engineer with a passion for web development."
+          content="A frontend engineer with a passion for web development."
         />
+        <meta property="og:image" content="/ayseSite.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@AyseStinnett" />
-        <meta property="twitter:title" content="Ayse Site" />
-      </Helmet>
+      </Head>
+
       {/*<NextSeo*/}
       {/*  title="Ayse Site"*/}
       {/*  description="I am a frontend engineer with a passion for web development."*/}
