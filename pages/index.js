@@ -18,11 +18,6 @@ const IndexPage = () => {
 
   return (
     <>
-      {/*<Helmet>*/}
-      {/*  <meta name="twitter:card" content="summary_large_image" />*/}
-      {/*  <meta name="twitter:site" content="@AyseStinnett" />*/}
-      {/*  <meta property="twitter:title" content="Ayse Site" />*/}
-      {/*</Helmet>*/}
       <Head>
         <title>Ayse Site</title>
         <link rel="canonical" href="https://ayse.site" key="canonical" />
@@ -39,6 +34,8 @@ const IndexPage = () => {
           content="A frontend engineer with a passion for web development."
         />
         <meta property="og:image" content="/ayseSite.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@AyseStinnett" />
       </Head>
 
       {/*<NextSeo*/}
