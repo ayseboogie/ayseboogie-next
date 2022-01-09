@@ -23,7 +23,6 @@ const IndexPage = () => {
         <link rel="canonical" href="https://ayse.site" />
         <link rel="icon" href={Triangle} />
         <meta property="og:image" content={Card} />
-        {/*<meta name="twitter:image" content={C} />*/}
       </Head>
       <NextSeo
         title="Ayse Site"
@@ -34,22 +33,6 @@ const IndexPage = () => {
           title: "Ayse Site",
           description:
             "I am a frontend engineer with a passion for web development.",
-          // images: [
-          //   {
-          //     url: { Card },
-          //     width: 2330,
-          //     height: 1374,
-          //     alt: "Ayse Site Card",
-          //     type: "image/png",
-          //   },
-          //   {
-          //     url: { Card2 },
-          //     width: 1200,
-          //     height: 630,
-          //     alt: "Ayse Site Card",
-          //     type: "image/png",
-          //   },
-          // ],
         }}
         twitter={{
           handle: "@AyseStinnett",
