@@ -1,5 +1,5 @@
 import * as React from "react";
-import { NextSeo } from "next-seo";
+// import { NextSeo } from "next-seo";
 import Image from "next/image";
 import NodeTree from "../public/nodeTree.png";
 import Layout from "../components/layout";
@@ -10,7 +10,7 @@ import CodeEditor from "../components/codeEditor/editorApp";
 const Code = () => {
   return (
     <>
-      <NextSeo title="Fun Code" description="Fun code exercises." />
+      {/*<NextSeo title="Fun Code" description="Fun code exercises." />*/}
       <Layout pageTitle="Fun Code">
         <div className="pb-4 py-2 md:py-6">
           {/*  DOM Traversal */}
