@@ -9,7 +9,7 @@ import AboutPhotos from "../components/aboutPhotos/aboutPhotos";
 import ProjectsContainer from "../components/projectsContainer/projectsContainer";
 import Contact from "../components/contact";
 import { NextSeo } from "next-seo";
-import Head from "next/head";
+// import Head from "next/head";
 import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
 
 const IndexPage = () => {
@@ -17,13 +17,13 @@ const IndexPage = () => {
 
   return (
     <>
-      <Head>
-        <meta charSet="utf-8" />
-        <title>Home</title>
-        <link rel="canonical" href="https://ayse.site" />
-        <link rel="icon" href={Triangle} />
-        <meta property="og:image" content={Card} />
-      </Head>
+      {/*<Head>*/}
+      {/*  <meta charSet="utf-8" />*/}
+      {/*  <title>Home</title>*/}
+      {/*  <link rel="canonical" href="https://ayse.site" />*/}
+      {/*  <link rel="icon" href={Triangle} />*/}
+      {/*  <meta property="og:image" content={Card} />*/}
+      {/*</Head>*/}
       <NextSeo
         title="Ayse Site"
         description="I am a frontend engineer with a passion for web development."
