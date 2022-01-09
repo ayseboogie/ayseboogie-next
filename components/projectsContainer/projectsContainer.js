@@ -97,6 +97,36 @@ const ProjectsContainer = () => {
             </div>
           </div>
         </div>
+
+        {/* 3 */}
+        <div className="relative w-full">
+          <Link href="/gatsbySite">
+            <Image
+              src="/gatsbySite.png"
+              alt="Gatsby Site"
+              layout="fill"
+              objectFit="contain"
+              className={cn(
+                "h-full w-auto opacity-100 block rounded-md",
+                style.image
+              )}
+            />
+          </Link>
+          <div
+            className={cn(
+              "opacity-100 absolute text-center",
+              style.translateDiv
+            )}
+            style={{
+              transition: ".5 ease",
+              left: "50%",
+            }}
+          >
+            <div className="text-white text-center whitespace-nowrap text-sm">
+              <Link href="/gatsbySite">Gatsby Site</Link>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
