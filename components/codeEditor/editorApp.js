@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useLocalStorage } from "./useLocalStorage";
 import Editor from "./editor";
 import * as style from "./editorApp.module.css";
+import cn from "classnames";
 
 const EditorApp = () => {
   const [html, setHtml] = useLocalStorage(
@@ -126,7 +127,7 @@ const EditorApp = () => {
 
   return (
     <>
-      <div className={style.topPane}>
+      <div className={cn("flex", style.topPane)}>
         <Editor
           language="xml"
           displayName="HTML"

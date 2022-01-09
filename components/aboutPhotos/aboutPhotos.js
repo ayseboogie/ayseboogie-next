@@ -62,7 +62,7 @@ const AboutPhotos = () => {
           objectFit="cover"
           width={1000}
           height={1200}
-          className={cn("pb-8", style.image)}
+          className={style.image}
         />
         <div
           className="opacity-100 absolute text-center"
