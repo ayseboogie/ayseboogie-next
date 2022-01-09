@@ -45,6 +45,12 @@ const IndexPage = () => {
           content="I am a frontend engineer with a passion for web development."
           key="desc"
         />
+        <meta property="og:title" content="Ayse's sweet webbie" />
+        <meta
+          property="og:description"
+          content="A frontend engineer with a passion for web development."
+        />
+        <meta property="og:image" content="/ayseSite.png" />
       </Head>
 
       {/*<NextSeo*/}
