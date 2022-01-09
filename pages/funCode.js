@@ -6,8 +6,11 @@ import Layout from "../components/layout";
 import ProjectsLayout from "../components/projectsLayout";
 import DomTraversal from "../components/domTraversal";
 import CodeEditor from "../components/codeEditor/editorApp";
+import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
 
 const Code = () => {
+  const { windowWidth } = useWindowDimensions();
+
   return (
     <>
       {/*<NextSeo title="Fun Code" description="Fun code exercises." />*/}
@@ -39,6 +42,16 @@ const Code = () => {
           Responsive Layout Without Media Queries
         </div>
         <CodeEditor />
+        <div className="flex justify-center">
+          Window size:&nbsp;
+          {windowWidth > 20 && windowWidth < 900 && (
+            <div className="pb-6">20px - 900px</div>
+          )}
+          {windowWidth > 900 && windowWidth < 1300 && (
+            <div className="pb-6">900px - 1300px</div>
+          )}
+          {windowWidth > 1300 && <div className="pb-6">&gt; 1300px</div>}
+        </div>
         <div className="pb-10 max-w-2xl lg:max-w-4xl m-auto text-center">
           I read an article from
           <a
