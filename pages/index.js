@@ -17,12 +17,16 @@ const IndexPage = () => {
 
   return (
     <>
+      {/*<Head>*/}
+      {/*  <meta charSet="utf-8" />*/}
+      {/*  <title>Home</title>*/}
+      {/*  <link rel="canonical" href="https://ayse.site" />*/}
+      {/*  <link rel="icon" href={Triangle} />*/}
+      {/*  <meta property="og:image" content={Card} />*/}
+      {/*</Head>*/}
       <Head>
-        <meta charSet="utf-8" />
-        <title>Home</title>
-        <link rel="canonical" href="https://ayse.site" />
+        <title>Create Next App</title>
         <link rel="icon" href={Triangle} />
-        <meta property="og:image" content={Card} />
       </Head>
       {/*<NextSeo*/}
       {/*  title="Ayse Site"*/}
