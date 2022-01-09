@@ -1,15 +1,10 @@
 import * as React from "react";
 import Image from "next/image";
 import Me from "../public/me.jpg";
-import Card from "../public/ayseSite.png";
-import Card2 from "../public/ayseSite1.png";
-import Triangle from "../public/triangle.png";
 import Layout from "../components/layout";
 import AboutPhotos from "../components/aboutPhotos/aboutPhotos";
 import ProjectsContainer from "../components/projectsContainer/projectsContainer";
 import Contact from "../components/contact";
-// import { NextSeo } from "next-seo";
-// import { Helmet } from "react-helmet";
 import Head from "next/head";
 import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
 
@@ -21,6 +16,7 @@ const IndexPage = () => {
       <Head>
         <title>Ayse Site</title>
         <link rel="canonical" href="https://ayse.site" key="canonical" />
+        <link rel="icon" href="/triangle.png" />
         <meta name="author" content="Ayse Stinnett" />
         <meta
           name="description"
@@ -38,22 +34,6 @@ const IndexPage = () => {
         <meta name="twitter:site" content="@AyseStinnett" />
       </Head>
 
-      {/*<NextSeo*/}
-      {/*  title="Ayse Site"*/}
-      {/*  description="I am a frontend engineer with a passion for web development."*/}
-      {/*  canonical="https://www.ayse.site/"*/}
-      {/*  openGraph={{*/}
-      {/*    url: "https://www.ayse.site/",*/}
-      {/*    title: "Ayse Site",*/}
-      {/*    description:*/}
-      {/*      "I am a frontend engineer with a passion for web development.",*/}
-      {/*  }}*/}
-      {/*  twitter={{*/}
-      {/*    handle: "@AyseStinnett",*/}
-      {/*    // site: "@site",*/}
-      {/*    cardType: "summary_large_image",*/}
-      {/*  }}*/}
-      {/*/>*/}
       <Layout pageTitle="Home">
         <div id="home" />
 
