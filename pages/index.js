@@ -19,20 +19,6 @@ const IndexPage = () => {
   return (
     <>
       {/*<Helmet>*/}
-      {/*  <title>Ayse Site</title>*/}
-      {/*  <meta name="author" content="Ayse Stinnett" />*/}
-      {/*  <meta name="title" content="Ayse's Personal Webbie" />*/}
-      {/*  <meta*/}
-      {/*    name="description"*/}
-      {/*    content="I am a frontend engineer with a passion for web development."*/}
-      {/*  />*/}
-      {/*  <meta property="og:title" content="Ayse Site" />*/}
-      {/*  <meta property="og:url" content="https://www.ayse.site/" />*/}
-      {/*  <meta property="og:image" content={Card} />*/}
-      {/*  <meta*/}
-      {/*    property="og:description"*/}
-      {/*    content="I am a frontend engineer with a passion for web development."*/}
-      {/*  />*/}
       {/*  <meta name="twitter:card" content="summary_large_image" />*/}
       {/*  <meta name="twitter:site" content="@AyseStinnett" />*/}
       {/*  <meta property="twitter:title" content="Ayse Site" />*/}
@@ -40,12 +26,14 @@ const IndexPage = () => {
       <Head>
         <title>Ayse Site</title>
         <link rel="canonical" href="https://ayse.site" key="canonical" />
+        <meta name="author" content="Ayse Stinnett" />
         <meta
           name="description"
           content="I am a frontend engineer with a passion for web development."
           key="desc"
         />
         <meta property="og:title" content="Ayse's sweet webbie" />
+        <meta property="og:url" content="https://www.ayse.site/" />
         <meta
           property="og:description"
           content="A frontend engineer with a passion for web development."
