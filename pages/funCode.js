@@ -5,27 +5,23 @@ import NodeTree from "../public/nodeTree.png";
 import Layout from "../components/layout";
 import ProjectsLayout from "../components/projectsLayout";
 import DomTraversal from "../components/domTraversal";
-
 import CodeEditor from "../components/codeEditor/editorApp";
 
 const Code = () => {
   return (
     <>
       <NextSeo title="Fun Code" description="Fun code exercises." />
-      <Layout pageTitle="Nifty Code">
-        <div className="pb-4 md:py-6">
+      <Layout pageTitle="Fun Code">
+        <div className="pb-4 py-2 md:py-6">
           {/*  DOM Traversal */}
-          <div className="text-center text-3xl pb-6">DOM Traversal</div>
-          <div className="flex justify-center align-middle px-56">
+          <div className="text-center text-3xl ">DOM Traversal</div>
+          <div className="px-6 md:px-0">
             <Image
-              // className="max-w-sm
-              // md:max-w-xl"
               src={NodeTree}
               alt="Node Tree"
-              // objectPosition="center
-              // center"
-              height="400%"
-              width="500%"
+              layout="intrinsic"
+              width={650}
+              height={425}
             />
           </div>
           <DomTraversal />

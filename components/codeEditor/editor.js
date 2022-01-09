@@ -6,6 +6,7 @@ import "codemirror/theme/material.css";
 // import "codemirror/mode/css/css";
 import { Controlled as ControlledEditor } from "react-codemirror2-react-17";
 import * as style from "./editorApp.module.css";
+import cn from "classnames";
 
 export default function Editor(props) {
   const { language, displayName, value, onChange } = props;
@@ -15,12 +16,19 @@ export default function Editor(props) {
   }
 
   return (
-    <div className={style.editorContainer}>
-      <div className={style.editorTitle}>{displayName}</div>
+    <div className="flex grow basis-0 flex-col p-2">
+      <div
+        className={cn(
+          "flex justify-between text-white rounded-t-lg py-2 pr-2 pl-4",
+          style.editorTitle
+        )}
+      >
+        {displayName}
+      </div>
       <ControlledEditor
         onBeforeChange={handleChange}
         value={value}
-        className={style.codeMirrorWrapper}
+        className="grow rounded-b-lg overflow-hidden text-left"
         options={{
           lineWrapping: true,
           lint: true,
