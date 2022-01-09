@@ -3,11 +3,13 @@ import Image from "next/image";
 import Me from "../public/me.jpg";
 import Card from "../public/ayseSite.png";
 import Card2 from "../public/ayseSite1.png";
+import Triangle from "../public/triangle.png";
 import Layout from "../components/layout";
 import AboutPhotos from "../components/aboutPhotos/aboutPhotos";
 import ProjectsContainer from "../components/projectsContainer/projectsContainer";
 import Contact from "../components/contact";
-import { NextSeo } from "next-seo";
+// import { NextSeo } from "next-seo";
+import { Helmet } from "react-helmet";
 import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
 
 const IndexPage = () => {
@@ -15,38 +17,41 @@ const IndexPage = () => {
 
   return (
     <>
-      <NextSeo
-        title="Ayse Site"
-        description="I am a frontend engineer with a passion for web development."
-        canonical="https://www.ayse.site/"
-        openGraph={{
-          url: "https://www.ayse.site/",
-          title: "Ayse Site",
-          description:
-            "I am a frontend engineer with a passion for web development.",
-          images: [
-            {
-              url: { Card },
-              width: 2330,
-              height: 1374,
-              alt: "Ayse Site Card",
-              type: "image/png",
-            },
-            {
-              url: { Card2 },
-              width: 1200,
-              height: 630,
-              alt: "Ayse Site Card",
-              type: "image/png",
-            },
-          ],
-        }}
-        twitter={{
-          handle: "@AyseStinnett",
-          // site: "@site",
-          cardType: "summary_large_image",
-        }}
-      />
+      <Helmet>
+        <title>Ayse Site</title>
+        <meta name="author" content="Ayse Stinnett" />
+        <meta name="title" content="Ayse's Personal Webbie" />
+        <meta
+          name="description"
+          content="I am a frontend engineer with a passion for web development."
+        />
+        <meta property="og:title" content="Ayse Site" />
+        <meta property="og:url" content="https://www.ayse.site/" />
+        <meta property="og:image" content={Card} />
+        <meta
+          property="og:description"
+          content="I am a frontend engineer with a passion for web development."
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@AyseStinnett" />
+        <meta property="twitter:title" content="Ayse Site" />
+      </Helmet>
+      {/*<NextSeo*/}
+      {/*  title="Ayse Site"*/}
+      {/*  description="I am a frontend engineer with a passion for web development."*/}
+      {/*  canonical="https://www.ayse.site/"*/}
+      {/*  openGraph={{*/}
+      {/*    url: "https://www.ayse.site/",*/}
+      {/*    title: "Ayse Site",*/}
+      {/*    description:*/}
+      {/*      "I am a frontend engineer with a passion for web development.",*/}
+      {/*  }}*/}
+      {/*  twitter={{*/}
+      {/*    handle: "@AyseStinnett",*/}
+      {/*    // site: "@site",*/}
+      {/*    cardType: "summary_large_image",*/}
+      {/*  }}*/}
+      {/*/>*/}
       <Layout pageTitle="Home">
         <div id="home" />
 
