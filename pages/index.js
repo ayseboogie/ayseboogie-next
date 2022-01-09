@@ -9,7 +9,7 @@ import AboutPhotos from "../components/aboutPhotos/aboutPhotos";
 import ProjectsContainer from "../components/projectsContainer/projectsContainer";
 import Contact from "../components/contact";
 // import { NextSeo } from "next-seo";
-import Head from "next/head";
+import { Helmet } from "react-helmet";
 import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
 
 const IndexPage = () => {
@@ -17,17 +17,25 @@ const IndexPage = () => {
 
   return (
     <>
-      {/*<Head>*/}
-      {/*  <meta charSet="utf-8" />*/}
-      {/*  <title>Home</title>*/}
-      {/*  <link rel="canonical" href="https://ayse.site" />*/}
-      {/*  <link rel="icon" href={Triangle} />*/}
-      {/*  <meta property="og:image" content={Card} />*/}
-      {/*</Head>*/}
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href={Triangle} />
-      </Head>
+      <Helmet>
+        <title>Ayse Site</title>
+        <meta name="author" content="Ayse Stinnett" />
+        <meta name="title" content="Ayse's Personal Webbie" />
+        <meta
+          name="description"
+          content="I am a frontend engineer with a passion for web development."
+        />
+        <meta property="og:title" content="Ayse Site" />
+        <meta property="og:url" content="https://www.ayse.site/" />
+        <meta property="og:image" content={Card} />
+        <meta
+          property="og:description"
+          content="I am a frontend engineer with a passion for web development."
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@AyseStinnett" />
+        <meta property="twitter:title" content="Ayse Site" />
+      </Helmet>
       {/*<NextSeo*/}
       {/*  title="Ayse Site"*/}
       {/*  description="I am a frontend engineer with a passion for web development."*/}
