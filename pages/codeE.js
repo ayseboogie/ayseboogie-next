@@ -1,7 +1,7 @@
 import * as React from "react";
 import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
 import Layout from "../components/layout";
-import CodeEditor from "../components/codeEditor/editorApp";
+import CodeEditor from "../components/codeEditorPlay/editorApp";
 
 const Code = () => {
   const { windowWidth } = useWindowDimensions();
