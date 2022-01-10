@@ -1,19 +1,42 @@
 import * as React from "react";
-// import { NextSeo } from "next-seo";
+import Head from "next/head";
 import Image from "next/image";
+import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
 import NodeTree from "../public/nodeTree.png";
 import Layout from "../components/layout";
 import ProjectsLayout from "../components/projectsLayout";
 import DomTraversal from "../components/domTraversal";
 import CodeEditor from "../components/codeEditor/editorApp";
-import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
 
 const Code = () => {
   const { windowWidth } = useWindowDimensions();
 
   return (
     <>
-      {/*<NextSeo title="Fun Code" description="Fun code exercises." />*/}
+      <Head>
+        <title>Code - Ayse Site</title>
+        <link rel="icon" href="/triangle.png" />
+        <meta name="author" content="Ayse Stinnett" />
+        <meta
+          name="description"
+          content="Fun components I build in my free time. Ever growing."
+          key="desc"
+        />
+        <meta property="og:title" content="Code - Ayse Site" />
+        <meta property="og:url" content="https://www.ayse.site/funCode" />
+        <meta
+          property="og:description"
+          content="Fun components I build in my free time. Ever growing."
+          key="desc"
+        />
+        <meta property="og:image" content="/ayseSite.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:image"
+          content="https://ayseimg.s3.amazonaws.com/ayseSite.png"
+        />
+        <meta name="twitter:site" content="@AyseStinnett" />
+      </Head>
       <Layout pageTitle="Fun Code">
         <div className="pb-4 py-2 md:py-6">
           {/*  DOM Traversal */}
