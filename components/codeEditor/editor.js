@@ -1,12 +1,16 @@
 import React from "react";
 import "codemirror/lib/codemirror.css";
 import "codemirror/theme/material.css";
-// import "codemirror/mode/xml/xml";
-// import "codemirror/mode/javascript/javascript";
-// import "codemirror/mode/css/css";
 import { Controlled as ControlledEditor } from "react-codemirror2-react-17";
 import * as style from "./editorApp.module.css";
 import cn from "classnames";
+
+let modeLoaded = false;
+if (typeof window !== "undefined" && typeof window.navigator !== "undefined") {
+  require("codemirror/mode/xml/xml");
+  require("codemirror/mode/css/css");
+  modeLoaded = true;
+}
 
 export default function Editor(props) {
   const { language, displayName, value, onChange } = props;

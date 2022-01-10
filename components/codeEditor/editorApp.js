@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useLocalStorage } from "./useLocalStorage";
 import Editor from "./editor";
 import * as style from "./editorApp.module.css";
-import cn from "classnames";
 
 const EditorApp = () => {
   const [html, setHtml] = useLocalStorage(
