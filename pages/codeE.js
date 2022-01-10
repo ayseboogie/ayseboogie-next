@@ -10,9 +10,7 @@ const Code = () => {
     <>
       <Layout pageTitle="Editor">
         {/*  CSS Trick */}
-        <div className="text-center text-3xl py-10">
-          Responsive Layout Without Media Queries
-        </div>
+        <div className="text-center text-3xl py-10">Code Editor</div>
         <CodeEditor />
         <div className="flex justify-center">
           Window size:&nbsp;
