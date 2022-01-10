@@ -1,5 +1,6 @@
 import * as React from "react";
 import Image from "next/image";
+import { Anchor } from "nextjs-anchor";
 import Me from "../public/me.jpg";
 import Layout from "../components/layout";
 import AboutPhotos from "../components/aboutPhotos/aboutPhotos";
@@ -7,6 +8,7 @@ import ProjectsContainer from "../components/projectsContainer/projectsContainer
 import Contact from "../components/contact";
 import Head from "next/head";
 import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
+import * as style from "./index.module.css";
 
 const IndexPage = () => {
   const { windowWidth } = useWindowDimensions();
@@ -23,7 +25,7 @@ const IndexPage = () => {
           content="I am a frontend engineer with a passion for web development."
           key="desc"
         />
-        <meta property="og:title" content="Ayse's sweet webbie" />
+        <meta property="og:title" content="Ayse's Website" />
         <meta property="og:url" content="https://www.ayse.site/" />
         <meta
           property="og:description"
@@ -67,7 +69,7 @@ const IndexPage = () => {
           <hr className="flex flex-grow md:mx-16 lg:mx-24" />
         </div>
 
-        <div className="w-full text-center text-sm md:text-lg lg:text-2xl tracking-widest px-16 md:px-32 py-6 md:py-16">
+        <div className="w-full text-center text-sm md:text-lg lg:text-2xl tracking-widest px-12 md:px-32 py-6 md:py-16">
           <h1>Hey, I&apos;m Ayse.</h1>
           <p>I am a frontend engineer with a passion for web development.</p>
           I enjoy taking on new challenges and continuously growing my skill
@@ -84,6 +86,19 @@ const IndexPage = () => {
           Other than staring at a computer screen, a few of the things I enjoy
           include bicycling, paddleboarding, hiking, snowboarding, traveling,
           and scrabble.
+        </div>
+        <hr className="mx-20 md:mx-48" />
+        <div className="w-full text-center text-sm md:text-lg lg:text-2xl tracking-widest px-16 md:px-32 py-6 md:py-16">
+          If you would like to speak with me about building a website for you,
+          please fill out the&nbsp;
+          <Anchor
+            href="/#contact"
+            title="Contact"
+            className={style.pinkOverlay}
+          >
+            <span>contact form</span>
+          </Anchor>
+          &nbsp;below.
         </div>
 
         <span id="portfolio" />
