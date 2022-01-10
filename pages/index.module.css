@@ -1,0 +1,4 @@
+.pinkOverlay {
+    box-shadow: inset 2000px 0 0 0 rgba(183, 110, 121, 0.5);
+    border-color: rgba(183, 110, 121, 1);
+}
