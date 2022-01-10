@@ -1,0 +1,31 @@
+
+.pane {
+    padding-top: 1%;
+    height: 65vh;
+}
+
+@media (min-width: 900px) {
+    .pane {
+        height: 40vh;
+    }
+}
+
+@media (min-width: 1300px) {
+    .pane {
+        height: 30vh;
+    }
+}
+
+.topPane {
+    background-color: hsl(225, 6%, 25%);
+}
+
+@media (min-width: 500px) {
+    .topPane {
+        display: flex;
+    }
+}
+
+.editorTitle {
+    background-color: hsl(225, 6%, 13%);
+}
