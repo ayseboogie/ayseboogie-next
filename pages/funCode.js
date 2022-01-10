@@ -86,9 +86,10 @@ const Code = () => {
           wanted. I pushed..and it failed. I spent many hours trying to get to
           the bottom of it with no luck. My next idea was to rebuild my entire
           site in NextJS, so that&apos;s what I did. It was a fun process to
-          rebuild with a slightly different API, but honestly I think it was the
-          break of fumbling with this component that allowed me to come back
-          with fresh eyes and get it solved.
+          rebuild with a slightly different API. The build still didn&apos;t
+          pass. I was able to figure it out this time, and honestly I think it
+          was the break of fumbling with this component that allowed me to come
+          back with fresh eyes and get it solved.
         </div>
 
         {/*<div className="max-w-2xl lg:max-w-4xl m-auto">*/}
