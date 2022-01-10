@@ -1,15 +1,35 @@
 import * as React from "react";
-// import { NextSeo } from "next-seo";
+import Head from "next/head";
 import Layout from "../components/layout";
 import ProjectsLayout from "../components/projectsLayout";
 
 const GatsbySite = () => {
   return (
     <>
-      {/*<NextSeo*/}
-      {/*  title="Experiences"*/}
-      {/*  description="This was my first project with Lonely Planet. It has been changed a bit since I built it, but it is React in a NextJS framework with Tailwind styling, using GraphQL to query from a Drupal CMS. Built in WordPress."*/}
-      {/*/>*/}
+      <Head>
+        <title>Gatsby - Ayse Site</title>
+        <link rel="icon" href="/triangle.png" />
+        <meta name="author" content="Ayse Stinnett" />
+        <meta
+          name="description"
+          content="The beginning of my website, built in a Gatsby framework."
+          key="desc"
+        />
+        <meta property="og:title" content="Gatsby - Ayse Site" />
+        <meta property="og:url" content="https://www.ayse.site/gatsbySite" />
+        <meta
+          property="og:description"
+          content="The beginning of my website, built in a Gatsby framework."
+          key="desc"
+        />
+        <meta property="og:image" content="/ayseSite.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:image"
+          content="https://ayseimg.s3.amazonaws.com/ayseSite.png"
+        />
+        <meta name="twitter:site" content="@AyseStinnett" />
+      </Head>
       <Layout pageTitle="Gatsby Site">
         <ProjectsLayout
           about="This is my first build of the website you are currently on. As mentioned on my Code page,
