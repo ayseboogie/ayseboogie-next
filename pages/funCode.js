@@ -111,7 +111,7 @@ const Code = () => {
           NextJS, so that&apos;s what I did. It was a fun process to rebuild
           with a slightly different API. The build still didn&apos;t pass. I was
           able to figure it out this time, and honestly I think it was the break
-          of fumbling with this component that allowed me to come back with
+          from fumbling with this component that allowed me to come back with
           fresh eyes and get it solved.
         </div>
 
