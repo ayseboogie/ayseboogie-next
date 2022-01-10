@@ -127,7 +127,7 @@ const EditorApp = () => {
 
   return (
     <>
-      <div className={cn("flex", style.topPane)}>
+      <div className={style.topPane}>
         <Editor
           language="xml"
           displayName="HTML"
