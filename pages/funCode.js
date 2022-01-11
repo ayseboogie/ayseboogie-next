@@ -52,7 +52,7 @@ const Code = () => {
           </div>
           <DomTraversal />
         </div>
-        <div className="pb-10 max-w-2xl lg:max-w-4xl m-auto text-center">
+        <div className="pb-10 px-4 md:px-0 max-w-2xl lg:max-w-4xl m-auto text-center">
           I created this page to familiarize myself with traversing the dom. All
           of the logic used in this page stems from the DOM. I used a for loop
           to traverse the node tree. For the fun facts, I used
@@ -75,7 +75,7 @@ const Code = () => {
           )}
           {windowWidth > 1300 && <div className="pb-6">&gt; 1300px</div>}
         </div>
-        <div className="pb-10 max-w-2xl lg:max-w-4xl m-auto text-center">
+        <div className="pb-10 px-4 md:px-0 max-w-2xl lg:max-w-4xl m-auto text-center">
           I read an article from
           <a
             className="text-gray-400 font-bold"
