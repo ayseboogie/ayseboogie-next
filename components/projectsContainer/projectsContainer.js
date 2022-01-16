@@ -127,6 +127,36 @@ const ProjectsContainer = () => {
             </div>
           </div>
         </div>
+
+        {/* 4 */}
+        <div className="relative w-full">
+          <Link href="/codeEditor">
+            <Image
+              src="/nextjsCodeEditor.jpeg"
+              alt="Code Editor"
+              layout="fill"
+              objectFit="contain"
+              className={cn(
+                "h-full w-auto opacity-100 block rounded-md",
+                style.image
+              )}
+            />
+          </Link>
+          <div
+            className={cn(
+              "opacity-100 absolute text-center",
+              style.translateDiv
+            )}
+            style={{
+              transition: ".5 ease",
+              left: "50%",
+            }}
+          >
+            <div className="text-white text-center whitespace-nowrap text-sm">
+              <Link href="/codeEditor">Code Editor</Link>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
