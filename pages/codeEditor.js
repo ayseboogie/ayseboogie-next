@@ -54,15 +54,15 @@ const CodeEditor = () => {
               </span>
               page, I ran into some issues creating a code editor in SSR
               frameworks. I could not find any solutions online, so I decided to
-              write a
+              write a &nbsp;
               <a href="" className="text-gray-800 font-bold">
                 post
               </a>
-              about it after I figured it out
+              &nbsp; about it after I figured it out.
             </span>
           }
-          platform="Wordpress Woocommerce, hosted through GoDaddy"
-          checkIt="https://chifarms.org/"
+          platform="Github Repository"
+          checkIt="https://dev.to/ayseboogie/building-a-code-editor-within-nextjs-3nnc"
         />
       </Layout>
     </>
