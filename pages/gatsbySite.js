@@ -29,6 +29,11 @@ const GatsbySite = () => {
           content="https://ayseimg.s3.amazonaws.com/ayseSite.png"
         />
         <meta name="twitter:site" content="@AyseStinnett" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1933632198679662"
+          crossOrigin="anonymous"
+        />
       </Head>
       <Layout pageTitle="Gatsby Site">
         <ProjectsLayout

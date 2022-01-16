@@ -36,6 +36,11 @@ const Code = () => {
           content="https://ayseimg.s3.amazonaws.com/ayseSite.png"
         />
         <meta name="twitter:site" content="@AyseStinnett" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1933632198679662"
+          crossOrigin="anonymous"
+        />
       </Head>
       <Layout pageTitle="Fun Code">
         <div className="pb-4 py-2 md:py-6">
