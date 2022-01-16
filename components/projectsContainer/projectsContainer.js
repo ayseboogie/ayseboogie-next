@@ -70,36 +70,6 @@ const ProjectsContainer = () => {
 
         {/* 2 */}
         <div className="relative w-full">
-          <Link href="/funCode">
-            <Image
-              src="/dom.png"
-              alt="Fun Code"
-              layout="fill"
-              objectFit="contain"
-              className={cn(
-                "h-full w-auto opacity-100 block rounded-md",
-                style.image
-              )}
-            />
-          </Link>
-          <div
-            className={cn(
-              "opacity-100 absolute text-center",
-              style.translateDiv
-            )}
-            style={{
-              transition: ".5 ease",
-              left: "50%",
-            }}
-          >
-            <div className="text-white text-center whitespace-nowrap text-sm">
-              <Link href="/funCode">Fun Code</Link>
-            </div>
-          </div>
-        </div>
-
-        {/* 3 */}
-        <div className="relative w-full">
           <Link href="/gatsbySite">
             <Image
               src="/gatsbySite.png"
@@ -128,7 +98,67 @@ const ProjectsContainer = () => {
           </div>
         </div>
 
+        {/* 3 */}
+        <div className="relative w-full">
+          <Link href="/domTraversal">
+            <Image
+              src="/dom.png"
+              alt="Dom Traversal"
+              layout="fill"
+              objectFit="contain"
+              className={cn(
+                "h-full w-auto opacity-100 block rounded-md",
+                style.image
+              )}
+            />
+          </Link>
+          <div
+            className={cn(
+              "opacity-100 absolute text-center",
+              style.translateDiv
+            )}
+            style={{
+              transition: ".5 ease",
+              left: "50%",
+            }}
+          >
+            <div className="text-white text-center whitespace-nowrap text-sm">
+              <Link href="/domTraversal">Dom Traversal</Link>
+            </div>
+          </div>
+        </div>
+
         {/* 4 */}
+        <div className="relative w-full">
+          <Link href="/responsiveLayout">
+            <Image
+              src="/responsiveLayout.png"
+              alt="Responsive Layout"
+              layout="fill"
+              objectFit="contain"
+              className={cn(
+                "h-full w-auto opacity-100 block rounded-md",
+                style.image
+              )}
+            />
+          </Link>
+          <div
+            className={cn(
+              "opacity-100 absolute text-center",
+              style.translateDiv
+            )}
+            style={{
+              transition: ".5 ease",
+              left: "50%",
+            }}
+          >
+            <div className="text-white text-center whitespace-nowrap text-sm">
+              <Link href="/responsiveLayout">Responsive Layout</Link>
+            </div>
+          </div>
+        </div>
+
+        {/* 5 */}
         <div className="relative w-full">
           <Link href="/codeEditor">
             <Image

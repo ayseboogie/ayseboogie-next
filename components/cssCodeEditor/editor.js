@@ -1,3 +1,4 @@
+import React from "react";
 import "codemirror/lib/codemirror.css";
 import "codemirror/theme/tomorrow-night-bright.css";
 import { Controlled as ControlledEditor } from "react-codemirror2-react-17";
@@ -6,11 +7,10 @@ let languageLoaded = false;
 if (typeof window !== "undefined" && typeof window.navigator !== "undefined") {
   require("codemirror/mode/xml/xml");
   require("codemirror/mode/css/css");
-  require("codemirror/mode/javascript/javascript");
   languageLoaded = true;
 }
 
-const Editor = (props) => {
+export default function Editor(props) {
   const { language, editorTitle, value, onChange, className } = props;
 
   function handleChange(editor, data, value) {
@@ -23,7 +23,7 @@ const Editor = (props) => {
         {editorTitle}
       </div>
       <ControlledEditor
-        onBeforeChange={handleChange}
+        // onBeforeChange={handleChange}
         value={value}
         className="grow rounded-b-lg overflow-hidden text-left"
         options={{
@@ -36,6 +36,4 @@ const Editor = (props) => {
       />
     </div>
   );
-};
-
-export default Editor;
+}

@@ -9,6 +9,7 @@ import Contact from "../components/contact";
 import Head from "next/head";
 import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
 import * as style from "./index.module.css";
+import cn from "classnames";
 
 const IndexPage = () => {
   const { windowWidth } = useWindowDimensions();
@@ -99,9 +100,9 @@ const IndexPage = () => {
           <Anchor
             href="/#contact"
             title="Contact"
-            className={style.pinkOverlay}
+            className={cn("px-2", style.pinkOverlay)}
           >
-            <span>contact form</span>
+            contact form
           </Anchor>
           &nbsp;below.
         </div>
