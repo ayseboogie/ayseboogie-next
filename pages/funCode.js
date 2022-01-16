@@ -46,7 +46,7 @@ const Code = () => {
         <div className="pb-4 py-2 md:py-6">
           {/*  DOM Traversal */}
           <div className="text-center text-3xl ">DOM Traversal</div>
-          <div className="px-6 md:px-0">
+          <div className="flex justify-center px-6 md:px-0  ">
             <Image
               src={NodeTree}
               alt="Node Tree"
