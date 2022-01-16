@@ -1,14 +1,12 @@
 import * as React from "react";
 import Head from "next/head";
-import Image from "next/image";
+import Link from "next/link";
 import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
-import NodeTree from "../public/nodeTree.png";
 import Layout from "../components/layout";
 import ProjectsLayout from "../components/projectsLayout";
-import DomTraversal from "../components/domTraversal";
-import CodeEditor from "../components/codeEditor/editorApp";
+import CodeEditor from "../components/cssCodeEditor/editorApp";
 
-const Code = () => {
+const ResponsiveLayout = () => {
   const { windowWidth } = useWindowDimensions();
 
   return (
@@ -19,14 +17,17 @@ const Code = () => {
         <meta name="author" content="Ayse Stinnett" />
         <meta
           name="description"
-          content="Fun components I build in my free time. Ever growing."
+          content="Responsive Layout without using media queries"
           key="desc"
         />
-        <meta property="og:title" content="Code - Ayse Site" />
-        <meta property="og:url" content="https://www.ayse.site/funCode" />
+        <meta property="og:title" content="Responsive Layout - Ayse Site" />
+        <meta
+          property="og:url"
+          content="https://www.ayse.site/responsiveLayout"
+        />
         <meta
           property="og:description"
-          content="Fun components I build in my free time. Ever growing."
+          content="Responsive Layout without using media queries"
           key="desc"
         />
         <meta property="og:image" content="/ayseSite.png" />
@@ -42,34 +43,11 @@ const Code = () => {
           crossOrigin="anonymous"
         />
       </Head>
-      <Layout pageTitle="Fun Code">
-        <div className="pb-4 py-2 md:py-6">
-          {/*  DOM Traversal */}
-          <div className="text-center text-3xl ">DOM Traversal</div>
-          <div className="flex justify-center px-6 md:px-0  ">
-            <Image
-              src={NodeTree}
-              alt="Node Tree"
-              layout="intrinsic"
-              width={650}
-              height={425}
-            />
-          </div>
-          <DomTraversal />
-        </div>
-        <div className="pb-10 px-4 md:px-0 max-w-2xl lg:max-w-4xl m-auto text-center">
-          I created this page to familiarize myself with traversing the dom. All
-          of the logic used in this page stems from the DOM. I used a for loop
-          to traverse the node tree. For the fun facts, I used
-          getElementsByTagName to find the &lt;td&gt; element and an if
-          statement to change the text color.
-        </div>
-        <hr />
-        {/*  CSS Trick */}
+      <Layout pageTitle="Responsive Layout">
         <div className="text-center text-3xl py-10">
           Responsive Layout Without Media Queries
         </div>
-        <CodeEditor />
+
         <div className="flex justify-center">
           Window size:&nbsp;
           {windowWidth > 20 && windowWidth < 900 && (
@@ -80,6 +58,7 @@ const Code = () => {
           )}
           {windowWidth > 1300 && <div className="pb-6">&gt; 1300px</div>}
         </div>
+        <CodeEditor />
         <div className="pb-10 px-4 md:px-0 max-w-2xl lg:max-w-4xl m-auto text-center">
           I read an article from
           <a
@@ -111,22 +90,24 @@ const Code = () => {
           codeMirror for this component, neither of which get along with the
           frameworks I used. I originally built this site in Gatsby. I built out
           this component and it looked / worked exactly as I wanted. I
-          pushed..and it failed. I spent many hours trying to get to the bottom
-          of it with no luck. My next idea was to rebuild my entire site in
+          pushed..and it failed. My next idea was to rebuild my entire site in
           NextJS, so that&apos;s what I did. It was a fun process to rebuild
           with a slightly different API. The build still didn&apos;t pass. I was
           able to figure it out this time, and honestly I think it was the break
           from fumbling with this component that allowed me to come back with
           fresh eyes and get it solved.
+          <br />
+          <br />
+          After my aha moment, I decided to make the
+          <span className="text-gray-800 font-bold cursor-pointer">
+            &nbsp;<Link href="/codeEditor">editor</Link>&nbsp;
+          </span>
+          a component of its own
         </div>
-
-        {/*<div className="max-w-2xl lg:max-w-4xl m-auto">*/}
-        <hr />
-        {/*</div>*/}
         <ProjectsLayout />
       </Layout>
     </>
   );
 };
 
-export default Code;
+export default ResponsiveLayout;

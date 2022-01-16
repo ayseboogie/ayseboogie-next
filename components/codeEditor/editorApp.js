@@ -1,153 +1,169 @@
-import * as React from "react";
 import { useEffect, useState } from "react";
-import { useLocalStorage } from "./useLocalStorage";
 import Editor from "./editor";
-import * as style from "./editorApp.module.css";
+import { useLocalStorage } from "./useLocalStorage";
+import * as style from "./editor.module.css";
+import cn from "classnames";
 
 const EditorApp = () => {
+  //html
   const [html, setHtml] = useLocalStorage(
     "html",
     `<div class="container">
-      <div class="slate">slate</div>
-      <div class="red">red</div>
-      <div class="orange"> orange</div>
-      <div class="yellow">yellow</div>
-      <div class="green">green</div>
-      <div class="blue">blue</div>
-      <div class="indigo">indigo</div>
-      <div class="violet"> violet</div>
-      <div class="grey">grey</div>
-  </div>`
+  <div class="card">
+     <img class="frontside___button" id="toggleCard"  src="https://ayseimg.s3.amazonaws.com/ayseSiteOriginal.png" alt="frontside" /> 
+    <div class="backside__form">
+      <img  class="backside__img" src="https://ayseimg.s3.amazonaws.com/back+of+card.png" alt="backside" />
+     </div>
+  </div>
+</div>`
   );
+  //css
   const [css, setCss] = useLocalStorage(
     "css",
-    `.container {
-       /* first breakpoint*/
-    --w1: 1300px;
-    --n: 6;
-    /* second breakpoint*/
-    --w2: 900px;
-    --m: 4;
-    /* third breakpoint*/
-    --w3: 20px;
-    --p: 2;
-    display: grid;
-    grid-template-columns:
-    repeat(auto-fill,
-        minmax(clamp(clamp(clamp(
-            100% / (var(--n) + 1) + 0.1%,
-            (var(--w1) - 100vw) * 1000,
-    100% / (var(--m) + 1) + 0.1%),
-    (var(--w2) - 100vw) * 1000,
-    100% / (var(--p) + 1) + 0.1%),
-    (var(--w3) - 100vw) * 1000,
-    100%), 1fr));
-    gap: 10px;
-  }
-.slate {
-    color: rgb(30, 41, 59);
-    background-color: rgb(241, 245, 249);
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
-  }
-.red {
-    color: rgb(185 28 28);
-    background-color: rgb(254 226 226);
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
-  }
-.orange {
-    color: rgb(194 65 12);
-    background-color: rgb(255 237 213);
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
-  }
-.yellow {
-    color: rgb(234 179 8);
-    background-color: rgb(254 249 195);
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
-  }
-.green {
-    color: rgb(21 128 61);
-    background-color: rgb(220 252 231);
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
-  }
-.blue {
-    color: rgb(29 78 216);
-    background-color: rgb(219 234 254);
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
-  }
-.indigo {
-    color: rgb(67 56 202);
-    background-color: rgb(224 231 255);
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
-  }
-.violet {
-    color: rgb(109 40 217);
-    background-color: rgb(237 233 254);
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
-  }
-.grey {
-    color: rgb(55 65 81);
-    background-color: rgb(243 244 246);
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
-  }`
-  );
+    `html {
+  height: 100%
+}
 
+body {
+  position: relative;
+  min-height: 100%;
+  background: #1F2937;
+}
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+ /* Intro animation */
+@keyframes intro {
+  from {
+    opacity: 0;
+    top: 0;
+  }
+  to {
+    opacity: 1;
+    top: 50%;
+  }
+}
+
+.container {
+  position: absolute;
+  width: 50%;
+  left: 50%;
+  vertical-align: center;
+  transform: translate(-50%,-70%);
+  animation: intro .7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@media (min-width: 1500px) {
+    .container {
+        transform: translate(-30%,-60%);
+    }
+}
+
+.card {
+  max-width: 400px;
+  position: relative;
+}
+@media (min-width: 2000px) {
+    .card {
+  max-width: 640px;
+\t}
+}
+.card--open .backside__form {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  transform: translateY(6em);
+  padding-top: 10em;
+}
+@media (min-width: 2000px) {
+    .card--open .backside__form {
+  transform: translateY(14em);
+  padding-top: 10em;
+}
+}
+
+.frontside___button {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  width: 100%;
+  display: block;
+  transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.backside__form {
+  position: relative;
+  visibility: hidden;
+  padding: 3em;
+  border-radius: .25em;
+  transition: 
+    opacity .4s ease-in-out,
+    height .4s ease-in-out,
+    transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+    padding .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}`
+  );
+  //js
+  const [js, setJs] = useLocalStorage(
+    "js",
+    `document.getElementById('toggleCard').addEventListener('click', function () {
+  [].map.call(document.querySelectorAll('.card'), function(el) {
+    el.classList.toggle('card--open');
+  });
+});`
+  );
   const [srcDoc, setSrcDoc] = useState("");
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setSrcDoc(`
-        <html>
+        <html lang="en">
           <body>${html}</body>
           <style>${css}</style>
+          <script>${js}</script>
         </html>
       `);
-    }, 250);
+    }, 200);
 
     return () => clearTimeout(timeout);
-  }, [html, css]);
+  }, [html, css, js]);
 
   return (
     <>
-      <div className={style.topPane}>
+      <div className={cn("bg-zinc-500", style.topPane)}>
         <Editor
+          className="px-2 py-3 md:w-1/3 md:pl-3 md:pr-2"
           language="xml"
-          displayName="HTML"
+          editorTitle="HTML"
           value={html}
           onChange={setHtml}
         />
         <Editor
+          className="px-2 py-3 md:w-1/3 md:px-2"
           language="css"
-          displayName="CSS"
+          editorTitle="CSS"
           value={css}
           onChange={setCss}
         />
+        <Editor
+          className="px-2 py-3 md:w-1/3 md:pl-1 md:pr-3"
+          language="javascript"
+          editorTitle="JS"
+          value={js}
+          onChange={setJs}
+        />
       </div>
-      <div className={style.pane}>
+      <div style={{ height: "60vh" }}>
         <iframe
           srcDoc={srcDoc}
           title="output"
           sandbox="allow-scripts"
           frameBorder="0"
-          width="100%"
           height="100%"
+          width="100%"
         />
       </div>
     </>

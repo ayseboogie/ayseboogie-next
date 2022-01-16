@@ -122,13 +122,13 @@ export class DomTraversal extends Component {
     function nextFact() {
       const td = document.getElementsByTagName("td")[0];
 
-      const tdKidz = td.childNodes;
+      const tdKids = td.childNodes;
       numb += 1;
       const nextFactButton = document.getElementsByTagName("button")[1];
-      if (numb < tdKidz.length) {
+      if (numb < tdKids.length) {
         td.childNodes[numb].style.color = "black";
       }
-      if (numb == tdKidz.length - 1) {
+      if (numb == tdKids.length - 1) {
         nextFactButton.style.backgroundColor = "grey";
       }
     }
@@ -205,6 +205,11 @@ export class DomTraversal extends Component {
               <tr>
                 <div style={{ paddingBottom: 1.25 + "em" }}>
                   We were both born on May 11th
+                </div>
+              </tr>
+              <tr>
+                <div style={{ paddingBottom: 1.25 + "em" }}>
+                  (Only I was born the month / year javascript was developed)
                 </div>
               </tr>
               <tr>
