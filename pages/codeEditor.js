@@ -43,6 +43,7 @@ const CodeEditor = () => {
         <ProjectsLayout
           about={
             <span>
+              Click the card to pop out the backside. <br />
               As mentioned on the
               <span className="text-gray-800 font-bold">
                 &nbsp;
@@ -51,9 +52,9 @@ const CodeEditor = () => {
                 </Link>
                 &nbsp;
               </span>
-              page, I ran into some issues creating a code editor in SSR
-              frameworks. I could not find any solutions online, so I decided to
-              write a &nbsp;
+              page, I ran into some issues creating a functional html, css, and
+              javascript code editor in SSR frameworks. I could not find any
+              solutions online, so I decided to write a &nbsp;
               <a href="" className="text-gray-800 font-bold cursor-pointer">
                 post
               </a>

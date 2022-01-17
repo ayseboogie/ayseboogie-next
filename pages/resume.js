@@ -20,8 +20,12 @@ function Resume() {
           <Link href="/">back home</Link>
         </div>
       </div>
-      <div className="w-full md:flex items-center justify-center">
-        <Document file="/resume.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+      <div className="w-full md:flex items-center justify-center py-9">
+        <Document
+          className="md:border-gray-800 md:border-2"
+          file="/resume.pdf"
+          onLoadSuccess={onDocumentLoadSuccess}
+        >
           <Page pageNumber={pageNumber} />
         </Document>
       </div>
