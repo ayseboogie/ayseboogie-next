@@ -12,7 +12,7 @@ const ResponsiveLayout = () => {
   return (
     <>
       <Head>
-        <title>Code - Ayse Site</title>
+        <title>Responsive Layout - Ayse Site</title>
         <link rel="icon" href="/triangle.png" />
         <meta name="author" content="Ayse Stinnett" />
         <meta
@@ -86,23 +86,24 @@ const ResponsiveLayout = () => {
           per.
           <br />
           <br />
-          This was a difficult debug for me. I used both localStorage and
-          codeMirror for this component, neither of which get along with the
-          frameworks I used. I originally built this site in Gatsby. I built out
-          this component and it looked / worked exactly as I wanted. I
-          pushed..and it failed. My next idea was to rebuild my entire site in
-          NextJS, so that&apos;s what I did. It was a fun process to rebuild
-          with a slightly different API. The build still didn&apos;t pass. I was
-          able to figure it out this time, and honestly I think it was the break
-          from fumbling with this component that allowed me to come back with
-          fresh eyes and get it solved.
+          The code editor I wanted to use for this was a challenge for me. I
+          used both localStorage and codeMirror for the component, neither of
+          which get along with the SSR frameworks. I originally built this site
+          in Gatsby. I built out the editor, and it looked / worked exactly as I
+          wanted. I pushed..and it failed. My next idea was to rebuild my entire
+          site in NextJS, so that&apos;s what I did. It was a fun process to
+          rebuild with a slightly different API. The build still didn&apos;t
+          pass. I was able to figure it out this time, and honestly I think it
+          was the break from fumbling with the component that allowed me to come
+          back with fresh eyes and get it solved.
           <br />
           <br />
           After my aha moment, I decided to make the
           <span className="text-gray-800 font-bold cursor-pointer">
             &nbsp;<Link href="/codeEditor">editor</Link>&nbsp;
           </span>
-          a component of its own
+          a component of its own. I then made the editor on this page static due
+          to localStorage being used on the code editor page.
         </div>
         <ProjectsLayout />
       </Layout>

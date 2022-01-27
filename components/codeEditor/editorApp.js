@@ -167,7 +167,7 @@ const EditorApp = () => {
           onChange={setJs}
         />
       </div>
-      <div style={{ height: "65vh" }}>
+      <div style={{ height: "68vh" }}>
         <iframe
           srcDoc={srcDoc}
           title="output"

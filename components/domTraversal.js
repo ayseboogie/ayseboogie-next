@@ -176,13 +176,12 @@ export class DomTraversal extends Component {
           <h1
             style={{
               color: "green",
-              paddingTop: 10 + "px",
-              fontSize: 24 + "px",
+              paddingTop: 10,
+              fontSize: 24,
             }}
           >
-            Salvador Dalí is my favorite visual artist.
+            Salvador Dalí Fun Facts
           </h1>
-          <h2 style={{ paddingBottom: 1.75 + "em" }}>Fun Facts</h2>
           <table
             style={{
               textAlign: "center",
@@ -191,39 +190,40 @@ export class DomTraversal extends Component {
             }}
           >
             <td
+              className="px-6"
               style={{
                 color: "white",
-                paddingTop: 10 + "px",
+                paddingTop: "10px",
               }}
             >
               <tr>
-                <div style={{ paddingBottom: 1.25 + "em" }}>
+                <div style={{ paddingBottom: "1.25em" }}>
                   He was friends with one of my favorite musical artists, Alice
                   Cooper
                 </div>
               </tr>
               <tr>
-                <div style={{ paddingBottom: 1.25 + "em" }}>
+                <div style={{ paddingBottom: "1.25em" }}>
                   We were both born on May 11th
                 </div>
               </tr>
               <tr>
-                <div style={{ paddingBottom: 1.25 + "em" }}>
+                <div style={{ paddingBottom: "1.25em" }}>
                   (Only I was born the month / year javascript was developed)
                 </div>
               </tr>
               <tr>
-                <div style={{ paddingBottom: 1.25 + "em" }}>
+                <div style={{ paddingBottom: "1.25em" }}>
                   He had an ocelot named Babou
                 </div>
               </tr>
               <tr>
-                <div style={{ paddingBottom: 1.25 + "em" }}>
+                <div style={{ paddingBottom: "1.25em" }}>
                   Dalí and his wife lived in America for 8 years
                 </div>
               </tr>
               <tr>
-                <div style={{ paddingBottom: 1.25 + "em" }}>
+                <div style={{ paddingBottom: "1.25em" }}>
                   His trademark mustache was still intact, since his death in
                   1989, when his body was exhumed in 2017
                 </div>
