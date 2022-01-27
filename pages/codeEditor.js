@@ -53,7 +53,7 @@ const CodeEditor = () => {
                 &nbsp;
               </span>
               page, I ran into some issues creating a functional html, css, and
-              javascript code editor in SSR frameworks. I could not find any
+              javascript code editor in a SSR framework. I could not find any
               solutions online, so I decided to write a &nbsp;
               <a href="" className="text-gray-800 font-bold cursor-pointer">
                 post
@@ -61,7 +61,7 @@ const CodeEditor = () => {
               &nbsp; about it after I figured it out.
             </span>
           }
-          platform="Github Repository"
+          platform="React in a NextJS framework with Tailwind styling"
           checkIt="https://dev.to/ayseboogie/building-a-code-editor-within-nextjs-3nnc"
         />
       </Layout>
