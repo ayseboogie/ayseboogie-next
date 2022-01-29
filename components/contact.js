@@ -14,8 +14,8 @@ const Contact = () => {
             <input
               type="text"
               name="name"
-              id="full-name"
-              placeholder="First and Last"
+              id="name"
+              placeholder="Name"
               aria-label="Your name"
               required={true}
               style={{
