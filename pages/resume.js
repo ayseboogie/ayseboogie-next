@@ -26,10 +26,6 @@ function Resume() {
     setNumPages(numPages);
   }
 
-  const work = pdfjs.GlobalWorkerOptions.workerSrc;
-  const defaultLayoutPluginInstance = defaultLayoutPlugin();
-  const { windowWidth } = useWindowDimensions();
-
   return (
     <>
       <div className="w-full md:pr-8 pt-6 md:bg-gray-800">
