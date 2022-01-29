@@ -1,33 +1,23 @@
-import * as React from "react";
-import { useState } from "react";
-import { Document, Page, pdfjs } from "react-pdf";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+const PdfViewer = dynamic(() => import("../components/pdfViewer"), {
+  ssr: false,
+});
 
 function Resume() {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
+  const { windowWidth } = useWindowDimensions();
 
   return (
     <>
-      <div className="w-full md:pr-8 pt-6 md:bg-gray-800">
-        <div className="md:text-white tracking-widest flex justify-end">
+      <div className="w-full md:pr-8 pt-6 bg-gray-800">
+        <div className="text-white tracking-widest flex justify-end">
           <Link href="/">back home</Link>
         </div>
       </div>
-      <div className="w-full md:flex items-center justify-center py-9">
-        <Document
-          className="md:border-gray-800 md:border-2"
-          file="/resume.pdf"
-          onLoadSuccess={onDocumentLoadSuccess}
-        >
-          <Page pageNumber={pageNumber} />
-        </Document>
+      <div className="flex items-center justify-center">
+        <PdfViewer url="/resume.pdf" mobile={windowWidth < 640} />
       </div>
     </>
   );
