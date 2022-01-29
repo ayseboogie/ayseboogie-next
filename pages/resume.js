@@ -37,13 +37,6 @@ function Resume() {
           <Link href="/">back home</Link>
         </div>
       </div>
-      {windowWidth < 640 && (
-        <Worker workerUrl={work}>
-          <div className="w-full md:w-3/4 py-6 ">
-            <Viewer fileUrl="/resume.pdf" defaultScale={0.6} />
-          </div>
-        </Worker>
-      )}
       <div className="w-full md:flex items-center justify-center py-9">
         <Document
           className="md:border-gray-800 md:border-2"
