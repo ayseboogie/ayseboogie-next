@@ -1,9 +1,12 @@
 import Link from "next/link";
+import { pdfjs } from "react-pdf";
 import { Viewer, Worker } from "@react-pdf-viewer/core";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 function Resume() {
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
