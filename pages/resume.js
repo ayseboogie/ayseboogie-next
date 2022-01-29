@@ -14,6 +14,7 @@ const { defaultLayoutPlugin } = dynamic(
 );
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
+import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -25,6 +26,10 @@ function Resume() {
     setNumPages(numPages);
   }
 
+  const work = pdfjs.GlobalWorkerOptions.workerSrc;
+  const defaultLayoutPluginInstance = defaultLayoutPlugin();
+  const { windowWidth } = useWindowDimensions();
+
   return (
     <>
       <div className="w-full md:pr-8 pt-6 md:bg-gray-800">
@@ -32,6 +37,13 @@ function Resume() {
           <Link href="/">back home</Link>
         </div>
       </div>
+      {windowWidth < 640 && (
+        <Worker workerUrl={work}>
+          <div className="w-full md:w-3/4 py-6 ">
+            <Viewer fileUrl="/resume.pdf" defaultScale={0.6} />
+          </div>
+        </Worker>
+      )}
       <div className="w-full md:flex items-center justify-center py-9">
         <Document
           className="md:border-gray-800 md:border-2"
