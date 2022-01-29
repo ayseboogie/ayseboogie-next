@@ -26,6 +26,8 @@ function Resume() {
     setNumPages(numPages);
   }
 
+  const work = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+
   return (
     <>
       <div className="w-full md:pr-8 pt-6 md:bg-gray-800">
