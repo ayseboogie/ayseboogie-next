@@ -33,7 +33,7 @@ const Contact = () => {
             <input
               type="email"
               name="_replyto"
-              placeholder="Your email"
+              placeholder="Email"
               aria-label="Your email"
               required={true}
               style={{
