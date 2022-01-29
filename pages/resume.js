@@ -21,24 +21,25 @@ function Resume() {
         </div>
       </div>
       <div className="flex items-center justify-center">
-        {windowWidth < 640 && (
-          <Worker workerUrl={work}>
-            <div className="w-full md:w-3/4 py-6 ">
-              <Viewer fileUrl="/resume.pdf" defaultScale={0.6} />
-            </div>
-          </Worker>
-        )}
-        {windowWidth > 640 && (
-          <Worker workerUrl={work}>
-            <div className="w-full md:w-3/4 py-6 ">
-              <Viewer
-                fileUrl="/resume.pdf"
-                // plugins={[defaultLayoutPluginInstance]}
-                defaultScale={1}
-              />
-            </div>
-          </Worker>
-        )}
+        pdf
+        {/*{windowWidth < 640 && (*/}
+        {/*  <Worker workerUrl={work}>*/}
+        {/*    <div className="w-full md:w-3/4 py-6 ">*/}
+        {/*      <Viewer fileUrl="/resume.pdf" defaultScale={0.6} />*/}
+        {/*    </div>*/}
+        {/*  </Worker>*/}
+        {/*)}*/}
+        {/*{windowWidth > 640 && (*/}
+        {/*  <Worker workerUrl={work}>*/}
+        {/*    <div className="w-full md:w-3/4 py-6 ">*/}
+        {/*      <Viewer*/}
+        {/*        fileUrl="/resume.pdf"*/}
+        {/*        // plugins={[defaultLayoutPluginInstance]}*/}
+        {/*        defaultScale={1}*/}
+        {/*      />*/}
+        {/*    </div>*/}
+        {/*  </Worker>*/}
+        {/*)}*/}
       </div>
     </>
   );
