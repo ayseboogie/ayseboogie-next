@@ -6,6 +6,7 @@ import { Document, Page, pdfjs } from "react-pdf";
 const { Viewer, Worker } = dynamic(import("@react-pdf-viewer/core"), {
   ssr: false,
 });
+import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
