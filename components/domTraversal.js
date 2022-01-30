@@ -10,7 +10,7 @@ export class DomTraversal extends Component {
     };
   }
 
-  render(message) {
+  render() {
     const tree = {
       id: 1,
       label: "A",
@@ -100,16 +100,15 @@ export class DomTraversal extends Component {
       search(tree, Number(textInput.current.value));
     }
 
-    const matchList = [];
+    let matchList = [];
 
     function search(tree, input) {
       if (tree.id === input) {
         matchList.push(tree.label);
         alert(matchList);
-      } else {
-        for (const child of tree.child) {
-          search(child, input);
-        }
+      }
+      for (const child of tree.child) {
+        search(child, input);
       }
       return matchList;
     }
