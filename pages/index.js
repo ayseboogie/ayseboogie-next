@@ -11,6 +11,23 @@ import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
 import * as style from "./index.module.css";
 import cn from "classnames";
 
+function factorial(n) {
+  console.log("factorial ", n);
+  if (n === 1 || n === 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+
+function python(x, ans) {
+  if (x === 0) {
+    return 0;
+  } else {
+    return python(x - 1, x + ans);
+  }
+}
+
 const IndexPage = () => {
   const { windowWidth } = useWindowDimensions();
 
@@ -59,6 +76,11 @@ const IndexPage = () => {
             <br />- Alan Watts
           </div>
         </div>
+
+        <div>factorial</div>
+        <div>{factorial(4)}</div>
+        <div>python</div>
+        <div>{python(2, 66)}</div>
 
         <AboutPhotos />
 

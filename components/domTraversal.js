@@ -10,7 +10,7 @@ export class DomTraversal extends Component {
     };
   }
 
-  render() {
+  render(message) {
     const tree = {
       id: 1,
       label: "A",
@@ -94,28 +94,25 @@ export class DomTraversal extends Component {
       ],
     };
 
+    let textInput = React.createRef();
+
     function handleClick() {
-      search(tree, textInput.current.value);
+      search(tree, Number(textInput.current.value));
     }
 
     const matchList = [];
-    const search = (tree, target) => {
-      if (tree.id == target) {
+
+    function search(tree, input) {
+      if (tree.id === input) {
         matchList.push(tree.label);
         alert(matchList);
-        if (matchList.length === 2) {
+      } else {
+        for (const child of tree.child) {
+          search(child, input);
         }
       }
-      for (const child of tree.child) {
-        const res = search(child, target);
-        // if (res) {
-        // return res;
-        // }
-      }
       return matchList;
-    };
-
-    let textInput = React.createRef();
+    }
 
     let numb = -1;
 
