@@ -13,7 +13,7 @@ const pViewer = ({ url, mobile }) => {
         <Viewer
           fileUrl={url}
           plugins={[defaultLayoutPluginInstance]}
-          defaultScale={mobile ? 0.6 : 1}
+          defaultScale={mobile ? 0.5 : 1}
         />
       </div>
     </Worker>
