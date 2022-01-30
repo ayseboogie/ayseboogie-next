@@ -9,7 +9,7 @@ const pViewer = ({ url, mobile }) => {
 
   return (
     <Worker workerUrl={worker}>
-      <div className="w-full md:w-3/4 py-6 ">
+      <div className="w-11/12 md:w-3/4 py-6">
         <Viewer
           fileUrl={url}
           plugins={[defaultLayoutPluginInstance]}
