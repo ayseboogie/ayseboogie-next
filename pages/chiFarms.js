@@ -41,11 +41,15 @@ const ChiFarms = () => {
       </Head>
       <Layout pageTitle="Chi Farms">
         <ProjectsLayout
-          about="Chi Farms is an ecommerce site I made for my friends at my local market.
-            This is a multivendor shop that offers various products from CSA boxes
-            to pottery, all locally made by vendors in Chattanooga. This project
-            has been fun, and is continuously improving as I navigate the world of
-            Wordpress."
+          about={
+            <span>
+              Chi Farms is an ecommerce site I made for my friends at my local
+              market. This is a multivendor shop that offers various products
+              from CSA boxes to pottery, all locally made by vendors in
+              Chattanooga. This project has been fun, and is continuously
+              improving as I navigate the world of Wordpress.
+            </span>
+          }
           platform="Wordpress Woocommerce, hosted through GoDaddy"
           checkIt="https://chifarms.org/"
         />
