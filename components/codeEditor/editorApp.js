@@ -10,7 +10,7 @@ const EditorApp = () => {
     "html",
     `<div class="container">
   <div class="card">
-     <img class="frontside" id="toggleCard"  src="https://ayseimg.s3.amazonaws.com/ayseSiteOriginal.png" alt="frontside" /> 
+     <img class="frontside" id="toggleCard"  src="https://ayseimg.s3.amazonaws.com/ayseSiteOriginal.png" alt="frontside" />
     <div class="backside">
       <img  src="https://ayseimg.s3.amazonaws.com/back+of+card.png" alt="backside" />
      </div>
