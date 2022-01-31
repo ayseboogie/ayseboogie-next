@@ -71,7 +71,6 @@ const EditorApp = () => {
 @media (min-width: 2000px) {
   .cardOpen .backside {
       transform: translateY(14em);
-      padding-top: 10em;
     }
   }
 
