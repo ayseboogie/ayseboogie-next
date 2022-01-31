@@ -54,10 +54,10 @@ const DomTraversal = () => {
           The logic used on this page stems from the DOM.
           <br />
           <br />
-          For the node tree traversal, I used a search function that pushes
-          matched values to an array, and traverses the node children with a
-          for...in loop. I synced the matched value array to an output state in
-          order to show the returned values in real time on the page.
+          For the node tree, I used a search function that traverses the node
+          children with a for...in loop and pushes matched values to an array. I
+          synced the matched value array to an output state in order to show the
+          returned values in real time on the page.
           <br />
           <br />
           For the fun facts, I used getElementsByTagName to find the &lt;td&gt;

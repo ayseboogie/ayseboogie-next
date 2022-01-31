@@ -10,9 +10,9 @@ const EditorApp = () => {
     "html",
     `<div class="container">
   <div class="card">
-     <img class="frontside___button" id="toggleCard"  src="https://ayseimg.s3.amazonaws.com/ayseSiteOriginal.png" alt="frontside" /> 
-    <div class="backside__form">
-      <img  class="backside__img" src="https://ayseimg.s3.amazonaws.com/back+of+card.png" alt="backside" />
+     <img class="frontside" id="toggleCard"  src="https://ayseimg.s3.amazonaws.com/ayseSiteOriginal.png" alt="frontside" /> 
+    <div class="backside">
+      <img  src="https://ayseimg.s3.amazonaws.com/back+of+card.png" alt="backside" />
      </div>
   </div>
 </div>`
@@ -25,10 +25,9 @@ const EditorApp = () => {
   }
 
   body {
-    position: relative;
-    min-height: 100%;
     background: #1F2937;
   }
+
   img {
     max-width: 100%;
   }
@@ -41,37 +40,19 @@ const EditorApp = () => {
     }
     to {
       opacity: 1;
-      top: 50%;
+      top: 10%;
     }
   }
 
 .container {
-    position: absolute;
-    width: 90%;
-    left: 50%;
-    vertical-align: center;
-    transform: translate(-50%,-60%);
-    animation: intro .7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  }
-@media (min-width: 600px) {
-  .container {
-      width: 50%;
-      transform: translate(-50%,-90%);
-    }
-  }
-@media (min-width: 800px) {
-  .container {
-      width: 50%;
-      transform: translate(-50%,-70%);
-    }
-  }
-@media (min-width: 1500px) {
-  .container {
-      transform: translate(-30%,-70%);
-    }
+  left: 50%;
+  position: absolute;
+  animation: intro .7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   }
 
 .card {
+  left: -50%;
+   min-width: 300px;
     max-width: 400px;
     position: relative;
   }
@@ -80,7 +61,7 @@ const EditorApp = () => {
       max-width: 640px;
     }
   }
-.card--open .backside__form {
+.cardOpen .backside {
     visibility: visible;
     height: auto;
     opacity: 1;
@@ -88,24 +69,21 @@ const EditorApp = () => {
     padding-top: 10em;
   }
 @media (min-width: 2000px) {
-  .card--open .backside__form {
+  .cardOpen .backside {
       transform: translateY(14em);
       padding-top: 10em;
     }
   }
 
-.frontside___button {
+.frontside {
     position: absolute;
     z-index: 1;
-    left: 50%;
-    transform: translateX(-50%);
     overflow: hidden;
     width: 100%;
-    display: block;
     transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
-.backside__form {
+.backside {
     position: relative;
     visibility: hidden;
     width: 100%;
@@ -122,7 +100,7 @@ const EditorApp = () => {
     "js",
     `document.getElementById('toggleCard').addEventListener('click', function () {
   [].map.call(document.querySelectorAll('.card'), function(el) {
-    el.classList.toggle('card--open');
+    el.classList.toggle('cardOpen');
   });
 });`
   );
