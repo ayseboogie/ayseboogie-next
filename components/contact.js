@@ -16,7 +16,7 @@ const Contact = () => {
               placeholder="Name"
               aria-label="Your name"
               required={true}
-              className="w-full rounded text-base p-4"
+              className="w-full rounded text-base border-gray-300 p-4"
             />
           </div>
           <hr />
@@ -27,7 +27,7 @@ const Contact = () => {
               placeholder="Email"
               aria-label="Your email"
               required={true}
-              className="w-full rounded text-base p-4"
+              className="w-full rounded text-base border-gray-300 p-4"
             />
           </div>
           <hr />
@@ -38,7 +38,7 @@ const Contact = () => {
               rows="4"
               aria-label="Your message"
               required={true}
-              className="w-full rounded text-base p-4"
+              className="w-full rounded text-base border-gray-300 p-4"
             />
           </div>
           <hr />
