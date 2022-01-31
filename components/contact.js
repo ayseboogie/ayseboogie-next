@@ -16,7 +16,7 @@ const Contact = () => {
               placeholder="Name"
               aria-label="Your name"
               required={true}
-              className="w-full rounded text-base border-gray-300 p-4"
+              className="w-full rounded text-base border border-gray-300 border-none p-4"
             />
           </div>
           <hr />
