@@ -38,7 +38,7 @@ const CodeEditor = () => {
         />
       </Head>
       <Layout pageTitle="Code Editor">
-        <div className="text-center text-3xl py-10">Code Editor</div>
+        <br />
         <CodeEditorCmp />
         <ProjectsLayout
           about={

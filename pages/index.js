@@ -11,6 +11,15 @@ import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
 import * as style from "./index.module.css";
 import cn from "classnames";
 
+function factorial(n) {
+  console.log("factorial ", n);
+  if (n === 1 || n === 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+
 const IndexPage = () => {
   const { windowWidth } = useWindowDimensions();
 
@@ -51,12 +60,14 @@ const IndexPage = () => {
 
         <div className="py-6 md:py-10">
           <div
-            className="w-full text-center tracking-widest px-16 md:px-32 py-8 md:py-16 text-sm md:text-lg lg:text-2xl"
+            className="w-full text-center py-8 md:py-10"
             style={{ backgroundColor: "#B76E79" }}
           >
-            &quot;It was a musical thing and you were supposed to sing or to
-            dance while the music was being played&quot;
-            <br />- Alan Watts
+            <div className="text-sm md:text-lg tracking-widest m-auto text-center px-4 md:px-0 max-w-2xl lg:max-w-5xl">
+              &quot;It was a musical thing and you were supposed to sing or to
+              dance while the music was being played&quot;
+              <br />- Alan Watts
+            </div>
           </div>
         </div>
 
@@ -74,8 +85,7 @@ const IndexPage = () => {
           />
           <hr className="flex flex-grow md:mx-16 lg:mx-24" />
         </div>
-
-        <div className="w-full text-center text-sm md:text-lg lg:text-2xl tracking-widest px-12 md:px-32 py-6 md:py-16">
+        <div className="text-sm md:text-lg tracking-widest m-auto text-center px-4 md:px-0 max-w-2xl lg:max-w-4xl py-6 md:py-16">
           <h1>Hey, I&apos;m Ayse.</h1>
           <p>I am a frontend engineer with a passion for web development.</p>
           I enjoy taking on new challenges and continuously growing my skill
@@ -94,7 +104,7 @@ const IndexPage = () => {
           and scrabble.
         </div>
         <hr className="mx-20 md:mx-48" />
-        <div className="w-full text-center text-sm md:text-lg lg:text-2xl tracking-widest px-16 md:px-32 py-6 md:py-16">
+        <div className="text-sm md:text-lg tracking-widest m-auto text-center px-4 md:px-0 max-w-2xl lg:max-w-4xl py-6 md:py-16">
           If you would like to speak with me about building a website for you,
           please fill out the&nbsp;
           <Anchor
@@ -114,14 +124,17 @@ const IndexPage = () => {
 
         <div className="pb-10 md:py-10">
           <div
-            className="w-full text-center tracking-widest px-16 md:px-32 py-8 md:py-16 text-sm md:text-lg lg:text-2xl"
+            className="w-full text-center py-8 md:py-10"
             style={{ backgroundColor: "#B76E79" }}
           >
-            &quot;We are the music makers, And we are the dreamers of dreams,
-            Wandering by lone sea-breakers, And sitting by desolate streams; —
-            World-losers and world-forsakers, On whom the pale moon gleams: Yet
-            we are the movers and shakers Of the world for ever, it seems.&quot;
-            <br />- Arthur O&apos;Shaugnessy
+            <div className="text-sm md:text-lg tracking-widest m-auto text-center px-4 md:px-0 max-w-2xl lg:max-w-5xl">
+              &quot;We are the music makers, And we are the dreamers of dreams,
+              Wandering by lone sea-breakers, And sitting by desolate streams; —
+              World-losers and world-forsakers, On whom the pale moon gleams:
+              Yet we are the movers and shakers Of the world for ever, it
+              seems.&quot;
+              <br />- Arthur O&apos;Shaugnessy
+            </div>
           </div>
         </div>
         <hr className="pb-8 md:pb-12 mx-20 md:mx-48" />

@@ -27,7 +27,9 @@ const AboutPhotos = () => {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <div className="text-white md:text-2xl">Dedication</div>
+          <div className="text-white tracking-widest md:text-2xl">
+            Dedication
+          </div>
         </div>
       </div>
 
@@ -50,7 +52,9 @@ const AboutPhotos = () => {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <div className="text-white md:text-2xl">Persistence</div>
+          <div className="text-white tracking-widest md:text-2xl">
+            Persistence
+          </div>
         </div>
       </div>
 
@@ -73,7 +77,9 @@ const AboutPhotos = () => {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <div className="text-white md:text-2xl">Determination</div>
+          <div className="text-white tracking-widest md:text-2xl">
+            Determination
+          </div>
         </div>
       </div>
     </div>

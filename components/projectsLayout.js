@@ -6,7 +6,7 @@ const ProjectsLayout = ({ about, platform, checkIt }) => {
     <>
       <div className="m-auto font-sans text-lg">
         <main className="max-w-2xl lg:max-w-4xl m-auto">
-          <div className="text-center my-8 md:my-16 px-6 md:px-0 text-sm md:text-base lg:text-lg">
+          <div className="text-center tracking-widest my-8 md:my-16 px-6 md:px-0 text-sm md:text-base lg:text-lg">
             {about}
           </div>
           <hr />
@@ -15,7 +15,7 @@ const ProjectsLayout = ({ about, platform, checkIt }) => {
               <h2 className="flex-1 flex justify-start tracking-widest text-base md:text-lg">
                 Platform:
               </h2>
-              <div className="flex-1 flex justify-end text-right text-sm md:text-lg">
+              <div className="flex-1 flex justify-end text-right  text-sm md:text-lg">
                 {platform}
               </div>
             </div>
