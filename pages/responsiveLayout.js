@@ -43,12 +43,8 @@ const ResponsiveLayout = () => {
           crossOrigin="anonymous"
         />
       </Head>
-      <Layout pageTitle="Responsive Layout">
-        <div className="text-center text-3xl py-10">
-          Responsive Layout Without Media Queries
-        </div>
-
-        <div className="flex justify-center">
+      <Layout pageTitle="Responsive Layout without Media Queries">
+        <div className="flex justify-center tracking-widest pt-6">
           Window size:&nbsp;
           {windowWidth > 20 && windowWidth < 900 && (
             <div className="pb-6">20px - 900px</div>
@@ -59,7 +55,7 @@ const ResponsiveLayout = () => {
           {windowWidth > 1300 && <div className="pb-6">&gt; 1300px</div>}
         </div>
         <CodeEditor />
-        <div className="pb-10 px-4 md:px-0 max-w-2xl lg:max-w-4xl m-auto text-center">
+        <div className="tracking-widest px-4 md:px-0 max-w-2xl lg:max-w-4xl m-auto text-center">
           I read an article from
           <a
             className="text-gray-400 font-bold"

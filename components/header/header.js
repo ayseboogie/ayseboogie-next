@@ -53,7 +53,7 @@ const Header = ({ pageTitle }) => {
       >
         <div
           className={cn(
-            "text-white text-xl md:text-2xl lg:text-4xl px-2 md:px-4",
+            "text-white tracking-widest text-xl md:text-2xl lg:text-4xl px-2 md:px-4",
             style.textBanner
           )}
         >

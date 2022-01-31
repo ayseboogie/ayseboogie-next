@@ -1,5 +1,3 @@
-import * as React from "react";
-
 const Contact = () => {
   return (
     <section
@@ -18,14 +16,7 @@ const Contact = () => {
               placeholder="Name"
               aria-label="Your name"
               required={true}
-              style={{
-                appearance: "none",
-                border: "none",
-                borderRadius: "5px",
-                fontSize: "16px",
-                padding: "10px 15px",
-                width: "100%",
-              }}
+              className="w-full rounded text-base p-4"
             />
           </div>
           <hr />
@@ -36,13 +27,7 @@ const Contact = () => {
               placeholder="Email"
               aria-label="Your email"
               required={true}
-              style={{
-                border: "1px solid var(--mid-gray-color)",
-                borderRadius: "5px",
-                fontSize: "16px",
-                padding: "10px 15px",
-                width: "100%",
-              }}
+              className="w-full rounded text-base p-4"
             />
           </div>
           <hr />
@@ -53,13 +38,7 @@ const Contact = () => {
               rows="4"
               aria-label="Your message"
               required={true}
-              style={{
-                border: "1px solid var(--mid-gray-color)",
-                borderRadius: "5px",
-                fontSize: "16px",
-                padding: "10px 15px",
-                width: "100%",
-              }}
+              className="w-full rounded text-base p-4"
             />
           </div>
           <hr />
@@ -74,18 +53,7 @@ const Contact = () => {
             <input
               type="submit"
               value="Send"
-              style={{
-                border: "none",
-                height: "50px",
-                width: "100%",
-                borderRadius: "0.3em",
-                fontWeight: "600",
-                /* Colors */
-                color: "white",
-                background: "#212121",
-                /* To get the hover animation to work */
-                transition: "transform .5s",
-              }}
+              className="bg-gray-800 w-full h-12 rounded text-white font-semibold"
             />
           </div>
         </form>

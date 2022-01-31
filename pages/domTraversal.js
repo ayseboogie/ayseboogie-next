@@ -10,7 +10,7 @@ const DomTraversal = () => {
   return (
     <>
       <Head>
-        <title>Code - Ayse Site</title>
+        <title>Dom Traversal - Ayse Site</title>
         <link rel="icon" href="/triangle.png" />
         <meta name="author" content="Ayse Stinnett" />
         <meta name="description" content="Dom Traversal exercises" key="desc" />
@@ -35,9 +35,7 @@ const DomTraversal = () => {
         />
       </Head>
       <Layout pageTitle="Dom Traversal">
-        <div className="pb-4 py-2 md:py-6">
-          {/*  DOM Traversal */}
-          <div className="text-center text-3xl ">DOM Traversal</div>
+        <div className="pt-2 md:pt-6">
           <div className="flex justify-center px-6 md:px-0  ">
             <Image
               src={NodeTree}
@@ -49,12 +47,23 @@ const DomTraversal = () => {
           </div>
           <DomTraversalCmp />
         </div>
-        <div className="pb-10 px-4 md:px-0 max-w-2xl lg:max-w-4xl m-auto text-center">
-          I created this page to familiarize myself with traversing the dom. All
-          of the logic used in this page stems from the DOM. I used a for loop
-          to traverse the node tree. For the fun facts, I used
-          getElementsByTagName to find the &lt;td&gt; element and an if
-          statement to change the text color.
+        <div className="max-w-2xl lg:max-w-4xl m-auto pb-6">
+          <hr />
+        </div>
+        <div className="tracking-widest px-4 md:px-0 max-w-2xl lg:max-w-4xl m-auto text-center">
+          The logic used on this page stems from the DOM.
+          <br />
+          <br />
+          For the node tree traversal, I used a search function that pushes
+          matched values to an array, and traverses the node children with a
+          for...in loop. I synced the matched value array to an output state in
+          order to show the returned values in real time on the page.
+          <br />
+          <br />
+          For the fun facts, I used getElementsByTagName to find the &lt;td&gt;
+          element and an if statement to change the text color from white to
+          black. I checked the td child node length to turn the button color to
+          grey when the last fact is revealed.
         </div>
         <ProjectsLayout />
       </Layout>
