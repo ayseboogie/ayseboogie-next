@@ -84,12 +84,12 @@ const ResponsiveLayout = () => {
           <br />
           The code editor I wanted to use for this was a challenge for me. I
           used both localStorage and codeMirror for the component, neither of
-          which get along with the SSR frameworks. I originally built this site
-          in Gatsby. I built out the editor, and it looked / worked exactly as I
+          which get along with SSR frameworks. I originally built this site in
+          Gatsby. I built out the editor, and it looked / worked exactly as I
           wanted. I pushed..and it failed. My next idea was to rebuild my entire
           site in NextJS, so that&apos;s what I did. It was a fun process to
           rebuild with a slightly different API. The build still didn&apos;t
-          pass. I was able to figure it out this time, and honestly I think it
+          pass. I was able to figure it out this time, and honestly, I think it
           was the break from fumbling with the component that allowed me to come
           back with fresh eyes and get it solved.
           <br />
