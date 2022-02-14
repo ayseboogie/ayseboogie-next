@@ -44,18 +44,7 @@ const ResponsiveLayout = () => {
         />
       </Head>
       <Layout pageTitle="Responsive Layout without Media Queries">
-        <div className="flex justify-center tracking-widest pt-6">
-          Window size:&nbsp;
-          {windowWidth > 20 && windowWidth < 900 && (
-            <div className="pb-6">20px - 900px</div>
-          )}
-          {windowWidth > 900 && windowWidth < 1300 && (
-            <div className="pb-6">900px - 1300px</div>
-          )}
-          {windowWidth > 1300 && <div className="pb-6">&gt; 1300px</div>}
-        </div>
-        <CodeEditor />
-        <div className="tracking-widest px-4 md:px-0 max-w-2xl lg:max-w-4xl m-auto text-center">
+        <div className="tracking-widest mt-12 px-4 md:px-0 max-w-2xl lg:max-w-4xl m-auto text-center">
           I read an article from
           <a
             className="text-gray-400 font-bold"
@@ -101,6 +90,19 @@ const ResponsiveLayout = () => {
           a component of its own. I then made the editor on this page static due
           to localStorage being used on the code editor page.
         </div>
+        <hr className="md:mt-8 pb-6 md:pb-8 mx-20 md:mx-48" />
+        <div className="flex justify-center tracking-widest pt-6">
+          Window size:&nbsp;
+          {windowWidth > 20 && windowWidth < 900 && (
+            <div className="pb-6">20px - 900px</div>
+          )}
+          {windowWidth > 900 && windowWidth < 1300 && (
+            <div className="pb-6">900px - 1300px</div>
+          )}
+          {windowWidth > 1300 && <div className="pb-6">&gt; 1300px</div>}
+        </div>
+        <CodeEditor />
+
         <ProjectsLayout />
       </Layout>
     </>

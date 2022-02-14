@@ -2,6 +2,7 @@ import * as React from "react";
 import Head from "next/head";
 import Layout from "../components/layout";
 import ProjectsLayout from "../components/projectsLayout";
+import ChiFarmsCmp from "../components/chiFarms/chiFarms";
 
 const ChiFarms = () => {
   return (
@@ -46,13 +47,30 @@ const ChiFarms = () => {
               Chi Farms is an ecommerce site I made for my friends at my local
               market. This is a multivendor shop that offers various products
               from CSA boxes to pottery, all locally made by vendors in
-              Chattanooga. This project has been fun, and is continuously
-              improving as I navigate the world of Wordpress.
+              Chattanooga.
+              <br />
+              This project was my first wordpress site, but surely not my last.
+              <br />
+              There is a high turnover rate at Chi Farms, and I was unable to
+              keep up with all of the users who had access to make changes on
+              this site. I took screenshots of the website for posterity. They
+              are navigable by the navigation bar below. Obviously the link to
+              the site is still on this page, but I cannot gurantee that is my
+              work anymore. I have since taken myself off this project and wish
+              Chi Farms the best of luck in their future!
             </span>
           }
-          platform="Wordpress Woocommerce, hosted through GoDaddy"
+          platform={
+            <span>
+              A Woocommerce site on Wordpress,
+              <br /> hosted through GoDaddy
+            </span>
+          }
           checkIt="https://chifarms.org/"
-        />
+        >
+          <ChiFarmsCmp />
+          <hr className="md:mt-6 pb-8 md:pb-12 mx-20 md:mx-48" />
+        </ProjectsLayout>
       </Layout>
     </>
   );

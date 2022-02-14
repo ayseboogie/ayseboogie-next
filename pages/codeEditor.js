@@ -38,8 +38,6 @@ const CodeEditor = () => {
         />
       </Head>
       <Layout pageTitle="Code Editor">
-        <br />
-        <CodeEditorCmp />
         <ProjectsLayout
           about={
             <span>
@@ -63,7 +61,11 @@ const CodeEditor = () => {
           }
           platform="React in a NextJS framework with Tailwind styling"
           checkIt="https://dev.to/ayseboogie/building-a-code-editor-within-nextjs-3nnc"
-        />
+        >
+          <CodeEditorCmp />
+          <br />
+          <hr className="md:mt-6 pb-8 md:pb-12 mx-20 md:mx-48" />
+        </ProjectsLayout>
       </Layout>
     </>
   );
