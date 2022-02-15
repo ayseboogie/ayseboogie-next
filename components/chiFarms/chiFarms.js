@@ -43,8 +43,8 @@ const tabs = [
 ];
 
 const ChiFarms = () => {
-  const worker = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.worker.js`;
-  const defaultLayoutPluginInstance = defaultLayoutPlugin();
+  // const worker = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.worker.js`;
+  // const defaultLayoutPluginInstance = defaultLayoutPlugin();
   let [activeTab, setActiveTab] = useState("");
   let [scrollDown, setScrollDown] = useState(0);
 
