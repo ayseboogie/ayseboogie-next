@@ -2,8 +2,12 @@ import * as React from "react";
 import Head from "next/head";
 import Layout from "../components/layout";
 import ProjectsLayout from "../components/projectsLayout";
-import ChiFarmsCmp from "../components/chiFarms/chiFarms";
+
+const ChiFarmsCmp = dynamic(() => import("../components/chiFarms/chiFarms"), {
+  ssr: false,
+});
 import { useState } from "react";
+import dynamic from "next/dynamic";
 
 const tabs = [
   {
