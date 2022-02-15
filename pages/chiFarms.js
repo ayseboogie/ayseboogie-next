@@ -3,8 +3,52 @@ import Head from "next/head";
 import Layout from "../components/layout";
 import ProjectsLayout from "../components/projectsLayout";
 import ChiFarmsCmp from "../components/chiFarms/chiFarms";
+import { useState } from "react";
+
+const tabs = [
+  {
+    title: "Home",
+    path: "/chiHome.pdf",
+  },
+  {
+    title: "About Us",
+    path: "/aboutUs.pdf",
+  },
+  {
+    title: "Shop",
+    path: "/shop.pdf",
+  },
+  {
+    title: "Gallery",
+    path: "/gallery.pdf",
+  },
+  {
+    title: "My Account",
+    path: "/myAccount.pdf",
+  },
+  {
+    title: "Contact Us",
+    path: "/contactUs.pdf",
+  },
+  {
+    title: "ShoppingCartIcon",
+    path: "/cart.pdf",
+  },
+  {
+    title: "SearchIcon",
+    path: "/search.pdf",
+  },
+];
 
 const ChiFarms = () => {
+  let [activeTab, setActiveTab] = useState("");
+
+  const onButtonClick = (value) => {
+    if (value !== null && value !== undefined) {
+      let clickedTab = value.target.id;
+      setActiveTab({ activeTab: clickedTab });
+    }
+  };
   return (
     <>
       <Head>
@@ -68,7 +112,34 @@ const ChiFarms = () => {
           }
           checkIt="https://chifarms.org/"
         >
-          <ChiFarmsCmp />
+          <div className="py-9">
+            <nav
+              id="nav"
+              className="px-12 py-3"
+              style={{ backgroundColor: "#8C9A8C" }}
+            >
+              <ul className="flex list-none justify-end tracking-widest md:text-lg">
+                {tabs.map((tab) => {
+                  return (
+                    <li
+                      key={tab.path}
+                      className="pr-8"
+                      style={{ color: "#373911" }}
+                    >
+                      <button
+                        id={tab.path}
+                        value={tab.path}
+                        onClick={onButtonClick}
+                      >
+                        {tab.title}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+          </div>
+          {activeTab !== "" && <ChiFarmsCmp url={activeTab.activeTab} />}
           <hr className="md:mt-6 pb-8 md:pb-12 mx-20 md:mx-48" />
         </ProjectsLayout>
       </Layout>
