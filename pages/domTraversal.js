@@ -35,6 +35,21 @@ const DomTraversal = () => {
         />
       </Head>
       <Layout pageTitle="Dom Traversal">
+        <div className="tracking-widest mt-12 px-4 md:px-0 max-w-2xl lg:max-w-4xl m-auto text-center">
+          The logic used on this page stems from the DOM.
+          <br />
+          <br />
+          For the node tree, I used a search function that traverses the node
+          children with a for...in loop and pushes matched values to an array. I
+          synced the matched value array to an output state in order to show the
+          returned values in real time on the page.
+          <br />
+          <br />
+          For the fun facts, I used getElementsByTagName to find the &lt;td&gt;
+          element and an if statement to change the text color from white to
+          black. I checked the td child node length to turn the button color to
+          grey when the last fact is revealed.
+        </div>
         <div className="pt-2 md:pt-6">
           <div className="flex justify-center px-6 md:px-0  ">
             <Image
@@ -50,21 +65,7 @@ const DomTraversal = () => {
         <div className="max-w-2xl lg:max-w-4xl m-auto pb-6">
           <hr />
         </div>
-        <div className="tracking-widest px-4 md:px-0 max-w-2xl lg:max-w-4xl m-auto text-center">
-          The logic used on this page stems from the DOM.
-          <br />
-          <br />
-          For the node tree, I used a search function that traverses the node
-          children with a for...in loop and pushes matched values to an array. I
-          synced the matched value array to an output state in order to show the
-          returned values in real time on the page.
-          <br />
-          <br />
-          For the fun facts, I used getElementsByTagName to find the &lt;td&gt;
-          element and an if statement to change the text color from white to
-          black. I checked the td child node length to turn the button color to
-          grey when the last fact is revealed.
-        </div>
+
         <ProjectsLayout />
       </Layout>
     </>
