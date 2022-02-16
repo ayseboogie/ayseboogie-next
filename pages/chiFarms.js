@@ -1,13 +1,14 @@
 import * as React from "react";
+import { useState } from "react";
 import Head from "next/head";
+import dynamic from "next/dynamic";
+import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
 import Layout from "../components/layout";
 import ProjectsLayout from "../components/projectsLayout";
 
 const ChiFarmsCmp = dynamic(() => import("../components/chiFarms/chiFarms"), {
   ssr: false,
 });
-import { useState } from "react";
-import dynamic from "next/dynamic";
 
 const tabs = [
   {
@@ -23,6 +24,10 @@ const tabs = [
     path: "/shop.pdf",
   },
   {
+    title: "Vendor StoreFront",
+    path: "/vendorStore.pdf",
+  },
+  {
     title: "Gallery",
     path: "/gallery.pdf",
   },
@@ -31,20 +36,25 @@ const tabs = [
     path: "/myAccount.pdf",
   },
   {
+    title: "My Account(Logged In)",
+    path: "/myAccountLoggedIn.pdf",
+  },
+  {
     title: "Contact Us",
     path: "/contactUs.pdf",
   },
   {
-    title: "ShoppingCartIcon",
+    title: "Shopping Cart",
     path: "/cart.pdf",
   },
   {
-    title: "SearchIcon",
+    title: "Search",
     path: "/search.pdf",
   },
 ];
 
 const ChiFarms = () => {
+  const { windowWidth } = useWindowDimensions();
   let [activeTab, setActiveTab] = useState("");
 
   const onButtonClick = (value) => {
@@ -52,6 +62,8 @@ const ChiFarms = () => {
       let clickedTab = value.target.id;
       setActiveTab({ activeTab: clickedTab });
     }
+    const Viewer = document.getElementById("viewer");
+    Viewer.scrollIntoView();
   };
   return (
     <>
@@ -117,17 +129,13 @@ const ChiFarms = () => {
           checkIt="https://chifarms.org/"
         >
           <div className="py-9">
-            <nav
-              id="nav"
-              className="px-12 py-3"
-              style={{ backgroundColor: "#8C9A8C" }}
-            >
-              <ul className="flex list-none justify-end tracking-widest md:text-lg">
+            <nav className="px-12 py-3" style={{ backgroundColor: "#8C9A8C" }}>
+              <ul className="flex flex-col md:flex-row list-none justify-between tracking-widest md:text-lg">
                 {tabs.map((tab) => {
                   return (
                     <li
                       key={tab.path}
-                      className="pr-8"
+                      className="pr-8 pb-4 md:pb-0"
                       style={{ color: "#373911" }}
                     >
                       <button
@@ -143,7 +151,10 @@ const ChiFarms = () => {
               </ul>
             </nav>
           </div>
-          {activeTab !== "" && <ChiFarmsCmp url={activeTab.activeTab} />}
+          <div id="viewer" />
+          {activeTab !== "" && (
+            <ChiFarmsCmp url={activeTab.activeTab} mobile={windowWidth < 640} />
+          )}
           <hr className="md:mt-6 pb-8 md:pb-12 mx-20 md:mx-48" />
         </ProjectsLayout>
       </Layout>
