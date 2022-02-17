@@ -6,7 +6,7 @@ import useWindowDimensions from "../utils/hooks/useWindowDimension.ts";
 import Layout from "../components/layout";
 import ProjectsLayout from "../components/projectsLayout";
 
-const ChiFarmsCmp = dynamic(() => import("../components/chiFarms/chiFarms"), {
+const ChiFarmsCmp = dynamic(() => import("../components/chiFarms"), {
   ssr: false,
 });
 
