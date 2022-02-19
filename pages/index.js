@@ -1,5 +1,6 @@
 import * as React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Anchor } from "nextjs-anchor";
 import Me from "../public/me.jpg";
 import Layout from "../components/layout";
@@ -57,8 +58,22 @@ const IndexPage = () => {
 
       <Layout pageTitle="Home">
         <div id="home" />
-
         <div className="py-6 md:py-10">
+          <div className="w-full text-center">
+            For NASA TSU STEM fair activity:&nbsp;
+            <a href="https://codepen.io/jonathangrossman/pen/VwLredR">
+              smiley face
+            </a>
+            <br />
+            The website itself is <a href="https://codepen.io/">
+              codepen.io
+            </a>{" "}
+            and has lots of cool html, css, an js tricks that people have
+            created!
+            <br /> I also have some activities on my site{" "}
+            <Link href="/codeEditor">code editor</Link> and{" "}
+            <Link href="/responsiveLayout">responsive rainbow</Link>
+          </div>
           <div
             className="w-full text-center py-8 md:py-10"
             style={{ backgroundColor: "#B76E79" }}
@@ -70,9 +85,7 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
-
         <AboutPhotos />
-
         <span id="about" />
         <div className="flex items-center justify-center mt-6">
           <hr className="flex-1 flex-grow md:mx-16 lg:mx-24" />
@@ -115,12 +128,10 @@ const IndexPage = () => {
           </Anchor>
           &nbsp;below.
         </div>
-
         <span id="portfolio" />
         <ProjectsContainer />
         <span id="contact" />
         <Contact />
-
         <div className="pb-10 md:py-10">
           <div
             className="w-full text-center py-8 md:py-10"
