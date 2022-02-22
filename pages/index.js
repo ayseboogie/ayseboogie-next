@@ -59,20 +59,29 @@ const IndexPage = () => {
       <Layout pageTitle="Home">
         <div id="home" />
         <div className="py-6 md:py-10">
-          <div className="w-full text-center">
+          <div className="w-full text-center pb-6">
             For NASA TSU STEM fair activity:&nbsp;
-            <a href="https://codepen.io/jonathangrossman/pen/VwLredR">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://codepen.io/jonathangrossman/pen/VwLredR"
+            >
               smiley face
             </a>
             <br />
-            The website itself is <a href="https://codepen.io/">
-              codepen.io
-            </a>{" "}
-            and has lots of cool html, css, an js tricks that people have
+            The website itself is{" "}
+            <a target="_blank" rel="noreferrer" href="https://codepen.io/">
+              codepen.io{" "}
+            </a>
+            which has lots of cool html, css, an js tricks that people have
             created!
-            <br /> I also have some activities on my site{" "}
-            <Link href="/codeEditor">code editor</Link> and{" "}
-            <Link href="/responsiveLayout">responsive rainbow</Link>
+            <br /> I also have some activities I have made on my site:
+            <Link href="/domTraversal"> traversing the dom,</Link>
+            <Link href="/codeEditor"> code editor,</Link> and
+            <Link href="/responsiveLayout"> responsive rainbow.</Link>
+            <br />I did not pay attention that you have to create a login for
+            that site since I already have an account..apologies. I will put
+            together a list of good resources on here when I get some time!
           </div>
           <div
             className="w-full text-center py-8 md:py-10"
