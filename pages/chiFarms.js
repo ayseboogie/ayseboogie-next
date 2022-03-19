@@ -114,10 +114,10 @@ const ChiFarms = () => {
               There is a high turnover rate at Chi Farms, and I was unable to
               keep up with all of the users who had access to make changes on
               this site. I took screenshots of the website for posterity. They
-              are navigable by the navigation bar below. Obviously the link to
-              the site is still on this page, but I cannot gurantee that is my
-              work anymore. I have since taken myself off this project and wish
-              Chi Farms the best of luck in their future!
+              are navigable by the navigation bar below. The link to the site is
+              still on this page, but I cannot gurantee that is my work anymore.
+              I have since taken myself off this project and wish Chi Farms the
+              best of luck in their future!
             </span>
           }
           platform={
