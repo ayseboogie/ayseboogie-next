@@ -1,7 +1,7 @@
 import * as React from "react";
 import ProjectsContainer from "./projectsContainer/projectsContainer";
 
-const ProjectsLayout = ({ about, platform, checkIt }) => {
+const ProjectsLayout = ({ about, platform, checkIt, children }) => {
   return (
     <>
       <div className="m-auto font-sans text-lg">
@@ -36,6 +36,7 @@ const ProjectsLayout = ({ about, platform, checkIt }) => {
             </a>
           )}
         </main>
+        {children}
         <ProjectsContainer />
         <div className="py-10 md:py-20 px-20 md:px-48">
           <hr />

@@ -1,34 +1,42 @@
-import React from "react";
+import * as React from "react";
 import "codemirror/lib/codemirror.css";
-import "codemirror/theme/material.css";
-import "codemirror/mode/xml/xml";
-import "codemirror/mode/javascript/javascript";
-import "codemirror/mode/css/css";
+import "codemirror/theme/tomorrow-night-bright.css";
 import { Controlled as ControlledEditor } from "react-codemirror2-react-17";
-import * as style from "./codeEditor.module.css";
 
-export default function Editor(props) {
-  const { language, displayName, value, onChange } = props;
+let languageLoaded = false;
+if (typeof window !== "undefined" && typeof window.navigator !== "undefined") {
+  require("codemirror/mode/xml/xml");
+  require("codemirror/mode/css/css");
+  require("codemirror/mode/javascript/javascript");
+  languageLoaded = true;
+}
+
+const Editor = (props) => {
+  const { language, editorTitle, value, onChange, className } = props;
 
   function handleChange(editor, data, value) {
     onChange(value);
   }
 
   return (
-    <div className={style.editorContainer}>
-      <div className={style.editorTitle}>{displayName}</div>
+    <div className={className}>
+      <div className="flex justify-between text-white rounded-t-lg py-2 pr-2 pl-4 bg-zinc-700">
+        {editorTitle}
+      </div>
       <ControlledEditor
         onBeforeChange={handleChange}
         value={value}
-        className={style.codeMirrorWrapper}
+        className="grow rounded-b-lg overflow-hidden text-left"
         options={{
           lineWrapping: true,
           lint: true,
           mode: language,
-          theme: "material",
+          theme: "tomorrow-night-bright",
           lineNumbers: true,
         }}
       />
     </div>
   );
-}
+};
+
+export default Editor;
